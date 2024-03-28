@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetPOWER_1 Pin=SW_P-1
+Removed Pin From Net: NetName=NetF000_1 Pin=SW_P-2
+Added Pin To Net: NetName=NetF000_1 Pin=SW_P-1
+Added Pin To Net: NetName=NetPOWER_1 Pin=SW_P-2
+Added Room: Name=Control
+Added Room: Name=Power

@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=H103-1
+Removed Pin From Net: NetName=5V Pin=H103-2
+Removed Pin From Net: NetName=RF_O1 Pin=H103-3
+Removed Pin From Net: NetName=RF_O2 Pin=H103-4
+Removed Pin From Net: NetName=RF_O3 Pin=H103-5
+Removed Pin From Net: NetName=RF_O4 Pin=H103-6
+Removed Pin From Net: NetName=RF_O5 Pin=H103-7
+Added Pin To Net: NetName=RF_O1 Pin=H103-1
+Added Pin To Net: NetName=RF_O2 Pin=H103-2
+Added Pin To Net: NetName=RF_O3 Pin=H103-3
+Added Pin To Net: NetName=RF_O4 Pin=H103-4
+Added Pin To Net: NetName=RF_O5 Pin=H103-5
+Added Pin To Net: NetName=5V Pin=H103-6
+Added Pin To Net: NetName=GND Pin=H103-7
+Added Room: Name=Control

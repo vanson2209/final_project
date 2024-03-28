@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=BIN1 Pin=U100-40
+Removed Pin From Net: NetName=BIN2 Pin=U100-41
+Added Pin To Net: NetName=BIN2 Pin=U100-40
+Added Pin To Net: NetName=BIN1 Pin=U100-41
+Added Room: Name=Control
+Added Room: Name=Power

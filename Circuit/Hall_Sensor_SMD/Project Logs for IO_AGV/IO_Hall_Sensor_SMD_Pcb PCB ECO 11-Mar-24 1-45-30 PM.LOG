@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=VCC Pin=C?-1
+Removed Pin From Net: NetName=GND Pin=C?-2
+Removed Member From Class: ClassName=Hall_Sensor_SMD_Sch Member=C?
+Change Component Footprint: Designator=C0 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C2 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C3 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C4 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C5 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C6 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C7 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C8 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C9 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C10 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C11 Old Footprint=tu 0805 New Footprint=CAP-SM-0603
+Change Component Comment : Designator=C2 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C3 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C4 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C5 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C6 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C7 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C8 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C9 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C10 Old Comment=476 New Comment=0.1uF
+Change Component Comment : Designator=C11 Old Comment=476 New Comment=0.1uF
+Change Component Designator: OldDesignator=Sensor? NewDesignator=Sensor
+Added Component: Designator=C12(tu tantalum smd3528)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH008401"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? tantalum 107T-100uF 50V SMD7343"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Change Net Name : Old Net Name=NetC3_1 New Net Name=SS1
+Change Net Name : Old Net Name=NetC5_1 New Net Name=SS2
+Change Net Name : Old Net Name=NetC7_1 New Net Name=SS3
+Change Net Name : Old Net Name=NetC9_1 New Net Name=SS4
+Change Net Name : Old Net Name=NetC11_1 New Net Name=SS5
+Change Class Name : Old Net Name=Hall_Sensor_SMD_Sch New Net Name=IO_Hall_Sensor_SMD_Sch
+Added Member To Class: ClassName=IO_Hall_Sensor_SMD_Sch Member=Component C12 100uF
+Added Room: Name=IO_Hall_Sensor_SMD_Sch

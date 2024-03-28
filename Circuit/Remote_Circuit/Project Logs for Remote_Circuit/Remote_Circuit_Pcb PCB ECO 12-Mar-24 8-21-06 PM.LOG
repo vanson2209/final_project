@@ -1,0 +1,199 @@
+Added Component: Designator=C00(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C01(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C02(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C03(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C04(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C05(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=D0(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D1(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D2(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D3(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D4(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(DIP18)
+Added Component: Designator=R00(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "3.3M"; VariantName = "[No Variations]"
+Added Component: Designator=R01(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R02(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R03(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R04(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R05(RES-SM-0603)
+Added Component: Designator=R06(RES-SM-0603)
+Added Component: Designator=R07(RES-SM-0603)
+Added Component: Designator=R08(RES-SM-0603)
+Added Component: Designator=R09(RES-SM-0603)
+Added Component: Designator=R10(RES-SM-0603)
+Added Component: Designator=SW0(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW2(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW3(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW4(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW(Slide Switch)
+Added Component: Designator=Transfer(RF315-SEND-NOIC)
+Add component (AddParameter): Name = "ComponentLink1 Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2 Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/6130xx143121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Created by"; Value = "Karrer Zheng"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Created Date"; Value = "29 March 2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "W¨¹rth Elektronik eiSos GmbH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "04"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "partNo"; Value = "613004143121"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=12V Pin=SW0-2
+Added Pin To Net: NetName=12V Pin=SW0-3
+Added Pin To Net: NetName=12V Pin=SW1-2
+Added Pin To Net: NetName=12V Pin=SW1-3
+Added Pin To Net: NetName=12V Pin=SW2-2
+Added Pin To Net: NetName=12V Pin=SW3-2
+Added Pin To Net: NetName=12V Pin=SW3-3
+Added Pin To Net: NetName=12V Pin=SW4-2
+Added Pin To Net: NetName=12V Pin=SW4-3
+Added Net: Name=12V
+Added Pin To Net: NetName=DATA Pin=IC?-17
+Added Pin To Net: NetName=DATA Pin=Transfer-1
+Added Net: Name=DATA
+Added Pin To Net: NetName=GND Pin=C00-1
+Added Pin To Net: NetName=GND Pin=C01-1
+Added Pin To Net: NetName=GND Pin=C02-1
+Added Pin To Net: NetName=GND Pin=C03-1
+Added Pin To Net: NetName=GND Pin=C04-1
+Added Pin To Net: NetName=GND Pin=C05-1
+Added Pin To Net: NetName=GND Pin=C06-1
+Added Pin To Net: NetName=GND Pin=IC?-2
+Added Pin To Net: NetName=GND Pin=IC?-3
+Added Pin To Net: NetName=GND Pin=IC?-4
+Added Pin To Net: NetName=GND Pin=IC?-5
+Added Pin To Net: NetName=GND Pin=IC?-6
+Added Pin To Net: NetName=GND Pin=IC?-7
+Added Pin To Net: NetName=GND Pin=IC?-9
+Added Pin To Net: NetName=GND Pin=IC?-14
+Added Pin To Net: NetName=GND Pin=R05-1
+Added Pin To Net: NetName=GND Pin=R06-1
+Added Pin To Net: NetName=GND Pin=R07-1
+Added Pin To Net: NetName=GND Pin=R08-1
+Added Pin To Net: NetName=GND Pin=R10-1
+Added Pin To Net: NetName=GND Pin=SW-3
+Added Pin To Net: NetName=GND Pin=Transfer-3
+Added Net: Name=GND
+Added Pin To Net: NetName=NetD0_1 Pin=D0-1
+Added Pin To Net: NetName=NetD0_1 Pin=R01-2
+Added Pin To Net: NetName=NetD0_1 Pin=SW0-1
+Added Pin To Net: NetName=NetD0_1 Pin=SW0-4
+Added Net: Name=NetD0_1
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=SW1-1
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=SW2-1
+Added Net: Name=NetD2_1
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=SW3-4
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=SW4-1
+Added Net: Name=NetD4_1
+Added Pin To Net: NetName=NetIC?_1 Pin=IC?-1
+Added Pin To Net: NetName=NetIC?_1 Pin=SW-2
+Added Net: Name=NetIC?_1
+Added Pin To Net: NetName=NetIC?_15 Pin=IC?-15
+Added Pin To Net: NetName=NetIC?_15 Pin=R00-1
+Added Net: Name=NetIC?_15
+Added Pin To Net: NetName=NetIC?_16 Pin=IC?-16
+Added Pin To Net: NetName=NetIC?_16 Pin=R00-2
+Added Net: Name=NetIC?_16
+Added Pin To Net: NetName=NetR02_2 Pin=R02-2
+Added Pin To Net: NetName=NetR02_2 Pin=SW1-4
+Added Net: Name=NetR02_2
+Added Pin To Net: NetName=NetR03_2 Pin=R03-2
+Added Pin To Net: NetName=NetR03_2 Pin=SW2-4
+Added Net: Name=NetR03_2
+Added Pin To Net: NetName=NetR04_2 Pin=R04-2
+Added Pin To Net: NetName=NetR04_2 Pin=SW3-1
+Added Net: Name=NetR04_2
+Added Pin To Net: NetName=NetR09_2 Pin=R09-2
+Added Pin To Net: NetName=NetR09_2 Pin=SW4-4
+Added Net: Name=NetR09_2
+Added Pin To Net: NetName=OUT0 Pin=C02-2
+Added Pin To Net: NetName=OUT0 Pin=IC?-13
+Added Pin To Net: NetName=OUT0 Pin=R01-1
+Added Pin To Net: NetName=OUT0 Pin=R05-2
+Added Net: Name=OUT0
+Added Pin To Net: NetName=OUT1 Pin=C03-2
+Added Pin To Net: NetName=OUT1 Pin=IC?-12
+Added Pin To Net: NetName=OUT1 Pin=R02-1
+Added Pin To Net: NetName=OUT1 Pin=R06-2
+Added Net: Name=OUT1
+Added Pin To Net: NetName=OUT2 Pin=C04-2
+Added Pin To Net: NetName=OUT2 Pin=IC?-11
+Added Pin To Net: NetName=OUT2 Pin=R03-1
+Added Pin To Net: NetName=OUT2 Pin=R07-2
+Added Net: Name=OUT2
+Added Pin To Net: NetName=OUT3 Pin=C05-2
+Added Pin To Net: NetName=OUT3 Pin=IC?-10
+Added Pin To Net: NetName=OUT3 Pin=R04-1
+Added Pin To Net: NetName=OUT3 Pin=R08-2
+Added Net: Name=OUT3
+Added Pin To Net: NetName=OUT4 Pin=C06-2
+Added Pin To Net: NetName=OUT4 Pin=IC?-8
+Added Pin To Net: NetName=OUT4 Pin=R09-1
+Added Pin To Net: NetName=OUT4 Pin=R10-2
+Added Net: Name=OUT4
+Added Pin To Net: NetName=VCC Pin=C00-2
+Added Pin To Net: NetName=VCC Pin=C01-2
+Added Pin To Net: NetName=VCC Pin=D0-2
+Added Pin To Net: NetName=VCC Pin=D1-2
+Added Pin To Net: NetName=VCC Pin=D2-2
+Added Pin To Net: NetName=VCC Pin=D3-2
+Added Pin To Net: NetName=VCC Pin=D4-2
+Added Pin To Net: NetName=VCC Pin=IC?-18
+Added Pin To Net: NetName=VCC Pin=SW-1
+Added Pin To Net: NetName=VCC Pin=Transfer-2
+Added Net: Name=VCC
+Added Class: Name=Remote_Circuit_Sch
+Added Room: Name=Remote_Circuit_Sch

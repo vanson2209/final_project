@@ -1,0 +1,21 @@
+Added Component: Designator=C016(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C017(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C018(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C0111(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=IR_1 Pin=C016-1
+Added Pin To Net: NetName=GND Pin=C016-2
+Added Pin To Net: NetName=IR_2 Pin=C017-1
+Added Pin To Net: NetName=GND Pin=C017-2
+Added Pin To Net: NetName=IR_3 Pin=C018-1
+Added Pin To Net: NetName=GND Pin=C018-2
+Added Pin To Net: NetName=IR Pin=C0111-1
+Added Pin To Net: NetName=GND Pin=C0111-2
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C016 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C017 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C018 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C0111 Cap Non-Pol SMD
+Added Room: Name=Slave_Board_Sch

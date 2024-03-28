@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=BO1 Pin=H103-1
+Removed Pin From Net: NetName=BO2 Pin=H103-2
+Added Pin To Net: NetName=BO2 Pin=H103-1
+Added Pin To Net: NetName=BO1 Pin=H103-2
+Added Member To Class: ClassName=Control Member=Component H100 Hall_Sensor
+Added Room: Name=Control
+Added Room: Name=Power

@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=C135 NewDesignator=C115
+Added Component: Designator=C135(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C135-1
+Added Pin To Net: NetName=RF_O5 Pin=C135-2
+Added Member To Class: ClassName=Control Member=Component C135 Cap Non-Pol SMD
+Added Room: Name=Control

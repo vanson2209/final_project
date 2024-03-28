@@ -1,0 +1,65 @@
+Added Component: Designator=C0(tu 0805)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH004761"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? g?m 104 100nF 50V"; VariantName = "[No Variations]"
+Added Component: Designator=C1(tu nhom 6.3 (d))
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001347"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? Hóa 100uF 16V 5x7MM"; VariantName = "[No Variations]"
+Added Component: Designator=H1(LO KHOAN 3MM)
+Added Component: Designator=H2(LO KHOAN 3MM)
+Added Component: Designator=H3(LO KHOAN 3MM)
+Added Component: Designator=H4(LO KHOAN 3MM)
+Added Component: Designator=Sensor1(SOT23)
+Added Component: Designator=Sensor2(SOT23)
+Added Component: Designator=Sensor3(SOT23)
+Added Component: Designator=Sensor4(SOT23)
+Added Component: Designator=Sensor5(SOT23)
+Added Component: Designator=Sensor?(Header 7P DC 2.54)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH004118"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 7P XH2.54-7P Ð?c Cong"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C0-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=Sensor1-2
+Added Pin To Net: NetName=GND Pin=Sensor2-2
+Added Pin To Net: NetName=GND Pin=Sensor3-2
+Added Pin To Net: NetName=GND Pin=Sensor4-2
+Added Pin To Net: NetName=GND Pin=Sensor5-2
+Added Pin To Net: NetName=GND Pin=Sensor?-7
+Added Net: Name=GND
+Added Pin To Net: NetName=NetSensor1_3 Pin=Sensor1-3
+Added Pin To Net: NetName=NetSensor1_3 Pin=Sensor?-5
+Added Net: Name=NetSensor1_3
+Added Pin To Net: NetName=NetSensor2_3 Pin=Sensor2-3
+Added Pin To Net: NetName=NetSensor2_3 Pin=Sensor?-4
+Added Net: Name=NetSensor2_3
+Added Pin To Net: NetName=NetSensor3_3 Pin=Sensor3-3
+Added Pin To Net: NetName=NetSensor3_3 Pin=Sensor?-3
+Added Net: Name=NetSensor3_3
+Added Pin To Net: NetName=NetSensor4_3 Pin=Sensor4-3
+Added Pin To Net: NetName=NetSensor4_3 Pin=Sensor?-2
+Added Net: Name=NetSensor4_3
+Added Pin To Net: NetName=NetSensor5_3 Pin=Sensor5-3
+Added Pin To Net: NetName=NetSensor5_3 Pin=Sensor?-1
+Added Net: Name=NetSensor5_3
+Added Pin To Net: NetName=VCC Pin=C0-2
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=VCC Pin=Sensor1-1
+Added Pin To Net: NetName=VCC Pin=Sensor2-1
+Added Pin To Net: NetName=VCC Pin=Sensor3-1
+Added Pin To Net: NetName=VCC Pin=Sensor4-1
+Added Pin To Net: NetName=VCC Pin=Sensor5-1
+Added Pin To Net: NetName=VCC Pin=Sensor?-6
+Added Net: Name=VCC
+Added Class: Name=Hall_Sensor_SMD_Sch
+Added Room: Name=Hall_Sensor_SMD_Sch

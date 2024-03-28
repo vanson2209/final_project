@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=U001-4
+Removed Pin From Net: NetName=VCC Pin=U001-11
+Change component parameters: Designator = "R005" ("R005"); Footprint = "RES-SM-0805"; UniqueID = "\JDVQKNMQ" ("\JDVQKNMQ")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R010" ("R010"); Footprint = "RES-SM-0805"; UniqueID = "\HTLHBEDL" ("\HTLHBEDL")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R015" ("R015"); Footprint = "RES-SM-0805"; UniqueID = "\DGIARBUG" ("\DGIARBUG")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R016" ("R016"); Footprint = "RES-SM-0805"; UniqueID = "\ILQEVDGL" ("\ILQEVDGL")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R017" ("R017"); Footprint = "RES-SM-0805"; UniqueID = "\XIAUZSZJ" ("\XIAUZSZJ")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=U001-4
+Added Pin To Net: NetName=GND Pin=U001-11
+Added Room: Name=Slave_Board_Sch

@@ -1,0 +1,11 @@
+Added Component: Designator=U?(SOT 23-3)
+Add component (AddParameter): Name = "Alternate Part Number-1"; Value = "NA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "SOT23-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "LM3480IM3-5.0/NOPB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number-1"; Value = "LM3480IM3-5.0/NOPB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier-1"; Value = "CATLOG COMPONENTS"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=U?-1
+Added Pin To Net: NetName=NetSensor?_5 Pin=U?-2
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component Sensor? Hall Sensor
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component U? LM3480

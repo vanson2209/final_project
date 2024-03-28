@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=C023-1
+Removed Pin From Net: NetName=VCC Pin=C023-2
+Removed Pin From Net: NetName=GND Pin=C025-1
+Removed Pin From Net: NetName=VCC Pin=C025-2
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C023
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C025
+Added Room: Name=Slave_Board_Sch

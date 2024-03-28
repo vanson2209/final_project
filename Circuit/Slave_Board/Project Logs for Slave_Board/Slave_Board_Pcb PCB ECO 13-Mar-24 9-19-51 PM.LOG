@@ -1,0 +1,282 @@
+Removed Pin From Net: NetName=GND Pin=C002-2
+Removed Pin From Net: NetName=GND Pin=C003-2
+Removed Pin From Net: NetName=GND Pin=C004-1
+Removed Pin From Net: NetName=GND Pin=C005-2
+Removed Pin From Net: NetName=IR_2 Pin=C006-1
+Removed Pin From Net: NetName=GND Pin=C006-2
+Removed Pin From Net: NetName=GND Pin=C007-1
+Removed Pin From Net: NetName=GND Pin=C008-2
+Removed Pin From Net: NetName=IR_1 Pin=C009-1
+Removed Pin From Net: NetName=GND Pin=C009-2
+Removed Pin From Net: NetName=GND Pin=C011-2
+Removed Pin From Net: NetName=VCC Pin=C012-1
+Removed Pin From Net: NetName=GND Pin=C012-2
+Removed Pin From Net: NetName=GND Pin=C015-1
+Removed Pin From Net: NetName=GND Pin=C018-2
+Removed Pin From Net: NetName=VCC Pin=C019-1
+Removed Pin From Net: NetName=GND Pin=C019-2
+Removed Pin From Net: NetName=VCC Pin=C020-1
+Removed Pin From Net: NetName=GND Pin=C020-2
+Removed Pin From Net: NetName=VCC Pin=C021-1
+Removed Pin From Net: NetName=GND Pin=C0021-2
+Removed Pin From Net: NetName=GND Pin=C021-2
+Removed Pin From Net: NetName=VCC Pin=C022-1
+Removed Pin From Net: NetName=GND Pin=C022-2
+Removed Pin From Net: NetName=GND Pin=C024-1
+Removed Pin From Net: NetName=VCC Pin=C024-2
+Removed Pin From Net: NetName=GND Pin=C0051-2
+Removed Pin From Net: NetName=GND Pin=C0081-2
+Removed Pin From Net: NetName=GND Pin=C0111-2
+Removed Pin From Net: NetName=NetC010_1 Pin=IC002-4
+Removed Pin From Net: NetName=GND Pin=LP001-2
+Removed Pin From Net: NetName=GND Pin=LP002-2
+Removed Pin From Net: NetName=GND Pin=LP003-2
+Removed Pin From Net: NetName=GND Pin=LT001-1
+Removed Pin From Net: NetName=GND Pin=LT002-1
+Removed Pin From Net: NetName=GND Pin=LT003-1
+Removed Pin From Net: NetName=GND Pin=R001-1
+Removed Pin From Net: NetName=VCC Pin=R002-2
+Removed Pin From Net: NetName=VCC Pin=R003-2
+Removed Pin From Net: NetName=VCC Pin=R004-2
+Removed Pin From Net: NetName=GND Pin=R005-1
+Removed Pin From Net: NetName=GND Pin=R006-1
+Removed Pin From Net: NetName=VCC Pin=R007-2
+Removed Pin From Net: NetName=VCC Pin=R008-2
+Removed Pin From Net: NetName=VCC Pin=R009-2
+Removed Pin From Net: NetName=GND Pin=R010-1
+Removed Pin From Net: NetName=IR_2 Pin=R010-2
+Removed Pin From Net: NetName=GND Pin=R011-1
+Removed Pin From Net: NetName=VCC Pin=R012-2
+Removed Pin From Net: NetName=VCC Pin=R013-2
+Removed Pin From Net: NetName=VCC Pin=R014-2
+Removed Pin From Net: NetName=GND Pin=R015-1
+Removed Pin From Net: NetName=IR_1 Pin=R015-2
+Removed Pin From Net: NetName=GND Pin=R017-1
+Removed Pin From Net: NetName=VCC Pin=U001-4
+Removed Pin From Net: NetName=IR_2 Pin=U001-7
+Removed Pin From Net: NetName=IR_1 Pin=U001-8
+Removed Pin From Net: NetName=GND Pin=U001-11
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C002
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C003
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C004
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C005
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C006
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C007
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C008
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C009
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C011
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C012
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C017
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C018
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C019
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C020
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C0021
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C021
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C022
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C024
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C0051
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C0081
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C0111
+Removed Member From Class: ClassName=Slave_Board_Sch Member=LP001
+Removed Member From Class: ClassName=Slave_Board_Sch Member=LP002
+Removed Member From Class: ClassName=Slave_Board_Sch Member=LP003
+Removed Member From Class: ClassName=Slave_Board_Sch Member=LT001
+Removed Member From Class: ClassName=Slave_Board_Sch Member=LT002
+Removed Member From Class: ClassName=Slave_Board_Sch Member=LT003
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R001
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R002
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R003
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R004
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R005
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R006
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R007
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R008
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R009
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R010
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R011
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R012
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R013
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R014
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R015
+Removed Member From Class: ClassName=Slave_Board_Sch Member=R017
+Removed Member From Class: ClassName=Slave_Board_Sch Member=U001
+Change Component Designator: OldDesignator=C017 NewDesignator=C015
+Change component parameters: Designator = "C010" ("C010"); Footprint = "CAP-SM-0805"; UniqueID = "\VAVMNZBZ" ("\VAVMNZBZ")
+Added Component: Designator=C00(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C01(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C02(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C03(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C04(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C05(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C07(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C08(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C09(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C12(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(SO8)
+Add component (AddParameter): Name = "Value"; Value = "LM358"; VariantName = "[No Variations]"
+Added Component: Designator=LP1(LED-5MM-WHITE)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH008983"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Led 5MM Tr?ng Ð?c (1000c)"; VariantName = "[No Variations]"
+Added Component: Designator=LP?(LED-5MM-WHITE)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH008983"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Led 5MM Tr?ng Ð?c (1000c)"; VariantName = "[No Variations]"
+Added Component: Designator=LT1(LED-5MM-WHITE)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH008983"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Led 5MM Tr?ng Ð?c (1000c)"; VariantName = "[No Variations]"
+Added Component: Designator=LT?(LED-5MM-WHITE)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH008983"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Led 5MM Tr?ng Ð?c (1000c)"; VariantName = "[No Variations]"
+Added Component: Designator=R00(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "3.9K"; VariantName = "[No Variations]"
+Added Component: Designator=R01(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Component: Designator=R02(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R03(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R04(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R05(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R06(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R07(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R08(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "3.9K"; VariantName = "[No Variations]"
+Added Component: Designator=R09(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C00-1
+Added Pin To Net: NetName=GND Pin=C01-2
+Added Pin To Net: NetName=GND Pin=C02-2
+Added Pin To Net: NetName=GND Pin=C03-2
+Added Pin To Net: NetName=GND Pin=C04-2
+Added Pin To Net: NetName=GND Pin=C05-2
+Added Pin To Net: NetName=GND Pin=C06-2
+Added Pin To Net: NetName=GND Pin=C07-2
+Added Pin To Net: NetName=GND Pin=C08-2
+Added Pin To Net: NetName=GND Pin=C09-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=GND Pin=IC1-4
+Added Pin To Net: NetName=NetC010_1 Pin=J001-01
+Added Pin To Net: NetName=GND Pin=LP1-2
+Added Pin To Net: NetName=GND Pin=LP?-2
+Added Pin To Net: NetName=GND Pin=LT1-1
+Added Pin To Net: NetName=GND Pin=LT?-1
+Added Pin To Net: NetName=GND Pin=R00-1
+Added Pin To Net: NetName=GND Pin=R04-1
+Added Pin To Net: NetName=GND Pin=R07-1
+Added Pin To Net: NetName=GND Pin=R08-1
+Change Net Name : Old Net Name=NetC010_1 New Net Name=IR
+Added Pin To Net: NetName=5V Pin=C01-1
+Added Pin To Net: NetName=5V Pin=C02-1
+Added Pin To Net: NetName=5V Pin=C03-1
+Added Pin To Net: NetName=5V Pin=C08-1
+Added Pin To Net: NetName=5V Pin=C09-1
+Added Pin To Net: NetName=5V Pin=IC1-8
+Added Pin To Net: NetName=5V Pin=R01-2
+Added Pin To Net: NetName=5V Pin=R02-2
+Added Pin To Net: NetName=5V Pin=R03-2
+Added Pin To Net: NetName=5V Pin=R05-2
+Added Pin To Net: NetName=5V Pin=R06-2
+Added Pin To Net: NetName=5V Pin=R09-2
+Added Net: Name=5V
+Added Pin To Net: NetName=IR_S1 Pin=C06-1
+Added Pin To Net: NetName=IR_S1 Pin=IC1-1
+Added Pin To Net: NetName=IR_S1 Pin=R04-2
+Added Net: Name=IR_S1
+Added Pin To Net: NetName=IR_S2 Pin=C12-1
+Added Pin To Net: NetName=IR_S2 Pin=IC1-7
+Added Pin To Net: NetName=IR_S2 Pin=R07-2
+Added Net: Name=IR_S2
+Added Pin To Net: NetName=NetC00_2 Pin=C00-2
+Added Pin To Net: NetName=NetC00_2 Pin=IC1-3
+Added Pin To Net: NetName=NetC00_2 Pin=R00-2
+Added Pin To Net: NetName=NetC00_2 Pin=R01-1
+Added Net: Name=NetC00_2
+Added Pin To Net: NetName=NetC04_1 Pin=C04-1
+Added Pin To Net: NetName=NetC04_1 Pin=C05-1
+Added Pin To Net: NetName=NetC04_1 Pin=IC1-2
+Added Pin To Net: NetName=NetC04_1 Pin=LT1-2
+Added Pin To Net: NetName=NetC04_1 Pin=R03-1
+Added Net: Name=NetC04_1
+Added Pin To Net: NetName=NetC07_1 Pin=C07-1
+Added Pin To Net: NetName=NetC07_1 Pin=IC1-5
+Added Pin To Net: NetName=NetC07_1 Pin=R08-2
+Added Pin To Net: NetName=NetC07_1 Pin=R09-1
+Added Net: Name=NetC07_1
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=C11-1
+Added Pin To Net: NetName=NetC10_1 Pin=IC1-6
+Added Pin To Net: NetName=NetC10_1 Pin=LT?-2
+Added Pin To Net: NetName=NetC10_1 Pin=R06-1
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetLP1_1 Pin=LP1-1
+Added Pin To Net: NetName=NetLP1_1 Pin=R02-1
+Added Net: Name=NetLP1_1
+Added Pin To Net: NetName=NetLP?_1 Pin=LP?-1
+Added Pin To Net: NetName=NetLP?_1 Pin=R05-1
+Added Net: Name=NetLP?_1
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C00 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C01 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C02 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C03 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C04 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C05 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C06 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C08 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C11 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C12 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component IC1 LM358
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LP1 LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LP? LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LT1 LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LT? LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R00 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R01 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R02 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R03 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R04 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R05 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R06 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R07 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R08 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R09 RESISTOR SMD
+Added Room: Name=Slave_Board_Sch

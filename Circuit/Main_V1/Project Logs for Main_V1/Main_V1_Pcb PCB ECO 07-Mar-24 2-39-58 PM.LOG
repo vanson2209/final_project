@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=3V3_C Pin=3V3_C-4
+Removed Pin From Net: NetName=3V3_P Pin=3V3_P-4
+Removed Pin From Net: NetName=AO1 Pin=U102-2
+Removed Pin From Net: NetName=AO2 Pin=U102-6
+Removed Pin From Net: NetName=BO2 Pin=U102-8
+Removed Pin From Net: NetName=BO1 Pin=U102-12
+Change Component Footprint: Designator=LED000 Old Footprint=LED-5mm New Footprint=LED_0805_Blue
+Added Room: Name=Control
+Added Room: Name=Power

@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=RF_O1 Pin=U100-15
+Removed Pin From Net: NetName=RF_O2 Pin=U100-16
+Removed Pin From Net: NetName=RF_O3 Pin=U100-17
+Removed Pin From Net: NetName=RF_O4 Pin=U100-18
+Added Pin To Net: NetName=RF_O4 Pin=U100-15
+Added Pin To Net: NetName=RF_O3 Pin=U100-16
+Added Pin To Net: NetName=RF_O2 Pin=U100-17
+Added Pin To Net: NetName=RF_O1 Pin=U100-18
+Added Room: Name=Control
+Added Room: Name=Power

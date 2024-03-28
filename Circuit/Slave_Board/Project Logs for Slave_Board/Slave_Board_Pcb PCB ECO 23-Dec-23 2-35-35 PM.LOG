@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=NetC002_1 Pin=LP001-1
+Removed Pin From Net: NetName=NetC005_1 Pin=LP002-1
+Removed Pin From Net: NetName=NetC008_1 Pin=LP003-1
+Removed Pin From Net: NetName=NetC002_1 Pin=R003-1
+Removed Pin From Net: NetName=NetC002_1 Pin=R004-1
+Removed Pin From Net: NetName=NetC005_1 Pin=R008-1
+Removed Pin From Net: NetName=NetC005_1 Pin=R009-1
+Removed Pin From Net: NetName=NetC008_1 Pin=R013-1
+Removed Pin From Net: NetName=NetC008_1 Pin=R014-1
+Added Pin To Net: NetName=NetLP001_1 Pin=LP001-1
+Added Pin To Net: NetName=NetLP001_1 Pin=R003-1
+Added Net: Name=NetLP001_1
+Added Pin To Net: NetName=NetLP002_1 Pin=LP002-1
+Added Pin To Net: NetName=NetLP002_1 Pin=R008-1
+Added Net: Name=NetLP002_1
+Added Pin To Net: NetName=NetLP003_1 Pin=LP003-1
+Added Pin To Net: NetName=NetLP003_1 Pin=R013-1
+Added Net: Name=NetLP003_1
+Added Room: Name=Slave_Board_Sch

@@ -1,0 +1,7 @@
+Added Component: Designator=U003(LCD&I2c)
+Added Pin To Net: NetName=GND Pin=U003-1
+Added Pin To Net: NetName=VCC Pin=U003-2
+Added Pin To Net: NetName=SDA Pin=U003-3
+Added Pin To Net: NetName=SCL Pin=U003-4
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component U003 16x02
+Added Room: Name=Slave_Board_Sch

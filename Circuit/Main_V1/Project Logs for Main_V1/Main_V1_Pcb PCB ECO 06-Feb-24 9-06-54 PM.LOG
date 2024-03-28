@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=3V3_C Pin=H100-2
+Removed Pin From Net: NetName=3V3_C Pin=H102-7
+Added Pin To Net: NetName=3V3_P Pin=H100-2
+Added Pin To Net: NetName=3V3_P Pin=H102-7
+Added Room: Name=Control

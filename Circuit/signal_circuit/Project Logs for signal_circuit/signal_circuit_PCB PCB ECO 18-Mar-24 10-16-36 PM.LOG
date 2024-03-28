@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=SS Pin=H0-1
+Removed Pin From Net: NetName=SCK Pin=H0-2
+Removed Pin From Net: NetName=MOSI Pin=H0-3
+Removed Pin From Net: NetName=MISO Pin=H0-4
+Removed Pin From Net: NetName=RST Pin=H0-5
+Removed Pin From Net: NetName=IR_S2 Pin=H0-6
+Removed Pin From Net: NetName=IR_S1 Pin=H0-7
+Removed Pin From Net: NetName=5V Pin=H0-8
+Removed Pin From Net: NetName=3V3 Pin=H0-9
+Removed Pin From Net: NetName=GND Pin=H0-10
+Added Pin To Net: NetName=GND Pin=H0-1
+Added Pin To Net: NetName=3V3 Pin=H0-2
+Added Pin To Net: NetName=5V Pin=H0-3
+Added Pin To Net: NetName=IR_S1 Pin=H0-4
+Added Pin To Net: NetName=IR_S2 Pin=H0-5
+Added Pin To Net: NetName=RST Pin=H0-6
+Added Pin To Net: NetName=MISO Pin=H0-7
+Added Pin To Net: NetName=MOSI Pin=H0-8
+Added Pin To Net: NetName=SCK Pin=H0-9
+Added Pin To Net: NetName=SS Pin=H0-10
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LT2 LED 5mm
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component U1 RFID
+Added Room: Name=signal_circuit_Sch

@@ -1,0 +1,9 @@
+Change Component Description : Designator=U100 Old Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7) New Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7)
+
+Added Component: Designator=C128(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C128-1
+Added Pin To Net: NetName=IR Pin=C128-2
+Added Member To Class: ClassName=Control Member=Component C128 Cap Non-Pol SMD
+Added Room: Name=Control
+Added Room: Name=Power

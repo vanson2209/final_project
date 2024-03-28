@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=AIN2 Pin=U100-31
+Removed Pin From Net: NetName=STBY Pin=U100-33
+Added Pin To Net: NetName=STBY Pin=U100-31
+Added Pin To Net: NetName=AIN2 Pin=U100-33
+Added Room: Name=Control
+Added Room: Name=Power

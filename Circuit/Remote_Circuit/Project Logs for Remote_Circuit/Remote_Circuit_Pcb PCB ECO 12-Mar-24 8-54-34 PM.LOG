@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=NetD1_1 Pin=R02-2
+Added Pin To Net: NetName=NetD2_1 Pin=R03-2
+Added Pin To Net: NetName=NetD3_1 Pin=R04-2
+Added Pin To Net: NetName=NetD1_1 Pin=SW1-4
+Added Pin To Net: NetName=NetD2_1 Pin=SW2-4
+Added Pin To Net: NetName=NetD3_1 Pin=SW3-1
+Added Room: Name=Remote_Circuit_Sch

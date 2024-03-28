@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=TX_E Pin=U103-3
+Change Component Designator: OldDesignator=R115 NewDesignator=R1151
+Added Component: Designator=R1152(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "470R"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TX_E Pin=R1152-1
+Change Net Name : Old Net Name=NetR115_2 New Net Name=NetR1151_2
+Added Pin To Net: NetName=NetR1152_2 Pin=R1152-2
+Added Pin To Net: NetName=NetR1152_2 Pin=U103-3
+Added Net: Name=NetR1152_2
+Added Member To Class: ClassName=Control Member=Component R1151 RESISTOR SMD
+Added Member To Class: ClassName=Control Member=Component R1152 RESISTOR SMD
+Added Room: Name=Control
+Added Room: Name=Power

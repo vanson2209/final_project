@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=C010 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C014 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C015 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C016 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=R016 Old Footprint=RES-SM-0805 New Footprint=RES-SM-0603
+Added Room: Name=Slave_Board_Sch

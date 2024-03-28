@@ -1,0 +1,27 @@
+Added Component: Designator=C123(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C124(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C125(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C126(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C127(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C123-1
+Added Pin To Net: NetName=SS1 Pin=C123-2
+Added Pin To Net: NetName=GND Pin=C124-1
+Added Pin To Net: NetName=SS2 Pin=C124-2
+Added Pin To Net: NetName=GND Pin=C125-1
+Added Pin To Net: NetName=SS3 Pin=C125-2
+Added Pin To Net: NetName=GND Pin=C126-1
+Added Pin To Net: NetName=SS4 Pin=C126-2
+Added Pin To Net: NetName=GND Pin=C127-1
+Added Pin To Net: NetName=SS5 Pin=C127-2
+Added Member To Class: ClassName=Control Member=Component C123 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C124 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C125 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C126 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C127 Cap Non-Pol SMD
+Added Room: Name=Control
+Added Room: Name=Power

@@ -1,0 +1,189 @@
+Removed Pin From Net: NetName=3V3_C Pin=3V3_C-4
+Removed Pin From Net: NetName=3V3_P Pin=3V3_P-4
+Removed Pin From Net: NetName=VDD_USB Pin=C111-2
+Removed Pin From Net: NetName=ADC Pin=C122-2
+Removed Pin From Net: NetName=SS3 Pin=C125-2
+Removed Pin From Net: NetName=SS4 Pin=C126-2
+Removed Pin From Net: NetName=IR Pin=C128-2
+Removed Pin From Net: NetName=GND Pin=H102-5
+Removed Pin From Net: NetName=RST Pin=H102-6
+Removed Pin From Net: NetName=3V3_P Pin=H102-7
+Removed Pin From Net: NetName=BO1 Pin=H103-1
+Removed Pin From Net: NetName=BO2 Pin=H103-2
+Removed Pin From Net: NetName=AO2 Pin=H103-3
+Removed Pin From Net: NetName=AO1 Pin=H103-4
+Removed Pin From Net: NetName=GND Pin=R102-1
+Removed Pin From Net: NetName=NetF000_1 Pin=SW_P-1
+Removed Pin From Net: NetName=NetPOWER_1 Pin=SW_P-2
+Removed Pin From Net: NetName=IR Pin=U100-18
+Removed Pin From Net: NetName=AO1 Pin=U102-1
+Removed Pin From Net: NetName=AO1 Pin=U102-2
+Removed Pin From Net: NetName=GND Pin=U102-3
+Removed Pin From Net: NetName=GND Pin=U102-4
+Removed Pin From Net: NetName=AO2 Pin=U102-5
+Removed Pin From Net: NetName=AO2 Pin=U102-6
+Removed Pin From Net: NetName=BO2 Pin=U102-7
+Removed Pin From Net: NetName=BO2 Pin=U102-8
+Removed Pin From Net: NetName=GND Pin=U102-9
+Removed Pin From Net: NetName=GND Pin=U102-10
+Removed Pin From Net: NetName=BO1 Pin=U102-11
+Removed Pin From Net: NetName=BO1 Pin=U102-12
+Removed Pin From Net: NetName=Vm Pin=U102-13
+Removed Pin From Net: NetName=Vm Pin=U102-14
+Removed Pin From Net: NetName=PWMB Pin=U102-15
+Removed Pin From Net: NetName=BIN2 Pin=U102-16
+Removed Pin From Net: NetName=BIN1 Pin=U102-17
+Removed Pin From Net: NetName=GND Pin=U102-18
+Removed Pin From Net: NetName=STBY Pin=U102-19
+Removed Pin From Net: NetName=3V3_P Pin=U102-20
+Removed Pin From Net: NetName=AIN1 Pin=U102-21
+Removed Pin From Net: NetName=AIN2 Pin=U102-22
+Removed Pin From Net: NetName=PWMA Pin=U102-23
+Removed Pin From Net: NetName=Vm Pin=U102-24
+Removed Pin From Net: NetName=VDD_USB Pin=U103-4
+Removed Pin From Net: NetName=VDD_USB Pin=U103-16
+Removed Member From Class: ClassName=Control Member=R102
+Removed Member From Class: ClassName=Control Member=U102
+Change Component Footprint: Designator=H102 Old Footprint=Header 7P DC 2.54 New Footprint=XH2.54M-10
+Change Component Footprint: Designator=H103 Old Footprint=JP 1x4 DT New Footprint=Header 7P DC 2.54
+Change Component Comment : Designator=H103 Old Comment=Motor New Comment=RF
+Change Component Comment : Designator=H102 Old Comment=RFID New Comment=RIGHT
+Change component parameters: Designator = "R116" ("R116"); Footprint = "RES-SM-0805"; UniqueID = "\RYSEMBIA" ("\RYSEMBIA")
+Change component parameters (AddParameter): Name = "Value"; Value = "30K/120K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "H102" ("H102"); Footprint = "Header 7P DC 2.54"; UniqueID = "\CSTURUVA" ("\CSTURUVA")
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH001286"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 10P XH2.54-10P Ð?c Th?ng"; VariantName = "[No Variations]"
+Change component parameters: Designator = "H103" ("H103"); Footprint = "JP 1x4 DT"; UniqueID = "\PFBXVDQP" ("\PFBXVDQP")
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH004118"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 7P XH2.54-7P Ð?c Cong"; VariantName = "[No Variations]"
+Added Component: Designator=C129(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C130(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C131(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C132(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C133(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C134(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C135(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=H104(JP 1x4 DT)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001310"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 4P XH2.54-4P Ð?c Cong"; VariantName = "[No Variations]"
+Added Component: Designator=U?(SOP65P760X160-24N)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/TB6612FNG,C,8,EL/Toshiba+Semiconductor+and+Storage/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Toshiba"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TB6612FNG,C,8,EL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SSOP-24 Toshiba"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/TB6612FNG,C,8,EL/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TB6612FNG,C,8,EL/Toshiba+Semiconductor+and+Storage/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3_C Pin=3V3_C-2
+Added Pin To Net: NetName=3V3_P Pin=3V3_P-2
+Added Pin To Net: NetName=5V Pin=C111-2
+Added Pin To Net: NetName=5V Pin=C122-2
+Added Pin To Net: NetName=SS4 Pin=C125-2
+Added Pin To Net: NetName=SS3 Pin=C126-2
+Added Pin To Net: NetName=5V Pin=C128-2
+Added Pin To Net: NetName=GND Pin=C129-1
+Added Pin To Net: NetName=GND Pin=C130-1
+Added Pin To Net: NetName=GND Pin=C131-1
+Added Pin To Net: NetName=GND Pin=C132-1
+Added Pin To Net: NetName=GND Pin=C133-1
+Added Pin To Net: NetName=GND Pin=C134-1
+Added Pin To Net: NetName=GND Pin=C135-1
+Added Pin To Net: NetName=RST Pin=H102-5
+Added Pin To Net: NetName=5V Pin=H102-8
+Added Pin To Net: NetName=3V3_P Pin=H102-9
+Added Pin To Net: NetName=GND Pin=H102-10
+Added Pin To Net: NetName=GND Pin=H103-1
+Added Pin To Net: NetName=5V Pin=H103-2
+Added Pin To Net: NetName=BO1 Pin=H104-1
+Added Pin To Net: NetName=BO2 Pin=H104-2
+Added Pin To Net: NetName=AO2 Pin=H104-3
+Added Pin To Net: NetName=AO1 Pin=H104-4
+Added Pin To Net: NetName=NetPOWER_1 Pin=SW_P-1
+Added Pin To Net: NetName=NetF000_1 Pin=SW_P-2
+Added Pin To Net: NetName=IR Pin=U100-20
+Added Pin To Net: NetName=5V Pin=U103-16
+Added Pin To Net: NetName=AO1 Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=AO2 Pin=U?-5
+Added Pin To Net: NetName=BO2 Pin=U?-7
+Added Pin To Net: NetName=GND Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-10
+Added Pin To Net: NetName=BO1 Pin=U?-11
+Added Pin To Net: NetName=Vm Pin=U?-13
+Added Pin To Net: NetName=Vm Pin=U?-14
+Added Pin To Net: NetName=PWMB Pin=U?-15
+Added Pin To Net: NetName=BIN2 Pin=U?-16
+Added Pin To Net: NetName=BIN1 Pin=U?-17
+Added Pin To Net: NetName=GND Pin=U?-18
+Added Pin To Net: NetName=STBY Pin=U?-19
+Added Pin To Net: NetName=3V3_P Pin=U?-20
+Added Pin To Net: NetName=AIN1 Pin=U?-21
+Added Pin To Net: NetName=AIN2 Pin=U?-22
+Added Pin To Net: NetName=PWMA Pin=U?-23
+Added Pin To Net: NetName=Vm Pin=U?-24
+Change Net Name : Old Net Name=ADC New Net Name=ENERGY
+Added Pin To Net: NetName=IR_S1 Pin=C129-2
+Added Pin To Net: NetName=IR_S1 Pin=H102-6
+Added Pin To Net: NetName=IR_S1 Pin=U100-46
+Added Net: Name=IR_S1
+Added Pin To Net: NetName=IR_S2 Pin=C130-2
+Added Pin To Net: NetName=IR_S2 Pin=H102-7
+Added Pin To Net: NetName=IR_S2 Pin=U100-45
+Added Net: Name=IR_S2
+Added Pin To Net: NetName=RF_O1 Pin=C133-2
+Added Pin To Net: NetName=RF_O1 Pin=H103-3
+Added Pin To Net: NetName=RF_O1 Pin=U100-15
+Added Net: Name=RF_O1
+Added Pin To Net: NetName=RF_O2 Pin=C131-2
+Added Pin To Net: NetName=RF_O2 Pin=H103-4
+Added Pin To Net: NetName=RF_O2 Pin=U100-16
+Added Net: Name=RF_O2
+Added Pin To Net: NetName=RF_O3 Pin=C132-2
+Added Pin To Net: NetName=RF_O3 Pin=H103-5
+Added Pin To Net: NetName=RF_O3 Pin=U100-17
+Added Net: Name=RF_O3
+Added Pin To Net: NetName=RF_O4 Pin=C134-2
+Added Pin To Net: NetName=RF_O4 Pin=H103-6
+Added Pin To Net: NetName=RF_O4 Pin=U100-18
+Added Net: Name=RF_O4
+Added Pin To Net: NetName=RF_O5 Pin=H103-7
+Added Pin To Net: NetName=RF_O5 Pin=U100-19
+Added Net: Name=RF_O5
+Added Pin To Net: NetName=V3 Pin=C135-2
+Added Pin To Net: NetName=V3 Pin=U103-4
+Added Net: Name=V3
+Added Member To Class: ClassName=Control Member=Component C129 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C130 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C131 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C132 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C133 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C134 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C135 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component H104 Motor
+Added Member To Class: ClassName=Control Member=Component U101 ESP8266 12
+Added Member To Class: ClassName=Control Member=Component U? TB6612FNG,C,8,EL
+Added Member To Class: ClassName=Control Member=Component USB100 USB Micro 5p SMD
+Added Room: Name=Control
+Added Room: Name=Power

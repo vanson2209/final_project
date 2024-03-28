@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND Pin=C115-1
+Removed Pin From Net: NetName=Vm Pin=C115-2
+Removed Member From Class: ClassName=Control Member=C115
+Change Component Footprint: Designator=H103 Old Footprint=Header 4P DC 2.54 New Footprint=JP 1x4 DT
+Added Room: Name=Control
+Added Room: Name=Power

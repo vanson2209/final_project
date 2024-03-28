@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=ADC Pin=U101-2
+Added Member To Class: ClassName=Control Member=Component C112 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component U102 TB6612FNG,C,8,EL
+Added Room: Name=Control
+Added Room: Name=Power

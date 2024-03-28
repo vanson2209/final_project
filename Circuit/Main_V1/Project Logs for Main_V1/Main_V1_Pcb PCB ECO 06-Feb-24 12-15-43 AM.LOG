@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=C105 Old Footprint=CAP-SM-0603 New Footprint=CAP-SM-0805
+Change Component Footprint: Designator=C106 Old Footprint=CAP-SM-0603 New Footprint=CAP-SM-0805
+Added Room: Name=Control
+Added Room: Name=Power

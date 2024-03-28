@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=NetC11_1 Pin=Sensor?-1
+Removed Pin From Net: NetName=NetC9_1 Pin=Sensor?-2
+Removed Pin From Net: NetName=NetC7_1 Pin=Sensor?-3
+Removed Pin From Net: NetName=NetC3_1 Pin=Sensor?-5
+Removed Pin From Net: NetName=VCC Pin=Sensor?-6
+Removed Pin From Net: NetName=GND Pin=Sensor?-7
+Added Pin To Net: NetName=GND Pin=Sensor?-1
+Added Pin To Net: NetName=VCC Pin=Sensor?-2
+Added Pin To Net: NetName=NetC3_1 Pin=Sensor?-3
+Added Pin To Net: NetName=NetC7_1 Pin=Sensor?-5
+Added Pin To Net: NetName=NetC9_1 Pin=Sensor?-6
+Added Pin To Net: NetName=NetC11_1 Pin=Sensor?-7
+Added Room: Name=Hall_Sensor_SMD_Sch

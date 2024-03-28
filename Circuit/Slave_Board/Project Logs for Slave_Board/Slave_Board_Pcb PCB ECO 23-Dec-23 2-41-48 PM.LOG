@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetC002_1 Pin=R004-1
+Added Pin To Net: NetName=NetC005_1 Pin=R009-1
+Added Pin To Net: NetName=NetC008_1 Pin=R014-1
+Added Room: Name=Slave_Board_Sch

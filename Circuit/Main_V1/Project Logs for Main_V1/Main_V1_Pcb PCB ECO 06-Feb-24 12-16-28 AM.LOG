@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=U? NewDesignator=U103
+Change Component Designator: OldDesignator=USB? NewDesignator=USB100
+Added Room: Name=Control
+Added Room: Name=Power

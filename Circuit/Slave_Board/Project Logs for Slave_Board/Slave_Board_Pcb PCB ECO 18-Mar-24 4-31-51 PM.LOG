@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=IR_S2 Pin=C015-1
+Removed Pin From Net: NetName=GND Pin=C015-2
+Removed Pin From Net: NetName=IR_S1 Pin=C016-1
+Removed Pin From Net: NetName=GND Pin=C016-2
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C015
+Removed Member From Class: ClassName=Slave_Board_Sch Member=C016
+Added Room: Name=Slave_Board_Sch

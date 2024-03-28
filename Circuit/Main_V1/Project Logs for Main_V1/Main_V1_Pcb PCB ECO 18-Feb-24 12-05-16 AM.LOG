@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=3V3_C Pin=3V3_C-4
+Removed Pin From Net: NetName=3V3_P Pin=3V3_P-4
+Removed Pin From Net: NetName=GND Pin=C1091-1
+Removed Pin From Net: NetName=3V3_C Pin=R110-2
+Removed Pin From Net: NetName=GPIO0 Pin=R111-2
+Removed Pin From Net: NetName=nRST Pin=R112-1
+Removed Pin From Net: NetName=NetF000_1 Pin=SW_P-1
+Removed Pin From Net: NetName=NetPOWER_1 Pin=SW_P-2
+Removed Pin From Net: NetName=AO1 Pin=U102-2
+Removed Pin From Net: NetName=AO2 Pin=U102-6
+Removed Pin From Net: NetName=BO2 Pin=U102-8
+Removed Pin From Net: NetName=BO1 Pin=U102-12
+Removed Member From Class: ClassName=Control Member=C1091
+Removed Member From Class: ClassName=Control Member=LED101
+Removed Member From Class: ClassName=Control Member=R110
+Removed Member From Class: ClassName=Control Member=R112
+Removed Member From Class: ClassName=Control Member=R1121
+Change component parameters: Designator = "R111" ("R111"); Footprint = "RES-SM-0805"; UniqueID = "\TFPUZWDN" ("\TFPUZWDN")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3_C Pin=3V3_C-2
+Added Pin To Net: NetName=3V3_P Pin=3V3_P-2
+Added Pin To Net: NetName=GPIO0 Pin=FLASH-2
+Added Pin To Net: NetName=TX_E Pin=R103-2
+Added Pin To Net: NetName=RX_E Pin=R104-2
+Added Pin To Net: NetName=GND Pin=R111-1
+Added Pin To Net: NetName=nRST Pin=RST_E-2
+Added Pin To Net: NetName=NetPOWER_1 Pin=SW_P-1
+Added Pin To Net: NetName=NetF000_1 Pin=SW_P-2
+Added Pin To Net: NetName=GPIO15 Pin=R111-2
+Added Pin To Net: NetName=GPIO15 Pin=U101-16
+Added Net: Name=GPIO15
+Added Room: Name=Control
+Added Room: Name=Power

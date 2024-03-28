@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=S100 NewDesignator=RST_S
+Change Component Designator: OldDesignator=S101 NewDesignator=FLASH
+Change Component Designator: OldDesignator=S102 NewDesignator=RST_E
+Change Net Name : Old Net Name=NetR111_1 New Net Name=NetFLASH_2
+Added Room: Name=Control
+Added Room: Name=Power

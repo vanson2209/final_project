@@ -1,0 +1,44 @@
+Added Component: Designator=C0(tu 0805)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH004761"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? g?m 104 100nF 50V"; VariantName = "[No Variations]"
+Added Component: Designator=C1(tu hoa 6.5mm)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001347"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? Hóa 100uF 16V 5x7MM"; VariantName = "[No Variations]"
+Added Component: Designator=H1(LO KHOAN 3MM)
+Added Component: Designator=H2(LO KHOAN 3MM)
+Added Component: Designator=H3(LO KHOAN 3MM)
+Added Component: Designator=H4(LO KHOAN 3MM)
+Added Component: Designator=Sensor?(Header 7P DC 2.54)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH004118"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 7P XH2.54-7P Ð?c Cong"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C0-1
+Added Pin To Net: NetName=VCC Pin=C0-2
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=NetSensor?_1 Pin=Sensor?-1
+Added Pin To Net: NetName=NetSensor?_2 Pin=Sensor?-2
+Added Pin To Net: NetName=NetSensor?_3 Pin=Sensor?-3
+Added Pin To Net: NetName=NetSensor?_4 Pin=Sensor?-4
+Added Pin To Net: NetName=NetSensor?_5 Pin=Sensor?-5
+Added Pin To Net: NetName=VCC Pin=Sensor?-6
+Added Pin To Net: NetName=GND Pin=Sensor?-7
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component C0 104
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component C1 100uF
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component H1 Hole
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component H2 Hole
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component H3 Hole
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component H4 Hole
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component Sensor? Sensor
+Added Room: Name=Hall_Sensor_SMD_Sch

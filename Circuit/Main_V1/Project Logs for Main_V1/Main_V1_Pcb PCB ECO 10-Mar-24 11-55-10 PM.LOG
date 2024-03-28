@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=3V3_C Pin=3V3_C-4
+Removed Pin From Net: NetName=3V3_P Pin=3V3_P-4
+Removed Pin From Net: NetName=GND Pin=C138-1
+Removed Pin From Net: NetName=5V Pin=C138-2
+Removed Pin From Net: NetName=RF_O1 Pin=H103-1
+Removed Pin From Net: NetName=RF_O2 Pin=H103-2
+Removed Pin From Net: NetName=RF_O3 Pin=H103-3
+Removed Pin From Net: NetName=RF_O4 Pin=H103-4
+Removed Pin From Net: NetName=RF_O5 Pin=H103-5
+Removed Pin From Net: NetName=5V Pin=H103-6
+Removed Pin From Net: NetName=GND Pin=H103-7
+Removed Pin From Net: NetName=AO1 Pin=U102-2
+Removed Pin From Net: NetName=AO2 Pin=U102-6
+Removed Pin From Net: NetName=BO2 Pin=U102-8
+Removed Pin From Net: NetName=BO1 Pin=U102-12
+Removed Member From Class: ClassName=Control Member=C138
+Removed Member From Class: ClassName=Control Member=H103
+Added Room: Name=Control
+Added Room: Name=Power

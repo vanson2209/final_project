@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VCC Pin=C1-1
+Removed Pin From Net: NetName=GND Pin=C1-2
+Removed Member From Class: ClassName=Hall_Sensor_SMD_Sch Member=C1
+Added Component: Designator=C?(CP1/2.5)
+Add component (AddParameter): Name = "Value"; Value = "100pF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=C?-1
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Member To Class: ClassName=Hall_Sensor_SMD_Sch Member=Component C? Cap Pol
+Added Room: Name=Hall_Sensor_SMD_Sch

@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=TX_E Pin=R115-1
+Removed Pin From Net: NetName=NetR115_2 Pin=R115-2
+Removed Pin From Net: NetName=RX_E Pin=U103-2
+Removed Pin From Net: NetName=NetR115_2 Pin=U103-3
+Added Component: Designator=R115(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "470R"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=RX_E Pin=R115-1
+Added Pin To Net: NetName=NetR115_2 Pin=R115-2
+Added Pin To Net: NetName=NetR115_2 Pin=U103-2
+Added Pin To Net: NetName=TX_E Pin=U103-3
+Added Room: Name=Control
+Added Room: Name=Power

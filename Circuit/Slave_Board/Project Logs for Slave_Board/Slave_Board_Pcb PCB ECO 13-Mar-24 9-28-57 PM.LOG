@@ -1,0 +1,88 @@
+Change Component Designator: OldDesignator=LP? NewDesignator=LP2
+Change Component Designator: OldDesignator=LT? NewDesignator=LT2
+Added Component: Designator=C010(CAP-SM-0805)
+Added Component: Designator=C013(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C014(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C015(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C016(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=IC2(SO14)
+Added Component: Designator=J001(SAMTEC_T1M-05-T-SH-L)
+Add component (AddParameter): Name = "Availability"; Value = "Bad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/T1M-05-T-SH-L-K/Samtec/view-part/3307825/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T1M-05-T-SH-L-K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T1M-05-T-SH-L-K/Samtec/view-part/3307825/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R016(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=U003(LCD&I2c)
+Added Pin To Net: NetName=IR Pin=C010-1
+Added Pin To Net: NetName=GND Pin=C010-2
+Added Pin To Net: NetName=VCC Pin=C013-1
+Added Pin To Net: NetName=GND Pin=C013-2
+Added Pin To Net: NetName=VCC Pin=C014-1
+Added Pin To Net: NetName=GND Pin=C014-2
+Added Pin To Net: NetName=IR_2 Pin=C015-1
+Added Pin To Net: NetName=GND Pin=C015-2
+Added Pin To Net: NetName=IR_1 Pin=C016-1
+Added Pin To Net: NetName=GND Pin=C016-2
+Added Pin To Net: NetName=IR_1 Pin=IC2-1
+Added Pin To Net: NetName=IR_2 Pin=IC2-2
+Added Pin To Net: NetName=IR Pin=IC2-3
+Added Pin To Net: NetName=GND Pin=IC2-7
+Added Pin To Net: NetName=VCC Pin=IC2-14
+Added Pin To Net: NetName=IR Pin=J001-01
+Added Pin To Net: NetName=SDA Pin=J001-02
+Added Pin To Net: NetName=SCL Pin=J001-03
+Added Pin To Net: NetName=VCC Pin=J001-04
+Added Pin To Net: NetName=GND Pin=J001-05
+Added Pin To Net: NetName=GND Pin=R016-1
+Added Pin To Net: NetName=IR Pin=R016-2
+Added Pin To Net: NetName=GND Pin=U003-1
+Added Pin To Net: NetName=VCC Pin=U003-2
+Added Pin To Net: NetName=SDA Pin=U003-3
+Added Pin To Net: NetName=SCL Pin=U003-4
+Change Net Name : Old Net Name=NetLP?_1 New Net Name=NetLP2_1
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C00 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C01 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C02 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C03 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C04 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C05 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C06 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C08 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C010 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C11 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C12 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C013 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C014 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C015 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C016 Cap Non-Pol SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component IC1 LM358
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component IC2 7432
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component J001 T1M-05-T-SH-L
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LP1 LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LP2 LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LT1 LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component LT2 LED 5mm
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R00 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R01 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R02 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R03 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R04 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R05 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R06 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R07 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R08 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R09 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component R016 RESISTOR SMD
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component U003 16x02

@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=C125 NewDesignator=C126
+Change Component Designator: OldDesignator=C126 NewDesignator=C125
+Added Room: Name=Control
+Added Room: Name=Power

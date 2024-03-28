@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=AO1 Pin=U102-2
+Removed Pin From Net: NetName=AO2 Pin=U102-6
+Removed Pin From Net: NetName=BO2 Pin=U102-8
+Removed Pin From Net: NetName=BO1 Pin=U102-12
+Change Component Designator: OldDesignator=C? NewDesignator=C000
+Change Component Description : Designator=U100 Old Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7) New Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7)
+
+Added Room: Name=Control
+Added Room: Name=Power

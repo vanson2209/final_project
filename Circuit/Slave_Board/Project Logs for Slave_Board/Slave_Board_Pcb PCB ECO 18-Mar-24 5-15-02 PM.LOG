@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=IR Pin=J001-01
+Removed Pin From Net: NetName=SDA Pin=J001-02
+Removed Pin From Net: NetName=SCL Pin=J001-03
+Removed Pin From Net: NetName=VCC Pin=J001-04
+Removed Pin From Net: NetName=GND Pin=J001-05
+Change Component Footprint: Designator=J001 Old Footprint=SAMTEC_T1M-05-T-SH-L New Footprint=XH2.54M-5
+Change Component Comment : Designator=J001 Old Comment=T1M-05-T-SH-L New Comment=Header 5P 2.54 Duc Thang
+Change component parameters: Designator = "J001" ("J001"); Footprint = "SAMTEC_T1M-05-T-SH-L"; UniqueID = "\OHHVWSAA" ("\OHHVWSAA")
+Change component parameters (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ma_Hang"; Value = "MH001298"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 5P XH2.54-5P Ð?c Th?ng"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=IR Pin=J001-1
+Added Pin To Net: NetName=SDA Pin=J001-2
+Added Pin To Net: NetName=SCL Pin=J001-3
+Added Pin To Net: NetName=VCC Pin=J001-4
+Added Pin To Net: NetName=GND Pin=J001-5
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component J001 Header 5P 2.54 Duc Thang
+Added Room: Name=Slave_Board_Sch

@@ -1,0 +1,62 @@
+Removed Pin From Net: NetName=3V3_C Pin=3V3_C-4
+Removed Pin From Net: NetName=3V3_P Pin=3V3_P-4
+Removed Pin From Net: NetName=AO1 Pin=U102-2
+Removed Pin From Net: NetName=AO2 Pin=U102-6
+Removed Pin From Net: NetName=BO2 Pin=U102-8
+Removed Pin From Net: NetName=BO1 Pin=U102-12
+Change Component Description : Designator=U100 Old Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7) New Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7)
+
+Added Component: Designator=C137(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C138(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=IC100(DIP18)
+Added Component: Designator=IC101(RF315-RECEIVE-NOIC)
+Add component (AddParameter): Name = "ComponentLink1 Description"; Value = "Manufacturer"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2 Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.de/em/datasheet/6130xx143121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Created by"; Value = "Karrer Zheng"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Created Date"; Value = "29 March 2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "W¨¹rth Elektronik eiSos GmbH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "NoPins"; Value = "04"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "partNo"; Value = "613004143121"; VariantName = "[No Variations]"
+Added Component: Designator=R118(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "680K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3_C Pin=3V3_C-2
+Added Pin To Net: NetName=GND Pin=C137-1
+Added Pin To Net: NetName=5V Pin=C137-2
+Added Pin To Net: NetName=GND Pin=C138-1
+Added Pin To Net: NetName=5V Pin=C138-2
+Added Pin To Net: NetName=GND Pin=IC100-2
+Added Pin To Net: NetName=GND Pin=IC100-3
+Added Pin To Net: NetName=GND Pin=IC100-4
+Added Pin To Net: NetName=GND Pin=IC100-5
+Added Pin To Net: NetName=GND Pin=IC100-6
+Added Pin To Net: NetName=GND Pin=IC100-7
+Added Pin To Net: NetName=RF_O5 Pin=IC100-8
+Added Pin To Net: NetName=GND Pin=IC100-9
+Added Pin To Net: NetName=RF_O4 Pin=IC100-10
+Added Pin To Net: NetName=RF_O3 Pin=IC100-11
+Added Pin To Net: NetName=RF_O2 Pin=IC100-12
+Added Pin To Net: NetName=RF_O1 Pin=IC100-13
+Added Pin To Net: NetName=5V Pin=IC100-18
+Added Pin To Net: NetName=5V Pin=IC101-1
+Added Pin To Net: NetName=GND Pin=IC101-4
+Added Pin To Net: NetName=DATA Pin=IC100-14
+Added Pin To Net: NetName=DATA Pin=IC101-2
+Added Pin To Net: NetName=DATA Pin=IC101-3
+Added Net: Name=DATA
+Added Pin To Net: NetName=NetIC100_15 Pin=IC100-15
+Added Pin To Net: NetName=NetIC100_15 Pin=R118-1
+Added Net: Name=NetIC100_15
+Added Pin To Net: NetName=NetIC100_16 Pin=IC100-16
+Added Pin To Net: NetName=NetIC100_16 Pin=R118-2
+Added Net: Name=NetIC100_16
+Added Member To Class: ClassName=Control Member=Component C137 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component C138 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component IC100 PT2272
+Added Member To Class: ClassName=Control Member=Component IC101 RF315-RECEIVE-NOIC
+Added Member To Class: ClassName=Control Member=Component R118 RESISTOR SMD
+Added Room: Name=Control
+Added Room: Name=Power

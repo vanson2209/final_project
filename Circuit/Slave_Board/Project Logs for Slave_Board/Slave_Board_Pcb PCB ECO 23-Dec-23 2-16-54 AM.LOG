@@ -1,0 +1,15 @@
+Added Component: Designator=J001(SAMTEC_T1M-05-T-SH-L)
+Add component (AddParameter): Name = "Availability"; Value = "Bad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/T1M-05-T-SH-L-K/Samtec/view-part/3307825/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T1M-05-T-SH-L-K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T1M-05-T-SH-L-K/Samtec/view-part/3307825/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J001-01
+Added Pin To Net: NetName=VCC Pin=J001-02
+Added Pin To Net: NetName=SCL Pin=J001-03
+Added Pin To Net: NetName=SDA Pin=J001-04
+Added Pin To Net: NetName=IR Pin=J001-05
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component J001 T1M-05-T-SH-L

@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=GPIO16 Pin=S102-2
+Change Component Description : Designator=U100 Old Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7) New Description=ARM® Cortex®-M3 STM32F1 Microcontroller IC 32-Bit 72MHz 64KB (64K x 8) FLASH 48-LQFP (7x7)
+
+Added Component: Designator=C1091(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=R1121(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "470R"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C1091-1
+Added Pin To Net: NetName=GPIO16 Pin=C1091-2
+Added Pin To Net: NetName=GPIO16 Pin=R1121-2
+Added Pin To Net: NetName=NetR1121_1 Pin=R1121-1
+Added Pin To Net: NetName=NetR1121_1 Pin=S102-2
+Added Net: Name=NetR1121_1
+Added Member To Class: ClassName=Control Member=Component C1091 Cap Non-Pol SMD
+Added Member To Class: ClassName=Control Member=Component R1121 RESISTOR SMD
+Added Room: Name=Control
+Added Room: Name=Power

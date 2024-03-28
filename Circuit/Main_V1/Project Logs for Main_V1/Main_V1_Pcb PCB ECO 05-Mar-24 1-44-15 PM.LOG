@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=IR_S1 Pin=H102-6
+Removed Pin From Net: NetName=IR_S2 Pin=H102-7
+Added Pin To Net: NetName=IR_S2 Pin=H102-6
+Added Pin To Net: NetName=IR_S1 Pin=H102-7
+Added Room: Name=Control

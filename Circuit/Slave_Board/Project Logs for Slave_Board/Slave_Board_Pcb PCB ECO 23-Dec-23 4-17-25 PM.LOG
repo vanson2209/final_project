@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=IR_1 Pin=C016-1
+Removed Pin From Net: NetName=IR_3 Pin=C018-1
+Removed Pin From Net: NetName=IR_1 Pin=IC002-1
+Removed Pin From Net: NetName=IR_3 Pin=IC002-5
+Added Pin To Net: NetName=IR_3 Pin=C016-1
+Added Pin To Net: NetName=IR_1 Pin=C018-1
+Added Pin To Net: NetName=IR_3 Pin=IC002-1
+Added Pin To Net: NetName=IR_1 Pin=IC002-5
+Change Net Name : Old Net Name=IR_1 New Net Name=IR_3
+Change Net Name : Old Net Name=IR_3 New Net Name=IR_1
+Added Room: Name=Slave_Board_Sch

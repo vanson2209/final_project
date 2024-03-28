@@ -1,0 +1,7 @@
+Added Component: Designator=C015(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C015-1
+Added Pin To Net: NetName=NetR001_2 Pin=C015-2
+Change Net Name : Old Net Name=NetR001_2 New Net Name=NetC015_2
+Added Member To Class: ClassName=Slave_Board_Sch Member=Component C015 Cap Non-Pol SMD
+Added Room: Name=Slave_Board_Sch
