@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>1381</LineNumber>
+          <LineNumber>1390</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134231126</Address>
+          <Address>134231288</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,14 +163,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AGV\../Core/Src/main.c\1381</Expression>
+          <Expression>\\AGV\../Core/Src/main.c\1390</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>1094</LineNumber>
+          <LineNumber>1523</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134230874</Address>
+          <Address>134230620</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -179,14 +179,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AGV\../Core/Src/main.c\1094</Expression>
+          <Expression>\\AGV\../Core/Src/main.c\1523</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>343</LineNumber>
+          <LineNumber>1560</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134233396</Address>
+          <Address>134231736</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -195,7 +195,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AGV\../Core/Src/main.c\343</Expression>
+          <Expression>\\AGV\../Core/Src/main.c\1560</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -207,51 +207,34 @@
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>robot</ItemText>
+          <ItemText>agv_infor</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>agv_infor</ItemText>
+          <ItemText>ship_state</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ship_state</ItemText>
+          <ItemText>state_go</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>state_go</ItemText>
+          <ItemText>goods_infor,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>goods_infor,0x0A</ItemText>
+          <ItemText>process_state</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>val1,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>7</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>val2,0x0A</ItemText>
-        </Ww>
-        <Ww>
-          <count>8</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>process_state</ItemText>
+          <ItemText>distance_tmp,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
-      <WatchWindow2>
-        <Ww>
-          <count>0</count>
-          <WinNumber>2</WinNumber>
-          <ItemText>val2</ItemText>
-        </Ww>
-      </WatchWindow2>
       <MemoryWindow1>
         <Mm>
           <WinNumber>1</WinNumber>
