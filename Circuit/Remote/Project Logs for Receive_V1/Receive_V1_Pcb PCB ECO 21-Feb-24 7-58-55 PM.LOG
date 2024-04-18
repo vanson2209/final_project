@@ -1,0 +1,18 @@
+Change Component Footprint: Designator=P0 Old Footprint=JP4 New Footprint=JP6H
+Change Component Comment : Designator=P0 Old Comment=Header 4 New Comment=Header 6H
+Added Pin To Net: NetName=GND Pin=P0-1
+Added Pin To Net: NetName=VCC Pin=P0-2
+Added Pin To Net: NetName=D0 Pin=IC0-13
+Added Pin To Net: NetName=D0 Pin=P0-3
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=IC0-12
+Added Pin To Net: NetName=D1 Pin=P0-4
+Added Net: Name=D1
+Added Pin To Net: NetName=D2 Pin=IC0-11
+Added Pin To Net: NetName=D2 Pin=P0-5
+Added Net: Name=D2
+Added Pin To Net: NetName=D3 Pin=IC0-10
+Added Pin To Net: NetName=D3 Pin=P0-6
+Added Net: Name=D3
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component P0 Header 6H
+Added Room: Name=Receive_V1_Sch

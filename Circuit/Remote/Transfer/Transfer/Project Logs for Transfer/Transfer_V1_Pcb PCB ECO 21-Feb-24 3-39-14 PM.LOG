@@ -1,0 +1,144 @@
+Added Component: Designator=12V(JP2)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=ANT(TP)
+Added Component: Designator=C00(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "5pF"; VariantName = "[No Variations]"
+Added Component: Designator=C1(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "15pF"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "15pF"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=D00(LED_0805_Blue)
+Added Component: Designator=IC1(SO18)
+Added Component: Designator=L1(RES-1/2W)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(QTO-92)
+Added Component: Designator=Q2(SOT23B)
+Added Component: Designator=Q3(SOT23B)
+Added Component: Designator=R00(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "27K"; VariantName = "[No Variations]"
+Added Component: Designator=R01(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "27K"; VariantName = "[No Variations]"
+Added Component: Designator=R02(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R03(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R04(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R05(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R06(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R07(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "4.7M"; VariantName = "[No Variations]"
+Added Component: Designator=R315(BXR315A)
+Added Component: Designator=SW0(SW2-SMD)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(SW2-SMD)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW3(SW2-SMD)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW?(SW2-SMD)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DATA Pin=IC1-17
+Added Pin To Net: NetName=DATA Pin=R01-2
+Added Net: Name=DATA
+Added Pin To Net: NetName=GND Pin=12V-1
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=IC1-9
+Added Pin To Net: NetName=GND Pin=Q2-1
+Added Pin To Net: NetName=GND Pin=R03-1
+Added Pin To Net: NetName=GND Pin=R04-1
+Added Pin To Net: NetName=GND Pin=R05-1
+Added Pin To Net: NetName=GND Pin=R06-1
+Added Net: Name=GND
+Added Pin To Net: NetName=Net12V_2 Pin=12V-2
+Added Pin To Net: NetName=Net12V_2 Pin=C00-1
+Added Pin To Net: NetName=Net12V_2 Pin=C1-1
+Added Pin To Net: NetName=Net12V_2 Pin=D00-1
+Added Pin To Net: NetName=Net12V_2 Pin=L1-1
+Added Pin To Net: NetName=Net12V_2 Pin=R00-2
+Added Pin To Net: NetName=Net12V_2 Pin=R315-1
+Added Net: Name=Net12V_2
+Added Pin To Net: NetName=NetANT_TP1 Pin=ANT-TP1
+Added Pin To Net: NetName=NetANT_TP1 Pin=C2-2
+Added Net: Name=NetANT_TP1
+Added Pin To Net: NetName=NetC00_2 Pin=C00-2
+Added Pin To Net: NetName=NetC00_2 Pin=Q2-2
+Added Pin To Net: NetName=NetC00_2 Pin=Q3-1
+Added Pin To Net: NetName=NetC00_2 Pin=R315-2
+Added Net: Name=NetC00_2
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=C2-1
+Added Pin To Net: NetName=NetC1_2 Pin=L1-2
+Added Pin To Net: NetName=NetC1_2 Pin=Q3-2
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetD00_2 Pin=D00-2
+Added Pin To Net: NetName=NetD00_2 Pin=Q1-1
+Added Pin To Net: NetName=NetD00_2 Pin=R02-1
+Added Net: Name=NetD00_2
+Added Pin To Net: NetName=NetIC1_15 Pin=IC1-15
+Added Pin To Net: NetName=NetIC1_15 Pin=R07-2
+Added Net: Name=NetIC1_15
+Added Pin To Net: NetName=NetIC1_16 Pin=IC1-16
+Added Pin To Net: NetName=NetIC1_16 Pin=R07-1
+Added Net: Name=NetIC1_16
+Added Pin To Net: NetName=NetQ2_3 Pin=Q2-3
+Added Pin To Net: NetName=NetQ2_3 Pin=R01-1
+Added Net: Name=NetQ2_3
+Added Pin To Net: NetName=NetQ3_3 Pin=Q3-3
+Added Pin To Net: NetName=NetQ3_3 Pin=R00-1
+Added Pin To Net: NetName=NetQ3_3 Pin=R315-3
+Added Net: Name=NetQ3_3
+Added Pin To Net: NetName=NetR03_2 Pin=R03-2
+Added Pin To Net: NetName=NetR03_2 Pin=SW0-1
+Added Net: Name=NetR03_2
+Added Pin To Net: NetName=NetR04_2 Pin=R04-2
+Added Pin To Net: NetName=NetR04_2 Pin=SW1-1
+Added Net: Name=NetR04_2
+Added Pin To Net: NetName=NetR05_2 Pin=R05-2
+Added Pin To Net: NetName=NetR05_2 Pin=SW3-1
+Added Net: Name=NetR05_2
+Added Pin To Net: NetName=NetR06_2 Pin=R06-2
+Added Pin To Net: NetName=NetR06_2 Pin=SW?-1
+Added Net: Name=NetR06_2
+Added Pin To Net: NetName=OUT0 Pin=C3-2
+Added Pin To Net: NetName=OUT0 Pin=IC1-13
+Added Pin To Net: NetName=OUT0 Pin=SW0-4
+Added Net: Name=OUT0
+Added Pin To Net: NetName=OUT1 Pin=C4-2
+Added Pin To Net: NetName=OUT1 Pin=IC1-12
+Added Pin To Net: NetName=OUT1 Pin=SW1-4
+Added Net: Name=OUT1
+Added Pin To Net: NetName=OUT2 Pin=C5-2
+Added Pin To Net: NetName=OUT2 Pin=IC1-11
+Added Pin To Net: NetName=OUT2 Pin=SW3-4
+Added Net: Name=OUT2
+Added Pin To Net: NetName=OUT3 Pin=C6-2
+Added Pin To Net: NetName=OUT3 Pin=IC1-10
+Added Pin To Net: NetName=OUT3 Pin=SW?-4
+Added Net: Name=OUT3
+Added Pin To Net: NetName=VCC Pin=Q1-2
+Added Pin To Net: NetName=VCC Pin=SW0-2
+Added Pin To Net: NetName=VCC Pin=SW1-2
+Added Pin To Net: NetName=VCC Pin=SW3-2
+Added Pin To Net: NetName=VCC Pin=SW?-2
+Added Net: Name=VCC
+Added Pin To Net: NetName=VP Pin=IC1-18
+Added Pin To Net: NetName=VP Pin=Q1-3
+Added Pin To Net: NetName=VP Pin=R02-2
+Added Net: Name=VP
+Added Class: Name=Transfer_V1_Sch
+Added Room: Name=Transfer_V1_Sch

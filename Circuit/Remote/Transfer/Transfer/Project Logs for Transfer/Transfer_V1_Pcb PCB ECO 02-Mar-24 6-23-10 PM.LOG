@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetQ1_3 Pin=R315-1
+Removed Pin From Net: NetName=GND Pin=R315-3
+Added Pin To Net: NetName=GND Pin=R315-1
+Added Pin To Net: NetName=NetQ1_3 Pin=R315-3
+Added Room: Name=Transfer_V1_Sch

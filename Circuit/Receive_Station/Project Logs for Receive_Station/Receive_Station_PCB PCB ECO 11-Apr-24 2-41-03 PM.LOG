@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=5V Pin=AMS-3V3-3
+Removed Pin From Net: NetName=Vin Pin=C00-1
+Removed Pin From Net: NetName=GND Pin=C00-2
+Removed Pin From Net: NetName=GND Pin=C01-1
+Removed Pin From Net: NetName=Vin Pin=C01-2
+Removed Pin From Net: NetName=5V Pin=C03-1
+Removed Pin From Net: NetName=GND Pin=C03-2
+Removed Pin From Net: NetName=GND Pin=C04-1
+Removed Pin From Net: NetName=5V Pin=C04-2
+Removed Pin From Net: NetName=5V Pin=C06-2
+Removed Pin From Net: NetName=GND Pin=D01-1
+Removed Pin From Net: NetName=5V Pin=D02-2
+Removed Pin From Net: NetName=5V Pin=L1-2
+Removed Pin From Net: NetName=GND Pin=LED1-2
+Removed Pin From Net: NetName=Vin Pin=LM-5V-1
+Removed Pin From Net: NetName=GND Pin=LM-5V-3
+Removed Pin From Net: NetName=5V Pin=LM-5V-4
+Removed Pin From Net: NetName=GND Pin=LM-5V-5
+Removed Pin From Net: NetName=GND Pin=LM-5V-6
+Removed Pin From Net: NetName=D4 Pin=U1-J2_5
+Removed Pin From Net: NetName=Sig1 Pin=U1-J2_8
+Removed Pin From Net: NetName=Sig2 Pin=U1-J2_9
+Removed Pin From Net: NetName=GND Pin=U1-J2_14
+Removed Pin From Net: NetName=3V3 Pin=U1-J2_15
+Removed Member From Class: ClassName=Receive_Station_Sch Member=C00
+Removed Member From Class: ClassName=Receive_Station_Sch Member=C01
+Removed Member From Class: ClassName=Receive_Station_Sch Member=C03
+Removed Member From Class: ClassName=Receive_Station_Sch Member=C04
+Removed Member From Class: ClassName=Receive_Station_Sch Member=D01
+Removed Member From Class: ClassName=Receive_Station_Sch Member=L1
+Removed Member From Class: ClassName=Receive_Station_Sch Member=LM-5V
+Change Component Comment : Designator=U1 Old Comment=ESP8266 New Comment=113990105
+Added Component: Designator=U2(SEEED_113990105)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/113990105/Seeed+Technology+Co.%252C+Ltd/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Seeed Technology Co., Ltd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "113990105"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/113990105/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/113990105/Seeed+Technology+Co.%252C+Ltd/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=D4 Pin=U2-J2_4
+Added Pin To Net: NetName=3V3 Pin=U2-J2_6
+Added Pin To Net: NetName=GND Pin=U2-J2_7
+Added Pin To Net: NetName=Sig2 Pin=U2-J2_8
+Added Pin To Net: NetName=NetAMS-3V3_3 Pin=AMS-3V3-3
+Added Pin To Net: NetName=NetAMS-3V3_3 Pin=C06-2
+Added Pin To Net: NetName=NetAMS-3V3_3 Pin=D02-2
+Added Net: Name=NetAMS-3V3_3
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component U2 113990105
+Added Room: Name=Receive_Station_Sch

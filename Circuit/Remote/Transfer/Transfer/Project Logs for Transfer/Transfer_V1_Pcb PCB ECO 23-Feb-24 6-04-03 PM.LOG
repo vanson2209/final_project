@@ -1,0 +1,6 @@
+Added Component: Designator=R03(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R03-1
+Added Pin To Net: NetName=NetR03_2 Pin=R03-2
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R03 RESISTOR SMD
+Added Room: Name=Transfer_V1_Sch

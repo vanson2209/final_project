@@ -1,0 +1,26 @@
+Added Component: Designator=U1(SEEED_113990105)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/113990105/Seeed+Technology+Co.%252C+Ltd/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Seeed Technology Co., Ltd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "113990105"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/113990105/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/113990105/Seeed+Technology+Co.%252C+Ltd/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U1-J1_10
+Added Pin To Net: NetName=GND Pin=U1-J1_14
+Added Pin To Net: NetName=3V3 Pin=U1-J1_15
+Added Pin To Net: NetName=D2 Pin=U1-J2_3
+Added Pin To Net: NetName=D3 Pin=U1-J2_4
+Added Pin To Net: NetName=D4 Pin=U1-J2_5
+Added Pin To Net: NetName=D5 Pin=U1-J2_8
+Added Pin To Net: NetName=D6 Pin=U1-J2_9
+Added Pin To Net: NetName=D7 Pin=U1-J2_10
+Added Pin To Net: NetName=D8 Pin=U1-J2_11
+Added Pin To Net: NetName=D9 Pin=U1-J2_12
+Added Pin To Net: NetName=D10 Pin=U1-J2_13
+Added Pin To Net: NetName=GND Pin=U1-J2_14
+Added Pin To Net: NetName=3V3 Pin=U1-J2_15
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component U1 ESP8266
+Added Room: Name=Receive_Station_Sch

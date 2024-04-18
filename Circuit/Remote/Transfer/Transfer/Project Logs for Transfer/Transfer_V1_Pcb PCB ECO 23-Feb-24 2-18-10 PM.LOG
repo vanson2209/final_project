@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetR06_2 Pin=SW3-
+Change Component Footprint: Designator=12V Old Footprint=DOMINO SMALL 2 New Footprint=JACK DC 5.5
+Change Component Comment : Designator=12V Old Comment=Domino 2 New Comment=JACK DC 5.5
+Change component parameters: Designator = "12V" ("12V"); Footprint = "DOMINO SMALL 2"; UniqueID = "\WTAHTCWT" ("\WTAHTCWT")
+Change component parameters (AddParameter): Name = "Value"; Value = "Jac DC"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW
+Added Room: Name=Transfer_V1_Sch

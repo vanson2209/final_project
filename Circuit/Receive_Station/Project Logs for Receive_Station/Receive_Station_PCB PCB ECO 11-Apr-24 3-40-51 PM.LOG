@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=LED? NewDesignator=LED1
+Change Component Designator: OldDesignator=R? NewDesignator=R00
+Change Net Name : Old Net Name=NetLED?_1 New Net Name=NetLED1_1
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C06 100uF
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C08 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C09 Cap Non-Pol SMD
+Added Room: Name=Receive_Station_Sch

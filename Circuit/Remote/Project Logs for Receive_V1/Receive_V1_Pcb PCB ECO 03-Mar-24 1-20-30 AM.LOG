@@ -1,0 +1,212 @@
+Added Component: Designator=Anten(TP)
+Added Component: Designator=C00(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C01(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C02(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2p"; VariantName = "[No Variations]"
+Added Component: Designator=C03(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "7p"; VariantName = "[No Variations]"
+Added Component: Designator=C04(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2p"; VariantName = "[No Variations]"
+Added Component: Designator=C05(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "15p"; VariantName = "[No Variations]"
+Added Component: Designator=C06(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Added Component: Designator=C07(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "4pF/X"; VariantName = "[No Variations]"
+Added Component: Designator=C08(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2p"; VariantName = "[No Variations]"
+Added Component: Designator=C09(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=IC0(DIP18)
+Added Component: Designator=IC1(SOp 8)
+Add component (AddParameter): Name = "Value"; Value = "LM358"; VariantName = "[No Variations]"
+Added Component: Designator=L0(L-DIP-M-5.3)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Component: Designator=L2(L-DIP-M-5.3)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Component: Designator=L3(RES-1/4W-SMALL)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Component: Designator=P1(JP8)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(SOT23B)
+Added Component: Designator=Q2(SOT23B)
+Added Component: Designator=R00(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "47K/39K"; VariantName = "[No Variations]"
+Added Component: Designator=R01(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "180K/680R"; VariantName = "[No Variations]"
+Added Component: Designator=R02(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "5.1K/680R"; VariantName = "[No Variations]"
+Added Component: Designator=R03(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "47K/6.2K"; VariantName = "[No Variations]"
+Added Component: Designator=R04(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "6.2K/150K"; VariantName = "[No Variations]"
+Added Component: Designator=R05(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "3.9K/56K"; VariantName = "[No Variations]"
+Added Component: Designator=R06(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "56K/27K"; VariantName = "[No Variations]"
+Added Component: Designator=R07(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "27K/6.2K"; VariantName = "[No Variations]"
+Added Component: Designator=R08(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K/150K"; VariantName = "[No Variations]"
+Added Component: Designator=R09(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K/680R"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.2M/150K"; VariantName = "[No Variations]"
+Added Component: Designator=R11(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "22/K10K"; VariantName = "[No Variations]"
+Added Component: Designator=R12(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "18K/150K"; VariantName = "[No Variations]"
+Added Component: Designator=R13(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.2M/3.3M"; VariantName = "[No Variations]"
+Added Component: Designator=R14(RES-SM-0603)
+Add component (AddParameter): Name = "R?"; Value = "22K/10K"; VariantName = "[No Variations]"
+Added Component: Designator=R15(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "680K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetAnten_TP1 Pin=Anten-TP1
+Added Pin To Net: NetName=GND Pin=C00-1
+Added Pin To Net: NetName=VCC Pin=C00-2
+Added Pin To Net: NetName=GND Pin=C01-1
+Added Pin To Net: NetName=VCC Pin=C01-2
+Added Pin To Net: NetName=GND Pin=C02-1
+Added Pin To Net: NetName=NetAnten_TP1 Pin=C02-2
+Added Pin To Net: NetName=NetC03_1 Pin=C03-1
+Added Pin To Net: NetName=NetAnten_TP1 Pin=C03-2
+Added Pin To Net: NetName=Stage1 Pin=C04-1
+Added Pin To Net: NetName=NetC04_2 Pin=C04-2
+Added Pin To Net: NetName=NetC05_1 Pin=C05-1
+Added Pin To Net: NetName=Stage1 Pin=C05-2
+Added Pin To Net: NetName=NetC06_1 Pin=C06-1
+Added Pin To Net: NetName=NetC05_1 Pin=C06-2
+Added Pin To Net: NetName=NetC07_1 Pin=C07-1
+Added Pin To Net: NetName=NetC06_1 Pin=C07-2
+Added Pin To Net: NetName=NetC07_1 Pin=C08-1
+Added Pin To Net: NetName=NetC08_2 Pin=C08-2
+Added Pin To Net: NetName=NetC09_1 Pin=C09-1
+Added Pin To Net: NetName=NetC09_2 Pin=C09-2
+Added Pin To Net: NetName=NetC09_1 Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=NetC11_2 Pin=C11-2
+Added Pin To Net: NetName=GND Pin=IC0-1
+Added Pin To Net: NetName=GND Pin=IC0-2
+Added Pin To Net: NetName=GND Pin=IC0-3
+Added Pin To Net: NetName=GND Pin=IC0-4
+Added Pin To Net: NetName=GND Pin=IC0-5
+Added Pin To Net: NetName=GND Pin=IC0-6
+Added Pin To Net: NetName=D5 Pin=IC0-7
+Added Pin To Net: NetName=D4 Pin=IC0-8
+Added Pin To Net: NetName=GND Pin=IC0-9
+Added Pin To Net: NetName=D3 Pin=IC0-10
+Added Pin To Net: NetName=D2 Pin=IC0-11
+Added Pin To Net: NetName=D1 Pin=IC0-12
+Added Pin To Net: NetName=D0 Pin=IC0-13
+Added Pin To Net: NetName=Data Pin=IC0-14
+Added Pin To Net: NetName=NetIC0_15 Pin=IC0-15
+Added Pin To Net: NetName=NetIC0_16 Pin=IC0-16
+Added Pin To Net: NetName=VCC Pin=IC0-18
+Added Pin To Net: NetName=Data Pin=IC1-1
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=NetC11_1 Pin=IC1-3
+Added Pin To Net: NetName=GND Pin=IC1-4
+Added Pin To Net: NetName=NetC09_1 Pin=IC1-5
+Added Pin To Net: NetName=NetIC1_6 Pin=IC1-6
+Added Pin To Net: NetName=NetC11_2 Pin=IC1-7
+Added Pin To Net: NetName=VCC Pin=IC1-8
+Added Pin To Net: NetName=NetAnten_TP1 Pin=L0-1
+Added Pin To Net: NetName=GND Pin=L0-2
+Added Pin To Net: NetName=NetC06_1 Pin=L2-1
+Added Pin To Net: NetName=NetC07_1 Pin=L2-2
+Added Pin To Net: NetName=NetC08_2 Pin=L3-1
+Added Pin To Net: NetName=Stage1 Pin=L3-2
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=VCC Pin=P1-2
+Added Pin To Net: NetName=D3 Pin=P1-3
+Added Pin To Net: NetName=D2 Pin=P1-4
+Added Pin To Net: NetName=D1 Pin=P1-5
+Added Pin To Net: NetName=D0 Pin=P1-6
+Added Pin To Net: NetName=D4 Pin=P1-7
+Added Pin To Net: NetName=D5 Pin=P1-8
+Added Pin To Net: NetName=GND Pin=Q1-1
+Added Pin To Net: NetName=NetC04_2 Pin=Q1-2
+Added Pin To Net: NetName=NetC03_1 Pin=Q1-3
+Added Pin To Net: NetName=NetC08_2 Pin=Q2-1
+Added Pin To Net: NetName=NetC07_1 Pin=Q2-2
+Added Pin To Net: NetName=NetC05_1 Pin=Q2-3
+Added Pin To Net: NetName=NetR00_1 Pin=R00-1
+Added Pin To Net: NetName=NetC03_1 Pin=R00-2
+Added Pin To Net: NetName=VCC Pin=R01-1
+Added Pin To Net: NetName=NetR00_1 Pin=R01-2
+Added Pin To Net: NetName=NetR00_1 Pin=R02-1
+Added Pin To Net: NetName=NetC04_2 Pin=R02-2
+Added Pin To Net: NetName=Stage1 Pin=R03-1
+Added Pin To Net: NetName=GND Pin=R03-2
+Added Pin To Net: NetName=VCC Pin=R04-1
+Added Pin To Net: NetName=NetC05_1 Pin=R04-2
+Added Pin To Net: NetName=NetC05_1 Pin=R05-1
+Added Pin To Net: NetName=GND Pin=R05-2
+Added Pin To Net: NetName=VCC Pin=R06-1
+Added Pin To Net: NetName=NetC07_1 Pin=R06-2
+Added Pin To Net: NetName=NetC09_2 Pin=R07-1
+Added Pin To Net: NetName=Stage1 Pin=R07-2
+Added Pin To Net: NetName=NetC09_1 Pin=R08-1
+Added Pin To Net: NetName=GND Pin=R08-2
+Added Pin To Net: NetName=NetIC1_6 Pin=R09-1
+Added Pin To Net: NetName=GND Pin=R09-2
+Added Pin To Net: NetName=NetIC1_6 Pin=R10-1
+Added Pin To Net: NetName=NetC11_2 Pin=R10-2
+Added Pin To Net: NetName=NetIC1_2 Pin=R11-1
+Added Pin To Net: NetName=VCC Pin=R11-2
+Added Pin To Net: NetName=NetIC1_2 Pin=R12-1
+Added Pin To Net: NetName=NetC11_1 Pin=R12-2
+Added Pin To Net: NetName=NetC11_1 Pin=R13-1
+Added Pin To Net: NetName=Data Pin=R13-2
+Added Pin To Net: NetName=NetIC1_2 Pin=R14-1
+Added Pin To Net: NetName=GND Pin=R14-2
+Added Pin To Net: NetName=NetIC0_16 Pin=R15-1
+Added Pin To Net: NetName=NetIC0_15 Pin=R15-2
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component Anten Test Point
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C00 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C01 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C02 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C03 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C04 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C05 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C06 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C08 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component C11 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component IC0 PT2272
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component IC1 LM358
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component L0 2.5T
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component L2 4.5T
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component L3 1uH
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component P1 Header 8
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component Q1 C1815
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component Q2 C1815
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R00 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R01 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R02 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R03 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R04 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R05 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R06 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R07 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R08 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R09 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R10 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R11 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R12 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R13 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R14 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R15 RESISTOR SMD
+Added Room: Name=Receive_V1_Sch

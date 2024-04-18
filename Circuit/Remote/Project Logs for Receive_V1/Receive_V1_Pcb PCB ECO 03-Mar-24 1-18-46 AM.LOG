@@ -1,0 +1,100 @@
+Removed Pin From Net: NetName=NetC02_2 Pin=CA-2
+Removed Pin From Net: NetName=GND Pin=P0-1
+Removed Pin From Net: NetName=VCC Pin=P0-2
+Removed Pin From Net: NetName=D3 Pin=P0-3
+Removed Pin From Net: NetName=D2 Pin=P0-4
+Removed Pin From Net: NetName=D1 Pin=P0-5
+Removed Pin From Net: NetName=D0 Pin=P0-6
+Removed Pin From Net: NetName=GND Pin=R16-2
+Removed Pin From Net: NetName=GND Pin=R17-2
+Removed Pin From Net: NetName=GND Pin=R18-2
+Removed Pin From Net: NetName=GND Pin=R19-2
+Removed Pin From Net: NetName=GND Pin=R20-2
+Removed Pin From Net: NetName=GND Pin=R21-2
+Removed Pin From Net: NetName=GND Pin=R22-2
+Removed Pin From Net: NetName=GND Pin=R23-2
+Removed Member From Class: ClassName=Receive_V1_Sch Member=CA
+Removed Member From Class: ClassName=Receive_V1_Sch Member=P0
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R16
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R17
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R18
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R19
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R20
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R21
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R22
+Removed Member From Class: ClassName=Receive_V1_Sch Member=R23
+Change Component Designator: OldDesignator=C8 NewDesignator=C08
+Change Component Designator: OldDesignator=C12 NewDesignator=C01
+Change component parameters: Designator = "R14" ("R14"); Footprint = "RES-SM-0603"; UniqueID = "\RIBZBWSV" ("\RIBZBWSV")
+Change component parameters (AddParameter): Name = "R?"; Value = "22K/10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C00" ("C00"); Footprint = "CAP-SM-0603"; UniqueID = "\NCNKISDI" ("\NCNKISDI")
+Change component parameters (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C05" ("C05"); Footprint = "CAP-SM-0603"; UniqueID = "\HUQIZPOZ" ("\HUQIZPOZ")
+Change component parameters (AddParameter): Name = "Value"; Value = "15p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C06" ("C06"); Footprint = "CAP-SM-0603"; UniqueID = "\QVJMQPPR" ("\QVJMQPPR")
+Change component parameters (AddParameter): Name = "Value"; Value = "33pF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C07" ("C07"); Footprint = "CAP-SM-0603"; UniqueID = "\KNQRSUPP" ("\KNQRSUPP")
+Change component parameters (AddParameter): Name = "Value"; Value = "4pF/X"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C11" ("C11"); Footprint = "CAP-SM-0603"; UniqueID = "\CDZDWXAP" ("\CDZDWXAP")
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C12" ("C01"); Footprint = "CAP-SM-0603"; UniqueID = "\FKUJNWUH" ("\FKUJNWUH")
+Change component parameters (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R00" ("R00"); Footprint = "RES-SM-0603"; UniqueID = "\VGBWYEBN" ("\VGBWYEBN")
+Change component parameters (AddParameter): Name = "Value"; Value = "47K/39K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R01" ("R01"); Footprint = "RES-SM-0603"; UniqueID = "\NUULXTCM" ("\NUULXTCM")
+Change component parameters (AddParameter): Name = "Value"; Value = "180K/680R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R02" ("R02"); Footprint = "RES-SM-0805"; UniqueID = "\WLJUJUXU" ("\WLJUJUXU")
+Change component parameters (AddParameter): Name = "Value"; Value = "5.1K/680R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R03" ("R03"); Footprint = "RES-SM-0603"; UniqueID = "\RVVLHLLT" ("\RVVLHLLT")
+Change component parameters (AddParameter): Name = "Value"; Value = "47K/6.2K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R04" ("R04"); Footprint = "RES-SM-0805"; UniqueID = "\RZFIHZPI" ("\RZFIHZPI")
+Change component parameters (AddParameter): Name = "Value"; Value = "6.2K/150K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R05" ("R05"); Footprint = "RES-SM-0805"; UniqueID = "\KMOOBCML" ("\KMOOBCML")
+Change component parameters (AddParameter): Name = "Value"; Value = "3.9K/56K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R06" ("R06"); Footprint = "RES-SM-0603"; UniqueID = "\GCJJGJDL" ("\GCJJGJDL")
+Change component parameters (AddParameter): Name = "Value"; Value = "56K/27K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R07" ("R07"); Footprint = "RES-SM-0603"; UniqueID = "\AUMVQFUV" ("\AUMVQFUV")
+Change component parameters (AddParameter): Name = "Value"; Value = "27K/6.2K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R08" ("R08"); Footprint = "RES-SM-0603"; UniqueID = "\FGETXFPP" ("\FGETXFPP")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K/150K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R09" ("R09"); Footprint = "RES-SM-0603"; UniqueID = "\FLXNIKGS" ("\FLXNIKGS")
+Change component parameters (AddParameter): Name = "Value"; Value = "10K/680R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R10" ("R10"); Footprint = "RES-SM-0603"; UniqueID = "\DADHTJAK" ("\DADHTJAK")
+Change component parameters (AddParameter): Name = "Value"; Value = "2.2M/150K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R11" ("R11"); Footprint = "RES-SM-0603"; UniqueID = "\OQOFYRIR" ("\OQOFYRIR")
+Change component parameters (AddParameter): Name = "Value"; Value = "22/K10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R12" ("R12"); Footprint = "RES-SM-0603"; UniqueID = "\IBKUSCGS" ("\IBKUSCGS")
+Change component parameters (AddParameter): Name = "Value"; Value = "18K/150K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R13" ("R13"); Footprint = "RES-SM-0603"; UniqueID = "\ODRYYDNN" ("\ODRYYDNN")
+Change component parameters (AddParameter): Name = "Value"; Value = "2.2M/3.3M"; VariantName = "[No Variations]"
+Added Component: Designator=P1(JP8)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC02_2 Pin=Anten-TP1
+Added Pin To Net: NetName=NetQ2_3 Pin=C05-1
+Added Pin To Net: NetName=NetQ2_3 Pin=C06-2
+Added Pin To Net: NetName=GND Pin=IC0-1
+Added Pin To Net: NetName=GND Pin=IC0-2
+Added Pin To Net: NetName=GND Pin=IC0-3
+Added Pin To Net: NetName=GND Pin=IC0-4
+Added Pin To Net: NetName=GND Pin=IC0-5
+Added Pin To Net: NetName=GND Pin=IC0-6
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=VCC Pin=P1-2
+Added Pin To Net: NetName=D3 Pin=P1-3
+Added Pin To Net: NetName=D2 Pin=P1-4
+Added Pin To Net: NetName=D1 Pin=P1-5
+Added Pin To Net: NetName=D0 Pin=P1-6
+Change Net Name : Old Net Name=NetC02_2 New Net Name=NetAnten_TP1
+Change Net Name : Old Net Name=NetC8_2 New Net Name=NetC08_2
+Change Net Name : Old Net Name=NetQ2_3 New Net Name=NetC05_1
+Added Pin To Net: NetName=D4 Pin=IC0-8
+Added Pin To Net: NetName=D4 Pin=P1-7
+Added Net: Name=D4
+Added Pin To Net: NetName=D5 Pin=IC0-7
+Added Pin To Net: NetName=D5 Pin=P1-8
+Added Net: Name=D5
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component L2 4.5T
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component P1 Header 8
+Added Room: Name=Receive_V1_Sch

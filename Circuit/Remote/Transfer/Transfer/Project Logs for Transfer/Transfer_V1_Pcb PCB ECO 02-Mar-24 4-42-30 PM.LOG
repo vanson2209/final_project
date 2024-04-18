@@ -1,0 +1,227 @@
+Added Component: Designator=12V(JACK DC 5.5)
+Add component (AddParameter): Name = "Value"; Value = "Jac DC"; VariantName = "[No Variations]"
+Added Component: Designator=ANT(TP)
+Added Component: Designator=C00(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "7pF"; VariantName = "[No Variations]"
+Added Component: Designator=C01(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "7p"; VariantName = "[No Variations]"
+Added Component: Designator=C02(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C03(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C04(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C05(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=C07(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(DIP18)
+Added Component: Designator=L1(L-DIP-M-5.3)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Component: Designator=L2(L-DIP-M-5.3)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(SOT23B)
+Added Component: Designator=Q2(SOT23B)
+Added Component: Designator=R00(RES-SM-0603)
+Added Component: Designator=R01(RES-SM-0603)
+Added Component: Designator=R02(RES-SM-0603)
+Added Component: Designator=R03(RES-SM-0603)
+Added Component: Designator=R04(RES-SM-0603)
+Added Component: Designator=R05(RES-SM-0603)
+Added Component: Designator=R06(RES-SM-0603)
+Added Component: Designator=R07(RES-SM-0603)
+Added Component: Designator=R08(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R09(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R11(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "2.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R12(RES-SM-0603)
+Added Component: Designator=R13(RES-SM-0603)
+Added Component: Designator=R14(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "4.7M"; VariantName = "[No Variations]"
+Added Component: Designator=R315(BXR315A)
+Added Component: Designator=SW0(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW2(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW3(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW4(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW5(SW2-DIP)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=SW(MTS-102)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/MTS102/Motorola/view-part/698799/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Motorola"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MTS102"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MTS102/Motorola/view-part/698799/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=12V-2
+Added Pin To Net: NetName=NetANT_TP1 Pin=ANT-TP1
+Added Pin To Net: NetName=NetANT_TP1 Pin=C00-1
+Added Pin To Net: NetName=NetC00_2 Pin=C00-2
+Added Pin To Net: NetName=GND Pin=C02-1
+Added Pin To Net: NetName=OUT0 Pin=C02-2
+Added Pin To Net: NetName=GND Pin=C03-1
+Added Pin To Net: NetName=OUT1 Pin=C03-2
+Added Pin To Net: NetName=GND Pin=C04-1
+Added Pin To Net: NetName=OUT2 Pin=C04-2
+Added Pin To Net: NetName=GND Pin=C05-1
+Added Pin To Net: NetName=OUT3 Pin=C05-2
+Added Pin To Net: NetName=GND Pin=C06-1
+Added Pin To Net: NetName=GND Pin=C07-1
+Added Pin To Net: NetName=NetIC1_1 Pin=IC1-1
+Added Pin To Net: NetName=GND Pin=IC1-2
+Added Pin To Net: NetName=GND Pin=IC1-3
+Added Pin To Net: NetName=GND Pin=IC1-4
+Added Pin To Net: NetName=GND Pin=IC1-5
+Added Pin To Net: NetName=GND Pin=IC1-6
+Added Pin To Net: NetName=GND Pin=IC1-9
+Added Pin To Net: NetName=OUT3 Pin=IC1-10
+Added Pin To Net: NetName=OUT2 Pin=IC1-11
+Added Pin To Net: NetName=OUT1 Pin=IC1-12
+Added Pin To Net: NetName=OUT0 Pin=IC1-13
+Added Pin To Net: NetName=GND Pin=IC1-14
+Added Pin To Net: NetName=NetIC1_15 Pin=IC1-15
+Added Pin To Net: NetName=NetIC1_16 Pin=IC1-16
+Added Pin To Net: NetName=NetC00_2 Pin=L2-2
+Added Pin To Net: NetName=NetC00_2 Pin=Q1-2
+Added Pin To Net: NetName=GND Pin=Q2-1
+Added Pin To Net: NetName=NetQ2_3 Pin=Q2-3
+Added Pin To Net: NetName=NetQ2_3 Pin=R01-1
+Added Pin To Net: NetName=GND Pin=R02-1
+Added Pin To Net: NetName=OUT0 Pin=R02-2
+Added Pin To Net: NetName=GND Pin=R03-1
+Added Pin To Net: NetName=OUT1 Pin=R03-2
+Added Pin To Net: NetName=GND Pin=R04-1
+Added Pin To Net: NetName=OUT2 Pin=R04-2
+Added Pin To Net: NetName=GND Pin=R05-1
+Added Pin To Net: NetName=OUT3 Pin=R05-2
+Added Pin To Net: NetName=GND Pin=R06-1
+Added Pin To Net: NetName=GND Pin=R07-1
+Added Pin To Net: NetName=OUT0 Pin=R08-1
+Added Pin To Net: NetName=OUT1 Pin=R09-1
+Added Pin To Net: NetName=OUT2 Pin=R10-1
+Added Pin To Net: NetName=OUT3 Pin=R11-1
+Added Pin To Net: NetName=NetIC1_15 Pin=R14-1
+Added Pin To Net: NetName=NetIC1_16 Pin=R14-2
+Added Pin To Net: NetName=GND Pin=R315-3
+Added Pin To Net: NetName=NetIC1_1 Pin=SW-2
+Added Pin To Net: NetName=GND Pin=SW-3
+Added Pin To Net: NetName=12V Pin=12V-1
+Added Pin To Net: NetName=12V Pin=12V-3
+Added Pin To Net: NetName=12V Pin=IC1-18
+Added Pin To Net: NetName=12V Pin=L1-1
+Added Pin To Net: NetName=12V Pin=SW-1
+Added Pin To Net: NetName=12V Pin=SW0-2
+Added Pin To Net: NetName=12V Pin=SW0-3
+Added Pin To Net: NetName=12V Pin=SW1-2
+Added Pin To Net: NetName=12V Pin=SW1-3
+Added Pin To Net: NetName=12V Pin=SW2-2
+Added Pin To Net: NetName=12V Pin=SW3-2
+Added Pin To Net: NetName=12V Pin=SW3-3
+Added Pin To Net: NetName=12V Pin=SW4-2
+Added Pin To Net: NetName=12V Pin=SW4-3
+Added Pin To Net: NetName=12V Pin=SW5-2
+Added Pin To Net: NetName=12V Pin=SW5-3
+Added Net: Name=12V
+Added Pin To Net: NetName=NetC01_1 Pin=C01-1
+Added Pin To Net: NetName=NetC01_1 Pin=L1-2
+Added Pin To Net: NetName=NetC01_1 Pin=L2-1
+Added Pin To Net: NetName=NetC01_1 Pin=Q1-3
+Added Pin To Net: NetName=NetC01_1 Pin=R00-2
+Added Pin To Net: NetName=NetC01_1 Pin=R315-1
+Added Net: Name=NetC01_1
+Added Pin To Net: NetName=NetC01_2 Pin=C01-2
+Added Pin To Net: NetName=NetC01_2 Pin=Q1-1
+Added Pin To Net: NetName=NetC01_2 Pin=Q2-2
+Added Net: Name=NetC01_2
+Added Pin To Net: NetName=NetIC1_17 Pin=IC1-17
+Added Pin To Net: NetName=NetIC1_17 Pin=R01-2
+Added Net: Name=NetIC1_17
+Added Pin To Net: NetName=NetR00_1 Pin=R00-1
+Added Pin To Net: NetName=NetR00_1 Pin=R315-2
+Added Net: Name=NetR00_1
+Added Pin To Net: NetName=NetR08_2 Pin=R08-2
+Added Pin To Net: NetName=NetR08_2 Pin=SW0-1
+Added Pin To Net: NetName=NetR08_2 Pin=SW0-4
+Added Net: Name=NetR08_2
+Added Pin To Net: NetName=NetR09_2 Pin=R09-2
+Added Pin To Net: NetName=NetR09_2 Pin=SW1-1
+Added Pin To Net: NetName=NetR09_2 Pin=SW1-4
+Added Net: Name=NetR09_2
+Added Pin To Net: NetName=NetR10_2 Pin=R10-2
+Added Pin To Net: NetName=NetR10_2 Pin=SW2-1
+Added Pin To Net: NetName=NetR10_2 Pin=SW2-4
+Added Net: Name=NetR10_2
+Added Pin To Net: NetName=NetR11_2 Pin=R11-2
+Added Pin To Net: NetName=NetR11_2 Pin=SW3-1
+Added Pin To Net: NetName=NetR11_2 Pin=SW3-4
+Added Net: Name=NetR11_2
+Added Pin To Net: NetName=NetR12_2 Pin=R12-2
+Added Pin To Net: NetName=NetR12_2 Pin=SW4-1
+Added Pin To Net: NetName=NetR12_2 Pin=SW4-4
+Added Net: Name=NetR12_2
+Added Pin To Net: NetName=NetR13_2 Pin=R13-2
+Added Pin To Net: NetName=NetR13_2 Pin=SW5-1
+Added Pin To Net: NetName=NetR13_2 Pin=SW5-4
+Added Net: Name=NetR13_2
+Added Pin To Net: NetName=OUT4 Pin=C06-2
+Added Pin To Net: NetName=OUT4 Pin=IC1-8
+Added Pin To Net: NetName=OUT4 Pin=R06-2
+Added Pin To Net: NetName=OUT4 Pin=R12-1
+Added Net: Name=OUT4
+Added Pin To Net: NetName=OUT5 Pin=C07-2
+Added Pin To Net: NetName=OUT5 Pin=IC1-7
+Added Pin To Net: NetName=OUT5 Pin=R07-2
+Added Pin To Net: NetName=OUT5 Pin=R13-1
+Added Net: Name=OUT5
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component 12V JACK DC 5.5
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component ANT Test Point
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C00 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C01 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C02 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C03 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C04 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C05 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C06 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component IC1 PT2262
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component L1 8T
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component L2 3T
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component Q1 2SC3356
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component Q2 S8050
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R00 27K
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R01 27K
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R02 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R03 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R04 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R05 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R06 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R07 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R08 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R09 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R10 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R11 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R12 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R13 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R14 RESISTOR SMD
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R315 BXR513A
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW0 SW
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW1 SW
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW2 SW
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW3 SW
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW4 SW
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW5 SW
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component SW MTS-102
+Added Room: Name=Transfer_V1_Sch

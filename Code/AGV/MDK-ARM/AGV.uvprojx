@@ -393,6 +393,36 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
+              <FileName>lcd.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\lcd.h</FilePath>
+            </File>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>rfid.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\rfid.h</FilePath>
+            </File>
+            <File>
+              <FileName>rfid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\rfid.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\flash.h</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\flash.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -457,36 +487,6 @@
                   </Cads>
                 </FileArmAds>
               </FileOption>
-            </File>
-            <File>
-              <FileName>lcd.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Core\Inc\lcd.h</FilePath>
-            </File>
-            <File>
-              <FileName>lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\lcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>rfid.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Core\Inc\rfid.h</FilePath>
-            </File>
-            <File>
-              <FileName>rfid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\rfid.c</FilePath>
-            </File>
-            <File>
-              <FileName>flash.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Core\Inc\flash.h</FilePath>
-            </File>
-            <File>
-              <FileName>flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\flash.c</FilePath>
             </File>
           </Files>
         </Group>

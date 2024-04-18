@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=OUT3 Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=R06-1
+Removed Pin From Net: NetName=OUT3 Pin=SW3-4
+Removed Member From Class: ClassName=Transfer_V1_Sch Member=R06
+Added Component: Designator=R6(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=OUT1 Pin=C6-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=OUT1 Pin=SW3-4
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetR6_2 Pin=SW3-1
+Added Net: Name=NetR6_2
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R6 RESISTOR SMD
+Added Room: Name=Transfer_V1_Sch

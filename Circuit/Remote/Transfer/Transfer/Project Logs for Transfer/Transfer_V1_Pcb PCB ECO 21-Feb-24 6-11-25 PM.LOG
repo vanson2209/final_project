@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=12V Old Footprint=JP2 New Footprint=DOMINO SMALL 2
+Change Component Comment : Designator=12V Old Comment=Header 2 New Comment=Domino 2
+Added Room: Name=Transfer_V1_Sch

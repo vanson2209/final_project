@@ -1,0 +1,196 @@
+Added Component: Designator=AMS-3V3(SOT223)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000596"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "AMS1117-3.3V SOT223"; VariantName = "[No Variations]"
+Added Component: Designator=C00(CAP ALU SIZE G)
+Add component (AddParameter): Name = "Value"; Value = "470uF"; VariantName = "[No Variations]"
+Added Component: Designator=C01(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C03(CAP-ALU-SMD-6.3x7.7x2.2)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH002228"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? Nhôm 220uF 50V 10x10.2MM"; VariantName = "[No Variations]"
+Added Component: Designator=C04(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C07(CAP-ALU-SMD-6.3x7.7x2.2)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH002228"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? Nhôm 220uF 50V 10x10.2MM"; VariantName = "[No Variations]"
+Added Component: Designator=C08(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C09(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=D00(SS34)
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "DO-214-AA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "DO-214-AA/SMB; 2 C-Bend Leads; Body 5.3 x 3.6 mm, inc. leads (LxW)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SMB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D01(SS34)
+Add component (AddParameter): Name = "Code_JEDEC"; Value = "DO-214-AA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "DO-214-AA/SMB; 2 C-Bend Leads; Body 5.3 x 3.6 mm, inc. leads (LxW)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SMB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=D02(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001063"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode 1N4007 1A (DIP)"; VariantName = "[No Variations]"
+Added Component: Designator=F00(FUSE SMD)
+Added Component: Designator=L1(INDUCTOR 12.5x12.5)
+Add component (AddParameter): Name = "Value"; Value = "68uH"; VariantName = "[No Variations]"
+Added Component: Designator=LED1(LED-5MM-WHITE)
+Added Component: Designator=LM-5V(TO263-5)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001260"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "LM2576S-3.3V BUCK 3.3V 3A TO263-5"; VariantName = "[No Variations]"
+Added Component: Designator=R00(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Component: Designator=R01(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=Servo1(JP3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Servo2(JP3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=SW0(SW_2ARS_TH)
+Add component (AddParameter): Name = "Alternate Part Number-1"; Value = "NA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "TH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "471005264153"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number-1"; Value = "471005264153"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier-1"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(Nut Nhan 4 Chan Cam 6x6)
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH004584"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten"; Value = "Nút Nh?n 4 Chân 6x6x5MM DIP"; VariantName = "[No Variations]"
+Added Component: Designator=U1(SEEED_113990105)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/113990105/Seeed+Technology+Co.%252C+Ltd/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Seeed Technology Co., Ltd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "113990105"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/113990105/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/113990105/Seeed+Technology+Co.%252C+Ltd/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=AMS-3V3-1
+Added Pin To Net: NetName=3V3 Pin=AMS-3V3-2
+Added Pin To Net: NetName=5V Pin=AMS-3V3-3
+Added Pin To Net: NetName=3V3 Pin=AMS-3V3-4
+Added Pin To Net: NetName=Vin Pin=C00-1
+Added Pin To Net: NetName=GND Pin=C00-2
+Added Pin To Net: NetName=GND Pin=C01-1
+Added Pin To Net: NetName=Vin Pin=C01-2
+Added Pin To Net: NetName=5V Pin=C03-1
+Added Pin To Net: NetName=GND Pin=C03-2
+Added Pin To Net: NetName=GND Pin=C04-1
+Added Pin To Net: NetName=5V Pin=C04-2
+Added Pin To Net: NetName=GND Pin=C06-1
+Added Pin To Net: NetName=5V Pin=C06-2
+Added Pin To Net: NetName=3V3 Pin=C07-1
+Added Pin To Net: NetName=GND Pin=C07-2
+Added Pin To Net: NetName=GND Pin=C08-1
+Added Pin To Net: NetName=3V3 Pin=C08-2
+Added Pin To Net: NetName=GND Pin=C09-1
+Added Pin To Net: NetName=D4 Pin=C09-2
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=5V Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=5V Pin=C11-2
+Added Pin To Net: NetName=NetD00_1 Pin=D00-1
+Added Pin To Net: NetName=Vin Pin=D00-2
+Added Pin To Net: NetName=GND Pin=D01-1
+Added Pin To Net: NetName=NetD01_2 Pin=D01-2
+Added Pin To Net: NetName=3V3 Pin=D02-1
+Added Pin To Net: NetName=5V Pin=D02-2
+Added Pin To Net: NetName=NetF00_1 Pin=F00-1
+Added Pin To Net: NetName=NetD00_1 Pin=F00-2
+Added Pin To Net: NetName=NetD01_2 Pin=L1-1
+Added Pin To Net: NetName=5V Pin=L1-2
+Added Pin To Net: NetName=NetLED1_1 Pin=LED1-1
+Added Pin To Net: NetName=GND Pin=LED1-2
+Added Pin To Net: NetName=Vin Pin=LM-5V-1
+Added Pin To Net: NetName=NetD01_2 Pin=LM-5V-2
+Added Pin To Net: NetName=GND Pin=LM-5V-3
+Added Pin To Net: NetName=5V Pin=LM-5V-4
+Added Pin To Net: NetName=GND Pin=LM-5V-5
+Added Pin To Net: NetName=GND Pin=LM-5V-6
+Added Pin To Net: NetName=Vin Pin=R00-1
+Added Pin To Net: NetName=NetLED1_1 Pin=R00-2
+Added Pin To Net: NetName=D4 Pin=R01-1
+Added Pin To Net: NetName=3V3 Pin=R01-2
+Added Pin To Net: NetName=Sig1 Pin=Servo1-1
+Added Pin To Net: NetName=5V Pin=Servo1-2
+Added Pin To Net: NetName=GND Pin=Servo1-3
+Added Pin To Net: NetName=Sig2 Pin=Servo2-1
+Added Pin To Net: NetName=5V Pin=Servo2-2
+Added Pin To Net: NetName=GND Pin=Servo2-3
+Added Pin To Net: NetName=NetPower_1 Pin=SW0-1
+Added Pin To Net: NetName=NetF00_1 Pin=SW0-2
+Added Pin To Net: NetName=GND Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=SW1-1
+Added Pin To Net: NetName=D4 Pin=SW1-2
+Added Pin To Net: NetName=D4 Pin=SW1-2
+Added Pin To Net: NetName=GND Pin=U1-J1_10
+Added Pin To Net: NetName=GND Pin=U1-J1_14
+Added Pin To Net: NetName=3V3 Pin=U1-J1_15
+Added Pin To Net: NetName=D4 Pin=U1-J2_5
+Added Pin To Net: NetName=Sig1 Pin=U1-J2_8
+Added Pin To Net: NetName=Sig2 Pin=U1-J2_9
+Added Pin To Net: NetName=GND Pin=U1-J2_14
+Added Pin To Net: NetName=3V3 Pin=U1-J2_15
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component AMS-3V3 AMS1117-3.3V
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C00 Cap Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C01 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C03 220uF
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C04 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C06 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C07 220uF
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C08 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C11 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component D00 D Schottky
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component D01 D Schottky
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component D02 100v
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component F00 Fuse
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component L1 Inductor
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component LED1 LED SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component LM-5V LM2576 5V SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component Power
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component R00 RESISTOR SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component R01 RESISTOR SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component Servo1 Header 3
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component Servo2 Header 3
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component SW0 SWITCH 10A-2PIN
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component SW1 Nut Nhan 4 Chan Cam 6x6
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component U1 ESP8266
+Added Room: Name=Receive_Station_Sch

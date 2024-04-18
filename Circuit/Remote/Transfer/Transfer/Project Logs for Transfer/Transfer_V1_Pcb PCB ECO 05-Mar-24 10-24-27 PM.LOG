@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=12V Pin=IC1-18
+Removed Pin From Net: NetName=12V Pin=SW-1
+Added Pin To Net: NetName=NetR09_2 Pin=IC1-18
+Added Pin To Net: NetName=NetR09_2 Pin=R08-2
+Added Pin To Net: NetName=NetR09_2 Pin=R10-2
+Added Pin To Net: NetName=NetR09_2 Pin=R11-2
+Added Pin To Net: NetName=NetR09_2 Pin=R12-2
+Added Pin To Net: NetName=NetR09_2 Pin=R13-2
+Added Pin To Net: NetName=NetR09_2 Pin=SW0-1
+Added Pin To Net: NetName=NetR09_2 Pin=SW0-4
+Added Pin To Net: NetName=NetR09_2 Pin=SW2-4
+Added Pin To Net: NetName=NetR09_2 Pin=SW3-1
+Added Pin To Net: NetName=NetR09_2 Pin=SW4-4
+Added Pin To Net: NetName=NetR09_2 Pin=SW5-1
+Added Pin To Net: NetName=NetR09_2 Pin=SW-1
+Change Net Name : Old Net Name=NetR09_2 New Net Name=VCC
+Added Room: Name=Transfer_V1_Sch

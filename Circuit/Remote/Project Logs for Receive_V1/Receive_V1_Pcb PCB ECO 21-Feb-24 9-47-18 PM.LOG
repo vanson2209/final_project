@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=NetAnten_TP1 Pin=Anten-TP1
+Change Component Comment : Designator=L2 Old Comment=\ New Comment=4.5T
+Added Component: Designator=CA(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "15p"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetAnten_TP1 Pin=CA-2
+Change Net Name : Old Net Name=NetAnten_TP1 New Net Name=NetC02_2
+Added Pin To Net: NetName=NetAnten_TP1 Pin=Anten-TP1
+Added Pin To Net: NetName=NetAnten_TP1 Pin=CA-1
+Added Net: Name=NetAnten_TP1
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component CA Cap Non-Pol SMD
+Added Room: Name=Receive_V1_Sch

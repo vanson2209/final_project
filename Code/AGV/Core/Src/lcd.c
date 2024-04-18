@@ -1,7 +1,6 @@
 #include "lcd.h"
 #include "stm32f1xx.h"
 extern I2C_HandleTypeDef hi2c2;  // change your handler here accordingly
-extern volatile uint32_t systick_count;
 #define SLAVE_ADDRESS_LCD 0x4E // change this according to ur setup
 
 void Lcd_Send_Cmd (char cmd)
@@ -34,23 +33,15 @@ void Lcd_Init (void)
 {
 	Lcd_Send_Cmd (0x33); /* set 4-bits interface */
 	Lcd_Send_Cmd (0x32);
-	systick_count = 0;
-	while(systick_count < 50);
+	HAL_Delay(50);
 	Lcd_Send_Cmd (0x28); /* start to set LCD function */
-	systick_count = 0;
-	while(systick_count < 50);
-	Lcd_Send_Cmd (0x01); /* clear display */
-	systick_count = 0;
-	while(systick_count < 50);
+	HAL_Delay(50);
 	Lcd_Send_Cmd (0x06); /* set entry mode */
-	systick_count = 0;
-	while(systick_count < 50);
+	HAL_Delay(50);
 	Lcd_Send_Cmd (0x0C); /* set display to on */	
-	systick_count = 0;
-	while(systick_count < 50);
+	HAL_Delay(50);
 	Lcd_Send_Cmd (0x02); /* move cursor to home and set data address to 0 */
-	systick_count = 0;
-	while(systick_count < 50);
+	HAL_Delay(50);
 	Lcd_Send_Cmd (0x80);
 }
 

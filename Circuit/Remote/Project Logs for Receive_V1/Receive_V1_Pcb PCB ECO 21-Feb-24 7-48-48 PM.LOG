@@ -1,0 +1,59 @@
+Change Component Designator: OldDesignator=IC? NewDesignator=IC0
+Added Component: Designator=R16(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R17(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R18(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R19(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R20(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R21(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R22(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R23(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R16-2
+Added Pin To Net: NetName=GND Pin=R17-2
+Added Pin To Net: NetName=GND Pin=R18-2
+Added Pin To Net: NetName=GND Pin=R19-2
+Added Pin To Net: NetName=GND Pin=R20-2
+Added Pin To Net: NetName=GND Pin=R21-2
+Added Pin To Net: NetName=GND Pin=R22-2
+Added Pin To Net: NetName=GND Pin=R23-2
+Change Net Name : Old Net Name=NetIC?_15 New Net Name=NetIC0_15
+Change Net Name : Old Net Name=NetIC?_16 New Net Name=NetIC0_16
+Added Pin To Net: NetName=NetIC0_1 Pin=IC0-1
+Added Pin To Net: NetName=NetIC0_1 Pin=R16-1
+Added Net: Name=NetIC0_1
+Added Pin To Net: NetName=NetIC0_2 Pin=IC0-2
+Added Pin To Net: NetName=NetIC0_2 Pin=R17-1
+Added Net: Name=NetIC0_2
+Added Pin To Net: NetName=NetIC0_3 Pin=IC0-3
+Added Pin To Net: NetName=NetIC0_3 Pin=R18-1
+Added Net: Name=NetIC0_3
+Added Pin To Net: NetName=NetIC0_4 Pin=IC0-4
+Added Pin To Net: NetName=NetIC0_4 Pin=R19-1
+Added Net: Name=NetIC0_4
+Added Pin To Net: NetName=NetIC0_5 Pin=IC0-5
+Added Pin To Net: NetName=NetIC0_5 Pin=R20-1
+Added Net: Name=NetIC0_5
+Added Pin To Net: NetName=NetIC0_6 Pin=IC0-6
+Added Pin To Net: NetName=NetIC0_6 Pin=R21-1
+Added Net: Name=NetIC0_6
+Added Pin To Net: NetName=NetIC0_7 Pin=IC0-7
+Added Pin To Net: NetName=NetIC0_7 Pin=R22-1
+Added Net: Name=NetIC0_7
+Added Pin To Net: NetName=NetIC0_8 Pin=IC0-8
+Added Pin To Net: NetName=NetIC0_8 Pin=R23-1
+Added Net: Name=NetIC0_8
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R16 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R17 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R18 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R19 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R20 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R21 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R22 RESISTOR SMD
+Added Member To Class: ClassName=Receive_V1_Sch Member=Component R23 RESISTOR SMD

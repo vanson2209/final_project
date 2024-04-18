@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetR05_2 Pin=SW2-1
+Removed Pin From Net: NetName=OUT2 Pin=SW2-4
+Added Pin To Net: NetName=OUT2 Pin=SW2-1
+Added Pin To Net: NetName=NetR05_2 Pin=SW2-4
+Added Room: Name=Transfer_V1_Sch

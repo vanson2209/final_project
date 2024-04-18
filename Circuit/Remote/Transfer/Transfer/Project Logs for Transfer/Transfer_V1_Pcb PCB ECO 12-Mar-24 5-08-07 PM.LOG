@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=NetANT_TP1 Pin=C00-1
+Change Component Footprint: Designator=C00 Old Footprint=CAP-SM-0603 New Footprint=CAP-SM-0805
+Change component parameters: Designator = "R14" ("R14"); Footprint = "RES-SM-0805"; UniqueID = "\MILIEDWD" ("\MILIEDWD")
+Change component parameters (AddParameter): Name = "Value"; Value = "3.3M"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetANT_TP1 Pin=C00-2
+Added Pin To Net: NetName=NetC00_1 Pin=C00-1
+Added Pin To Net: NetName=NetC00_1 Pin=L2-2
+Added Pin To Net: NetName=NetC00_1 Pin=Q1-2
+Added Net: Name=NetC00_1
+Added Room: Name=Transfer_V1_Sch

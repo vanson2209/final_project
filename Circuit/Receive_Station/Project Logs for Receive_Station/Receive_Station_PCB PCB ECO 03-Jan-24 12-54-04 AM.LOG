@@ -1,0 +1,22 @@
+Added Component: Designator=C09(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C09-1
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=5V Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=5V Pin=C11-2
+Added Pin To Net: NetName=D4 Pin=C09-2
+Added Pin To Net: NetName=D4 Pin=R01-1
+Added Pin To Net: NetName=D4 Pin=SW1-2
+Added Pin To Net: NetName=D4 Pin=SW1-2
+Added Pin To Net: NetName=D4 Pin=U1-J2_5
+Added Net: Name=D4
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C11 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component U1 ESP8266
+Added Room: Name=Receive_Station_Sch

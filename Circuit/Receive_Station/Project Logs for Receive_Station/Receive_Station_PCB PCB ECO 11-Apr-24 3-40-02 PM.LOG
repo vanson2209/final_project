@@ -1,0 +1,162 @@
+Removed Pin From Net: NetName=GND Pin=C00-2
+Removed Pin From Net: NetName=5V Pin=C03-1
+Removed Pin From Net: NetName=GND Pin=C03-2
+Removed Pin From Net: NetName=5V Pin=C04-2
+Removed Pin From Net: NetName=3V3 Pin=C07-1
+Removed Pin From Net: NetName=GND Pin=C07-2
+Removed Pin From Net: NetName=5V Pin=C10-2
+Removed Pin From Net: NetName=5V Pin=C11-2
+Removed Pin From Net: NetName=GND Pin=D01-1
+Removed Pin From Net: NetName=5V Pin=L1-2
+Removed Pin From Net: NetName=GND Pin=LED1-2
+Removed Pin From Net: NetName=GND Pin=LM-5V-3
+Removed Pin From Net: NetName=5V Pin=LM-5V-4
+Removed Pin From Net: NetName=GND Pin=LM-5V-5
+Removed Pin From Net: NetName=GND Pin=LM-5V-6
+Removed Pin From Net: NetName=5V Pin=Servo1-2
+Removed Pin From Net: NetName=GND Pin=Servo1-3
+Removed Pin From Net: NetName=5V Pin=Servo2-2
+Removed Pin From Net: NetName=GND Pin=Servo2-3
+Removed Pin From Net: NetName=D4 Pin=U1-J2_5
+Removed Member From Class: ClassName=Receive_Station_Sch Member=C00
+Removed Member From Class: ClassName=Receive_Station_Sch Member=D01
+Removed Member From Class: ClassName=Receive_Station_Sch Member=L1
+Removed Member From Class: ClassName=Receive_Station_Sch Member=LED1
+Removed Member From Class: ClassName=Receive_Station_Sch Member=LM-5V
+Removed Member From Class: ClassName=Receive_Station_Sch Member=R00
+Removed Member From Class: ClassName=Receive_Station_Sch Member=Servo1
+Removed Member From Class: ClassName=Receive_Station_Sch Member=Servo2
+Change Component Footprint: Designator=C03 Old Footprint=CAP-ALU-SMD-6.3x7.7x2.2 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C01 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C04 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C06 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C08 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C09 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C10 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Footprint: Designator=C11 Old Footprint=CAP-SM-0805 New Footprint=CAP-SM-0603
+Change Component Comment : Designator=C03 Old Comment=220uF New Comment=Cap Non-Pol SMD
+Change Component Designator: OldDesignator=C06 NewDesignator=C05
+Change Component Designator: OldDesignator=C08 NewDesignator=C07
+Change Component Designator: OldDesignator=C09 NewDesignator=C08
+Change component parameters: Designator = "C08" ("C07"); Footprint = "CAP-SM-0805"; UniqueID = "\TRUQYZYB" ("\TRUQYZYB")
+Change component parameters (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C03" ("C03"); Footprint = "CAP-ALU-SMD-6.3x7.7x2.2"; UniqueID = "\PYEWKWLI" ("\PYEWKWLI")
+Change component parameters (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=\(tu tantalum smd3528)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH007594"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? tantalum 107A-100uF 10V SMD6032"; VariantName = "[No Variations]"
+Added Component: Designator=C02(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(tu tantalum smd3528)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH007594"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? tantalum 107A-100uF 10V SMD6032"; VariantName = "[No Variations]"
+Added Component: Designator=C09(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C12(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=H1(XH2.54M-4)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001285"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 4P XH2.54-4P Ð?c Th?ng"; VariantName = "[No Variations]"
+Added Component: Designator=H2(XH2.54M-4)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001285"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 4P XH2.54-4P Ð?c Th?ng"; VariantName = "[No Variations]"
+Added Component: Designator=H3(XH2.54M-4)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001285"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 4P XH2.54-4P Ð?c Th?ng"; VariantName = "[No Variations]"
+Added Component: Designator=H4(XH2.54M-4)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH001285"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Header 4P XH2.54-4P Ð?c Th?ng"; VariantName = "[No Variations]"
+Added Component: Designator=LED?(LED-5MM-WHITE)
+Added Component: Designator=R?(RES-SM-0805)
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=5V Pin=\-1
+Added Pin To Net: NetName=GND Pin=\-2
+Added Pin To Net: NetName=3V3 Pin=C01-2
+Added Pin To Net: NetName=GND Pin=C02-1
+Added Pin To Net: NetName=3V3 Pin=C02-2
+Added Pin To Net: NetName=GND Pin=C03-1
+Added Pin To Net: NetName=3V3 Pin=C03-2
+Added Pin To Net: NetName=3V3 Pin=C04-2
+Added Pin To Net: NetName=3V3 Pin=C06-1
+Added Pin To Net: NetName=GND Pin=C06-2
+Added Pin To Net: NetName=GND Pin=C09-1
+Added Pin To Net: NetName=3V3 Pin=C09-2
+Added Pin To Net: NetName=3V3 Pin=C10-2
+Added Pin To Net: NetName=3V3 Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=3V3 Pin=C12-2
+Added Pin To Net: NetName=5V Pin=D00-2
+Added Pin To Net: NetName=GND Pin=H1-1
+Added Pin To Net: NetName=3V3 Pin=H1-2
+Added Pin To Net: NetName=GND Pin=H2-1
+Added Pin To Net: NetName=3V3 Pin=H2-2
+Added Pin To Net: NetName=GND Pin=H3-1
+Added Pin To Net: NetName=3V3 Pin=H3-2
+Added Pin To Net: NetName=GND Pin=H4-1
+Added Pin To Net: NetName=3V3 Pin=H4-2
+Added Pin To Net: NetName=GND Pin=LED?-2
+Added Pin To Net: NetName=5V Pin=R?-1
+Added Pin To Net: NetName=D4 Pin=U1-J2_3
+Change Net Name : Old Net Name=5V New Net Name=Vin
+Change Net Name : Old Net Name=D4 New Net Name=D2
+Added Pin To Net: NetName=D3 Pin=H4-4
+Added Pin To Net: NetName=D3 Pin=U1-J2_4
+Added Net: Name=D3
+Added Pin To Net: NetName=D4 Pin=H4-3
+Added Pin To Net: NetName=D4 Pin=U1-J2_5
+Added Net: Name=D4
+Added Pin To Net: NetName=D5 Pin=H3-4
+Added Pin To Net: NetName=D5 Pin=U1-J2_8
+Added Net: Name=D5
+Added Pin To Net: NetName=D6 Pin=H3-3
+Added Pin To Net: NetName=D6 Pin=U1-J2_9
+Added Net: Name=D6
+Added Pin To Net: NetName=D7 Pin=H2-4
+Added Pin To Net: NetName=D7 Pin=U1-J2_10
+Added Net: Name=D7
+Added Pin To Net: NetName=D8 Pin=H2-3
+Added Pin To Net: NetName=D8 Pin=U1-J2_11
+Added Net: Name=D8
+Added Pin To Net: NetName=D9 Pin=H1-4
+Added Pin To Net: NetName=D9 Pin=U1-J2_12
+Added Net: Name=D9
+Added Pin To Net: NetName=D10 Pin=H1-3
+Added Pin To Net: NetName=D10 Pin=U1-J2_13
+Added Net: Name=D10
+Added Pin To Net: NetName=NetLED?_1 Pin=LED?-1
+Added Pin To Net: NetName=NetLED?_1 Pin=R?-2
+Added Net: Name=NetLED?_1
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component \ 100uF
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C02 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C06 100uF
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component C12 Cap Non-Pol SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component H1 Sig_1
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component H2 Sig_2
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component H3 Sig_3
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component H4 Sig_4
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component LED? LED SMD
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component R? RESISTOR SMD

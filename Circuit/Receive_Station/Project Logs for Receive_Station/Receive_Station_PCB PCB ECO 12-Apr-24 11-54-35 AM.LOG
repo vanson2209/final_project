@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=3V3 Pin=H1-2
+Removed Pin From Net: NetName=D10 Pin=H1-3
+Removed Pin From Net: NetName=D9 Pin=H1-4
+Removed Pin From Net: NetName=3V3 Pin=H2-2
+Removed Pin From Net: NetName=D8 Pin=H2-3
+Removed Pin From Net: NetName=D7 Pin=H2-4
+Removed Pin From Net: NetName=3V3 Pin=H3-2
+Removed Pin From Net: NetName=D6 Pin=H3-3
+Removed Pin From Net: NetName=D5 Pin=H3-4
+Removed Pin From Net: NetName=3V3 Pin=H4-2
+Removed Pin From Net: NetName=D4 Pin=H4-3
+Removed Pin From Net: NetName=D3 Pin=H4-4
+Added Pin To Net: NetName=D10 Pin=H1-2
+Added Pin To Net: NetName=D9 Pin=H1-3
+Added Pin To Net: NetName=3V3 Pin=H1-4
+Added Pin To Net: NetName=D8 Pin=H2-2
+Added Pin To Net: NetName=D7 Pin=H2-3
+Added Pin To Net: NetName=3V3 Pin=H2-4
+Added Pin To Net: NetName=D6 Pin=H3-2
+Added Pin To Net: NetName=D5 Pin=H3-3
+Added Pin To Net: NetName=3V3 Pin=H3-4
+Added Pin To Net: NetName=D4 Pin=H4-2
+Added Pin To Net: NetName=D3 Pin=H4-3
+Added Pin To Net: NetName=3V3 Pin=H4-4
+Added Member To Class: ClassName=Receive_Station_Sch Member=Component LED1 LED SMD
+Added Room: Name=Receive_Station_Sch

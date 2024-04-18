@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=SW0 Old Footprint=SW2-SMD New Footprint=SW2-DIP
+Change Component Footprint: Designator=SW1 Old Footprint=SW2-SMD New Footprint=SW2-DIP
+Change Component Footprint: Designator=SW2 Old Footprint=SW2-SMD New Footprint=SW2-DIP
+Change Component Footprint: Designator=SW3 Old Footprint=SW2-SMD New Footprint=SW2-DIP
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component R315 BXR513A
+Added Room: Name=Transfer_V1_Sch

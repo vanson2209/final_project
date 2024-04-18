@@ -1,0 +1,11 @@
+Added Component: Designator=TP1(TP)
+Added Component: Designator=TP2(TP)
+Added Pin To Net: NetName=GND Pin=P1-6
+Added Pin To Net: NetName=GND Pin=TP2-TP1
+Added Net: Name=GND
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=VCC Pin=TP1-TP1
+Added Net: Name=VCC
+Added Member To Class: ClassName=PIN_3_Sch Member=Component TP1 Test Point
+Added Member To Class: ClassName=PIN_3_Sch Member=Component TP2 Test Point
+Added Room: Name=PIN_3_Sch

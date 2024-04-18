@@ -1,0 +1,95 @@
+Removed Pin From Net: NetName=VCC Pin=IC1-18
+Removed Pin From Net: NetName=VCC Pin=R09-2
+Removed Pin From Net: NetName=VCC Pin=R10-2
+Removed Pin From Net: NetName=VCC Pin=R11-2
+Removed Pin From Net: NetName=VCC Pin=R12-2
+Removed Pin From Net: NetName=VCC Pin=R13-2
+Removed Pin From Net: NetName=VCC Pin=SW1-1
+Removed Pin From Net: NetName=VCC Pin=SW1-4
+Removed Pin From Net: NetName=VCC Pin=SW2-4
+Removed Pin From Net: NetName=VCC Pin=SW3-1
+Removed Pin From Net: NetName=VCC Pin=SW4-4
+Removed Pin From Net: NetName=VCC Pin=SW5-1
+Removed Pin From Net: NetName=VCC Pin=SW-1
+Added Component: Designator=D00(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D01(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D02(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D03(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D05(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Component: Designator=D06(DIODE SMA)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH000944"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "Diode M7 1N4007 SMD 1A 1000V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=D00-1
+Change Net Name : Old Net Name=VCC New Net Name=NetD00_1
+Added Pin To Net: NetName=NetD01_1 Pin=D01-1
+Added Pin To Net: NetName=NetD01_1 Pin=R09-2
+Added Pin To Net: NetName=NetD01_1 Pin=SW1-4
+Added Net: Name=NetD01_1
+Added Pin To Net: NetName=NetD02_1 Pin=D02-1
+Added Pin To Net: NetName=NetD02_1 Pin=R10-2
+Added Pin To Net: NetName=NetD02_1 Pin=SW2-4
+Added Net: Name=NetD02_1
+Added Pin To Net: NetName=NetD03_1 Pin=D03-1
+Added Pin To Net: NetName=NetD03_1 Pin=SW3-4
+Added Net: Name=NetD03_1
+Added Pin To Net: NetName=NetD05_1 Pin=D05-1
+Added Pin To Net: NetName=NetD05_1 Pin=R12-2
+Added Pin To Net: NetName=NetD05_1 Pin=SW4-4
+Added Net: Name=NetD05_1
+Added Pin To Net: NetName=NetD06_1 Pin=D06-1
+Added Pin To Net: NetName=NetD06_1 Pin=R13-2
+Added Pin To Net: NetName=NetD06_1 Pin=SW5-1
+Added Net: Name=NetD06_1
+Added Pin To Net: NetName=NetR11_2 Pin=R11-2
+Added Pin To Net: NetName=NetR11_2 Pin=SW3-1
+Added Net: Name=NetR11_2
+Added Pin To Net: NetName=VCC Pin=D00-2
+Added Pin To Net: NetName=VCC Pin=D01-2
+Added Pin To Net: NetName=VCC Pin=D02-2
+Added Pin To Net: NetName=VCC Pin=D03-2
+Added Pin To Net: NetName=VCC Pin=D05-2
+Added Pin To Net: NetName=VCC Pin=D06-2
+Added Pin To Net: NetName=VCC Pin=IC1-18
+Added Pin To Net: NetName=VCC Pin=SW-1
+Added Net: Name=VCC
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component D00 M7
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component D01 M7
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component D02 M7
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component D03 M7
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component D05 M7
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component D06 M7
+Added Room: Name=Transfer_V1_Sch

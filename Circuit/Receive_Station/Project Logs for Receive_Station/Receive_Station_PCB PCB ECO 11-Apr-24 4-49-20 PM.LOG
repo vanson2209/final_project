@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=3V3 Pin=C01-2
+Removed Pin From Net: NetName=3V3 Pin=C02-2
+Removed Pin From Net: NetName=3V3 Pin=C03-2
+Removed Pin From Net: NetName=3V3 Pin=C04-2
+Change Component Designator: OldDesignator=16 NewDesignator=C16
+Change Component Designator: OldDesignator=\ NewDesignator=C00
+Added Pin To Net: NetName=Vin Pin=C01-2
+Added Pin To Net: NetName=Vin Pin=C02-2
+Added Pin To Net: NetName=Vin Pin=C03-2
+Added Pin To Net: NetName=Vin Pin=C04-2
+Added Room: Name=Receive_Station_Sch

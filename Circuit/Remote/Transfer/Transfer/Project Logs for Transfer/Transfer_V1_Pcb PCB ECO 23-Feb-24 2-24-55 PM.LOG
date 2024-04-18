@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=Net12V_1 Pin=12V-1
+Removed Pin From Net: NetName=GND Pin=12V-2
+Added Pin To Net: NetName=GND Pin=12V-1
+Added Pin To Net: NetName=Net12V_1 Pin=12V-2
+Change Net Name : Old Net Name=Net12V_1 New Net Name=Net12V_2
+Added Room: Name=Transfer_V1_Sch

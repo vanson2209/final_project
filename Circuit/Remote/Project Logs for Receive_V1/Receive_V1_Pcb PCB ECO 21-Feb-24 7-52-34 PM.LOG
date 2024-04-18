@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=L2 Old Footprint=AXIAL-0.8 New Footprint=L-DIP-M-5.3
+Change Component Footprint: Designator=L3 Old Footprint=RES-2W New Footprint=RES-1/4W-SMALL
+Change Component Comment : Designator=L2 Old Comment=Inductor Adj New Comment=\
+Change component parameters: Designator = "L2" ("L2"); Footprint = "AXIAL-0.8"; UniqueID = "\HMPDNZNI" ("\HMPDNZNI")
+Change component parameters (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Room: Name=Receive_V1_Sch

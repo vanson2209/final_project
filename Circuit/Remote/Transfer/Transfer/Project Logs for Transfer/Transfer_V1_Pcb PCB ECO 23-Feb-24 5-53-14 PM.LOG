@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=C00 Old Footprint=CAP-SM-0603 New Footprint=CN1
+Change Component Footprint: Designator=C1 Old Footprint=CAP-SM-0603 New Footprint=CN1
+Change Component Footprint: Designator=C2 Old Footprint=CAP-SM-0603 New Footprint=CN1
+Change Component Comment : Designator=Q1 Old Comment=A1015 New Comment=MMBT3906
+Change Component Comment : Designator=Q3 Old Comment=C1815 New Comment=2SC3356
+Change Component Comment : Designator=Q2 Old Comment=C1815 New Comment=MMBT3904
+Change Component Comment : Designator=C00 Old Comment=Cap Non-Pol SMD New Comment=Cap Non-Pol
+Change Component Comment : Designator=C1 Old Comment=Cap Non-Pol SMD New Comment=Cap Non-Pol
+Change Component Comment : Designator=C2 Old Comment=Cap Non-Pol SMD New Comment=Cap Non-Pol
+Added Room: Name=Transfer_V1_Sch

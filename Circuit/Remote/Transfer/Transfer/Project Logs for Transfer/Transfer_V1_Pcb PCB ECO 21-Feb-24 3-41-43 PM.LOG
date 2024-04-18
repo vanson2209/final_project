@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=NetD00_2 Pin=Q1-1
+Removed Pin From Net: NetName=VCC Pin=Q1-2
+Removed Pin From Net: NetName=VP Pin=Q1-3
+Removed Member From Class: ClassName=Transfer_V1_Sch Member=Q1
+Change Component Designator: OldDesignator=SW? NewDesignator=SW4
+Added Component: Designator=Q?(SOT23B)
+Added Pin To Net: NetName=NetD00_2 Pin=Q?-1
+Added Pin To Net: NetName=VCC Pin=Q?-2
+Added Pin To Net: NetName=VP Pin=Q?-3
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component Q? A1015

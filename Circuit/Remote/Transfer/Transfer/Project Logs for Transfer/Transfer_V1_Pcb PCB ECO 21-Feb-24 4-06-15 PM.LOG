@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=GND Pin=IC1-9
+Removed Pin From Net: NetName=OUT3 Pin=IC1-10
+Removed Pin From Net: NetName=OUT2 Pin=IC1-11
+Removed Pin From Net: NetName=OUT1 Pin=IC1-12
+Removed Pin From Net: NetName=OUT0 Pin=IC1-13
+Removed Pin From Net: NetName=DATA Pin=IC1-17
+Removed Pin From Net: NetName=VP Pin=IC1-18
+Removed Member From Class: ClassName=Transfer_V1_Sch Member=IC1
+Change Component Designator: OldDesignator=SW3 NewDesignator=SW2
+Change Component Designator: OldDesignator=SW4 NewDesignator=SW3
+Added Component: Designator=IC?(DIP18)
+Added Pin To Net: NetName=GND Pin=IC?-9
+Added Pin To Net: NetName=OUT3 Pin=IC?-10
+Added Pin To Net: NetName=OUT2 Pin=IC?-11
+Added Pin To Net: NetName=OUT1 Pin=IC?-12
+Added Pin To Net: NetName=OUT0 Pin=IC?-13
+Added Pin To Net: NetName=DATA Pin=IC?-17
+Added Pin To Net: NetName=VP Pin=IC?-18
+Added Pin To Net: NetName=NetIC?_15 Pin=IC?-15
+Added Pin To Net: NetName=NetIC?_15 Pin=R07-2
+Added Net: Name=NetIC?_15
+Added Pin To Net: NetName=NetIC?_16 Pin=IC?-16
+Added Pin To Net: NetName=NetIC?_16 Pin=R07-1
+Added Net: Name=NetIC?_16
+Added Member To Class: ClassName=Transfer_V1_Sch Member=Component IC? PT2262
+Added Room: Name=Transfer_V1_Sch
