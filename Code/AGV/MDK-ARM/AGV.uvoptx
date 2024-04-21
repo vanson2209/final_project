@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>1390</LineNumber>
+          <LineNumber>1594</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134231288</Address>
+          <Address>134231886</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,7 +163,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AGV\../Core/Src/main.c\1390</Expression>
+          <Expression>\\AGV\../Core/Src/main.c\1594</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
@@ -180,22 +180,6 @@
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\AGV\../Core/Src/main.c\1523</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>1560</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134231736</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>../Core/Src/main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\AGV\../Core/Src/main.c\1560</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -233,6 +217,11 @@
           <count>6</count>
           <WinNumber>1</WinNumber>
           <ItemText>distance_tmp,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Tx</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>

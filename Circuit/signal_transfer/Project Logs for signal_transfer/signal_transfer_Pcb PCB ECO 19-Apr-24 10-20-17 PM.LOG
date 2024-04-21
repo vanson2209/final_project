@@ -1,0 +1,12 @@
+Added Component: Designator=IC1(SO14)
+Add component (AddParameter): Name = "Value"; Value = "7408"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=IC1-1
+Added Pin To Net: NetName=Sig_1 Pin=IC1-2
+Added Pin To Net: NetName=NetIC1_3 Pin=IC1-3
+Added Pin To Net: NetName=VCC Pin=IC1-4
+Added Pin To Net: NetName=Sig_2 Pin=IC1-5
+Added Pin To Net: NetName=NetIC2_6 Pin=IC1-6
+Added Pin To Net: NetName=GND Pin=IC1-7
+Added Pin To Net: NetName=VCC Pin=IC1-14
+Change Net Name : Old Net Name=NetIC2_6 New Net Name=NetIC1_6
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component IC1 7408

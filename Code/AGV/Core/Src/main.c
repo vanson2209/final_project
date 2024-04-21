@@ -1273,10 +1273,21 @@ void V_Turn_Left_at_the_Intersection(void)
 			HAL_Delay(150);
 			if(agv_infor.agv_position == goods_infor.goods_position[0])
 			{
-				if(process_state == SHIP)
-					ship_state = PUT_DOWN;
-				else 
-					process_state = PICK_UP;
+				if((agv_infor.agv_direct == LEFT) && (agv_infor.agv_side == goods_infor.goods_side[0]))
+				{
+					if(process_state == SHIP)
+						ship_state = PUT_DOWN;
+					else 
+						process_state = PICK_UP;
+				}
+				else if((agv_infor.agv_direct == RIGHT) && (agv_infor.agv_side == (goods_infor.goods_side[0]) + 1
+					))
+				{
+					if(process_state == SHIP)
+						ship_state = PUT_DOWN;
+					else 
+						process_state = PICK_UP;
+				}
 			}
 //			else if((agv_infor.agv_direct == LEFT) || agv_infor.agv_direct == RIGHT)
 //				turn_left_interection_state = PASS_LEFT_3;
@@ -1311,10 +1322,21 @@ void V_Turn_Right_at_the_Intersection(void)
 			V_Turn_Right();
 			if(agv_infor.agv_position == goods_infor.goods_position[0])
 			{
-				if(process_state == SHIP)
-					ship_state = PUT_DOWN;
-				else 
-					process_state = PICK_UP;
+				if((agv_infor.agv_direct == LEFT) && (agv_infor.agv_side == goods_infor.goods_side[0]))
+				{
+					if(process_state == SHIP)
+						ship_state = PUT_DOWN;
+					else 
+						process_state = PICK_UP;
+				}
+				else if((agv_infor.agv_direct == RIGHT) && (agv_infor.agv_side == (goods_infor.goods_side[0]) + 1
+					))
+				{
+					if(process_state == SHIP)
+						ship_state = PUT_DOWN;
+					else 
+						process_state = PICK_UP;
+				}
 			}
 //			else if((agv_infor.agv_direct == LEFT) || agv_infor.agv_direct == RIGHT)
 //				turn_right_interection_state = PASS_RIGHT_1;
@@ -1386,7 +1408,6 @@ void V_Put_Down(void)
 			systick_count = HAL_GetTick();
 			robot = set;
 			goods_infor.goods_quantity--;
-			ship_state = PROCESS_SHIP;
 			V_Remove_First_Goods(goods_infor.goods_list, goods_infor.goods_quantity);
 			V_Analysis_Goods_List(goods_infor.goods_side, goods_infor.goods_position, goods_infor.goods_list);
 			state_put_down = DONE_PUT_DOWN;
@@ -1396,6 +1417,7 @@ void V_Put_Down(void)
 			{
 				Lcd_Clear_Display();
 				state_put_down = PRE_DOWN;
+				ship_state = PROCESS_SHIP;
 			}
 			break;
 	}
@@ -1591,7 +1613,7 @@ void V_Ship(void)
 			V_Put_Down();
 			break;
 		case WAIT_DONE_SHIP:
-			if((agv_infor.agv_direct == RIGHT) && (agv_infor.agv_side == 0))
+			if((agv_infor.agv_direct == RIGHT) && (agv_infor.agv_side == 1))
 				goods_infor.goods_list[0] = TS1;
 			else
 				goods_infor.goods_list[0] = TS2;

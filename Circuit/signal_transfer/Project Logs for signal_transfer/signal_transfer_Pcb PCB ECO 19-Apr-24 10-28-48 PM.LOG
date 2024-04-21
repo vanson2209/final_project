@@ -1,0 +1,58 @@
+Added Component: Designator=C0(tu tantalum smd3528)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "Dán"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = "Con"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = "MH007594"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "So_Chan"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = "T? tantalum 107A-100uF 10V SMD6032"; VariantName = "[No Variations]"
+Added Component: Designator=C1(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C07(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C8(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C9(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=C0-1
+Added Pin To Net: NetName=GND Pin=C0-2
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=VCC Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=VCC Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=VCC Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=Sig_1 Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=NetIC1_3 Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=VCC Pin=C07-1
+Added Pin To Net: NetName=GND Pin=C07-2
+Added Pin To Net: NetName=Sig_2 Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=NetIC1_6 Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Change Net Name : Old Net Name=NetIC1_3 New Net Name=NetC6_1
+Change Net Name : Old Net Name=NetIC1_6 New Net Name=NetC9_1
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C0 100uF
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C1 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C2 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C3 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C4 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C5 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C6 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C8 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C9 Cap Non-Pol SMD
+Added Room: Name=signal_transfer_Sch

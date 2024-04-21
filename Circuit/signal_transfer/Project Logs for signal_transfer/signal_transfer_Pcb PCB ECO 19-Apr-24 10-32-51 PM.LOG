@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=Sig_2 Pin=H0-1
+Removed Pin From Net: NetName=Sig_1 Pin=H0-2
+Removed Pin From Net: NetName=VCC Pin=H0-3
+Removed Pin From Net: NetName=GND Pin=H0-4
+Added Pin To Net: NetName=GND Pin=H0-1
+Added Pin To Net: NetName=VCC Pin=H0-2
+Added Pin To Net: NetName=Sig_1 Pin=H0-3
+Added Pin To Net: NetName=Sig_2 Pin=H0-4
+Added Room: Name=signal_transfer_Sch
