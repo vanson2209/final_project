@@ -1,8 +1,6 @@
 --cpu Cortex-M3
 "agv\startup_stm32f103xb.o"
 "agv\lcd.o"
-"agv\rfid.o"
-"agv\flash.o"
 "agv\main.o"
 "agv\stm32f1xx_it.o"
 "agv\stm32f1xx_hal_msp.o"
@@ -21,7 +19,6 @@
 "agv\stm32f1xx_hal_flash_ex.o"
 "agv\stm32f1xx_hal_exti.o"
 "agv\stm32f1xx_hal_i2c.o"
-"agv\stm32f1xx_hal_spi.o"
 "agv\stm32f1xx_hal_tim.o"
 "agv\stm32f1xx_hal_tim_ex.o"
 "agv\stm32f1xx_hal_uart.o"

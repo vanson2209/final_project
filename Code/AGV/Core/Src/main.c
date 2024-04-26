@@ -22,8 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "math.h"
-#include "rfid.h"
-#include "flash.h"
 #include "lcd.h"
 /* USER CODE END Includes */
 
@@ -37,6 +35,7 @@ typedef enum {PROCESS_SHIP = 0, GO_SHIP, PUT_DOWN, WAIT_DONE_SHIP, DONE_SHIP} st
 typedef enum {PROCESS_GO = 0, WAIT_CROSS} state_go_t;
 typedef enum {PRE_DOWN = 0, WAIT_ROBOT, PROCESS_PUT_DOWN, DONE_PUT_DOWN} state_put_down_t;
 typedef enum {PRE_CB = 0, GO_CB} state_comeback_t;
+typedef enum {PRE_STOP = 0, WAIT_OUT} state_stop_t;
 
 typedef enum {CHECK_SIGN_LEFT, PASS_LEFT_1, TURN_LEFT, PASS_LEFT_2} state_turn_left_intersection_t;
 typedef enum {CHECK_SIGN_RIGHT, TURN_RIGHT} state_turn_right_intersection_t;
@@ -46,19 +45,6 @@ typedef enum {TS1 = 0, RS1 = 1, RS2 = 2, TS2 = 4, RS3 = 5, RS4 = 6} list_station
 typedef enum {UP = 0, DOWN, LEFT, RIGHT, PAUSE} direct_t;
 
 typedef enum {reset = 0, set} bool_t;
-//typedef enum{} state_ship_t;
-//typedef enum{} state_comeback_t;
-//typedef enum{} state_comeback_home_opp_t;
-//typedef enum{} state_comeback_home_syn_t;
-
-//typedef struct{
-//	uint8_t start;
-//	uint8_t pick;
-//	uint8_t ship;
-//	uint8_t come_back;
-//	uint8_t come_home_opp;
-//	uint8_t come_home_syn;
-//} process_t;
 
 typedef struct{
 	bool_t goods_side[4];
@@ -100,8 +86,6 @@ DMA_HandleTypeDef hdma_adc1;
 
 I2C_HandleTypeDef hi2c2;
 
-SPI_HandleTypeDef hspi2;
-
 TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
@@ -109,7 +93,8 @@ UART_HandleTypeDef huart1;
 /* USER CODE BEGIN PV */
 uint8_t distance_tmp;
 volatile uint32_t systick_count;
-state_t state;
+volatile state_t state;
+state_stop_t state_stop;
 state_process_t process_state;
 state_pick_t pick_state;
 state_ship_t ship_state;
@@ -136,9 +121,6 @@ uint16_t sensor[5]; // gia tri doc mau tu
 uint8_t check[5];	// gia tri kiem tra mau tu
 uint16_t val1, val2; //gia tri bam xung pwm cho dng co
 
-uint8_t str[5];
-uint8_t ID_Scan[5]; // gia tri the tu
-uint8_t ID[20]; // bo ma tu
 //uint8_t direct;
 
 uint8_t tmp;
@@ -149,7 +131,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
-static void MX_SPI2_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_USART1_UART_Init(void);
@@ -173,8 +154,6 @@ void V_Come_Back(void);
 void V_Come_Home_Syn(void);
 void V_Come_Home_Pos(void);
 
-void V_Scan_ID(void);
-int8_t V_Check_ID(void);
 
 void V_Put_Down(void);
  
@@ -230,12 +209,12 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC1_Init();
-  MX_SPI2_Init();
   MX_TIM2_Init();
   MX_I2C2_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 	state = AUTO;
+	state_stop = PRE_STOP;
 	process_state = START;
 	pick_state = PRE_UP;
 	ship_state = PROCESS_SHIP;
@@ -259,15 +238,11 @@ int main(void)
 	while(agv_infor.agv_power != set){}
 	Tx = '1';
 	HAL_UART_Transmit(&huart1, &Tx, 1, 100);
-////	val1 = 9868;
-////	val2 = 0;
-////	V_Start_Motor();
-//	//systick_count = HAL_GetTick();
 	do
 	{
-//		Lcd_Send_String_XY(1, 4, "Sampling!");
-//		Lcd_Goto_XY(2,1);
-//		Lcd_Send_String("Wait, Please!");
+		Lcd_Send_String_XY(1, 4, "Sampling!");
+		Lcd_Goto_XY(2,1);
+		Lcd_Send_String("Wait, Please!");
 		V_Sensor_Init();
 	}
 	while(V_Check_Sensor_Init());
@@ -275,7 +250,6 @@ int main(void)
 	HAL_UART_Transmit(&huart1, &Tx, 1, 100);
 	htim2.Instance -> CCR1 = 8771;
 	htim2.Instance -> CCR2 = 8888;
-	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -361,8 +335,21 @@ int main(void)
 				V_Control_Web();
 				break;
 			case STOP:
-				htim2.Instance -> CCR1 = 0;
-				htim2.Instance -> CCR2 = 0;
+				switch(state_stop)
+				{
+					case PRE_STOP:
+						htim2.Instance -> CCR1 = 0;
+						htim2.Instance -> CCR2 = 0;
+						state_stop = WAIT_OUT;
+						break;
+					case WAIT_OUT:
+						if((GPIOB -> IDR  & GPIO_PIN_2) == GPIO_PIN_RESET)
+						{
+							state_stop = PRE_STOP;
+							state = AUTO;
+						}
+						break;
+				}
 				break;
 		}
 		
@@ -533,44 +520,6 @@ static void MX_I2C2_Init(void)
 }
 
 /**
-  * @brief SPI2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_SPI2_Init(void)
-{
-
-  /* USER CODE BEGIN SPI2_Init 0 */
-
-  /* USER CODE END SPI2_Init 0 */
-
-  /* USER CODE BEGIN SPI2_Init 1 */
-
-  /* USER CODE END SPI2_Init 1 */
-  /* SPI2 parameter configuration*/
-  hspi2.Instance = SPI2;
-  hspi2.Init.Mode = SPI_MODE_MASTER;
-  hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi2.Init.NSS = SPI_NSS_SOFT;
-  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
-  hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
-  hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
-  hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-  hspi2.Init.CRCPolynomial = 10;
-  if (HAL_SPI_Init(&hspi2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN SPI2_Init 2 */
-
-  /* USER CODE END SPI2_Init 2 */
-
-}
-
-/**
   * @brief TIM2 Initialization Function
   * @param None
   * @retval None
@@ -696,10 +645,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12|GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PA5 PA6 */
   GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6;
@@ -713,8 +662,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB0 PB1 PB8 PB9 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_8|GPIO_PIN_9;
+  /*Configure GPIO pins : PB0 PB1 PB14 PB15
+                           PB8 PB9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_14|GPIO_PIN_15
+                          |GPIO_PIN_8|GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -725,19 +676,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PB12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  /*Configure GPIO pins : PB12 PB13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA10 PA11 PA12 */
   GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12;
@@ -779,10 +723,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 				state = AUTO;
 			break;
 		case GPIO_PIN_2:
-			if(state == AUTO)
 				state = STOP;
-			else
-				state = AUTO;
 			break;
 	}
 }
@@ -1130,7 +1071,6 @@ void V_Pick_Up(void)
 			robot = set;
 			break;
 		case DONE_PICK:
-//			HAL_UART_Transmit(&huart1, &Tx, 1, 100);
 			if((HAL_GetTick() - systick_count) > 1500)
 			{
 				Lcd_Clear_Display();
@@ -1186,14 +1126,14 @@ void V_Remove_First_Goods(list_station_t v_goods_list[4],  uint8_t goods_quantit
 }
 bool_t V_Check_Turn_Left(void)	//set -> can turn
 {
-	if((GPIOB->IDR & GPIO_PIN_8) != (uint32_t)GPIO_PIN_RESET)
+	if((GPIOB->IDR & GPIO_PIN_15) != (uint32_t)GPIO_PIN_RESET)
 		return reset;
 	else
 		return set;
 }
 bool_t V_Check_Go_Straight(void)	//set -> can go
 {
-	if((GPIOB->IDR & GPIO_PIN_8) != (uint32_t)GPIO_PIN_RESET)
+	if((GPIOB->IDR & GPIO_PIN_14) != (uint32_t)GPIO_PIN_RESET)
 		return reset;
 	else
 		return set;
@@ -1204,11 +1144,13 @@ void V_Cross_the_Intersection(void)
 	switch(cross_interection_state)
 	{
 		case CHECK_SIGN_CROSS:
+			GPIO_SET_PIN(GPIOB, GPIO_PIN_12);
 			if(V_Check_Go_Straight() == set)
 			{
 				htim2.Instance -> CCR1 = 9868;
 				htim2.Instance -> CCR2 = 9999;
 				HAL_Delay(150);
+				GPIO_RESET_PIN(GPIOB, GPIO_PIN_12);
 				cross_interection_state = PASS_CROSS_1;
 			}
 			break;
@@ -1231,19 +1173,9 @@ void V_Cross_the_Intersection(void)
 				else 
 					process_state = PICK_UP;
 			}
-//			else if((agv_infor.agv_direct == LEFT) || agv_infor.agv_direct == RIGHT)
-//				cross_interection_state = PASS_CROSS_3;
 			state_go = PROCESS_GO;
 			cross_interection_state = CHECK_SIGN_CROSS;
 			break;
-//		case PASS_CROSS_3:
-//			state_go = PROCESS_GO;
-//			cross_interection_state = CHECK_SIGN_CROSS;
-//			htim2.Instance -> CCR1 = 9868;
-//			val2 = 9999;
-//			V_Start_Motor();
-//			HAL_Delay(150);
-//			break;
 	}
 }
 void V_Turn_Left_at_the_Intersection(void)
@@ -1251,10 +1183,12 @@ void V_Turn_Left_at_the_Intersection(void)
 	switch(turn_left_interection_state)
 	{
 		case CHECK_SIGN_LEFT:
+			GPIO_SET_PIN(GPIOB, GPIO_PIN_13);
 			if(V_Check_Turn_Left() == set)
 				htim2.Instance -> CCR1 = 9868;
 				htim2.Instance -> CCR2 = 9999;
 				HAL_Delay(150);
+				GPIO_RESET_PIN(GPIOB, GPIO_PIN_13);
 				turn_left_interection_state = PASS_LEFT_1;
 			break;
 		case PASS_LEFT_1:
@@ -1310,11 +1244,13 @@ void V_Turn_Right_at_the_Intersection(void)
 	switch(turn_right_interection_state)
 	{
 		case CHECK_SIGN_RIGHT:
+			GPIO_SET_PIN(GPIOB, GPIO_PIN_12);
 			if(V_Check_Go_Straight() == set)
 			{
 				htim2.Instance -> CCR1 = 9868;
 				htim2.Instance -> CCR2 = 9999;
 				HAL_Delay(150);
+				GPIO_RESET_PIN(GPIOB, GPIO_PIN_12);
 				turn_right_interection_state = TURN_RIGHT;
 			}
 			break;
@@ -1338,19 +1274,9 @@ void V_Turn_Right_at_the_Intersection(void)
 						process_state = PICK_UP;
 				}
 			}
-//			else if((agv_infor.agv_direct == LEFT) || agv_infor.agv_direct == RIGHT)
-//				turn_right_interection_state = PASS_RIGHT_1;
 			state_go = PROCESS_GO;
 			turn_right_interection_state = CHECK_SIGN_RIGHT;
 			break;
-//		case PASS_RIGHT_1:
-//			state_go = PROCESS_GO;
-//			turn_right_interection_state = CHECK_SIGN_RIGHT;
-//			val1 = 9868;
-//			val2 = 9999;
-//			V_Start_Motor();
-//			HAL_Delay(150);
-//			break;
 	}
 }
 
@@ -1651,53 +1577,7 @@ void V_Start_Motor(void)
 	htim2.Instance -> CCR2 = val2;
 }
 
-void V_Scan_ID(void)
-{
-	for(uint8_t i = 0; i < 100; i++){
-		if(!MFRC522_Request(0x26, str)){
-			if(!MFRC522_Anticoll(str)){
-				for(uint8_t i = 0; i < 5; i++){
-					ID_Scan[i] = str[i];
-				}
-			}
-		}
-		if(ID_Scan[1] != 0) break;
-	}
-	Flash_Erase(0x800A000);  //ghi vao bo id
-	Flash_Write_Array(0x800A000, ID_Scan, 5);
-	for(uint8_t i = 0; i < 5; i++){
-			str[i] = 0;
-			ID_Scan[i] = 0;
-	}
-}
-int8_t V_Check_ID(void)
-{
-	AntennaOn();
-	uint8_t t = 0, m, n;
-	int8_t cout = -1;
-	uint32_t a = 0x800A000;
-	uint32_t b = 0x800B000;
-	V_Scan_ID();
-	AntennaOff();
-	for(uint8_t j = 0; j < 5; j++){
-		for(uint8_t i = 0; i < 5; i++){
-			m = Flash_Read_Int(a);
-			n = Flash_Read_Int(b);
-			if(m == n) t++;
-			a++;
-			b++;
-		}
-		cout++;
-		if(t == 5) break;
-		else{
-			t = 0;
-			a = 0x800A000;
-		}
-	}
-	Flash_Erase(0x800A000);
-	if(t == 5) return cout;
-	else return -1;	
-}
+
 /* USER CODE END 4 */
 
 /**

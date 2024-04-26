@@ -1,21 +1,35 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <WebSocketsServer.h>
+#include <Ticker.h>
+Ticker systick;
+volatile uint8_t systick_count;
 
 const char* WIFI_SSID = "abc";
 const char* WIFI_PASS = "tamsotam";
+
+typedef enum{Y_RED = 0, WAIT_X_BLUE, X_BLUE, WAIT_X_YELLOW, X_YELLOW, WAIT_X_RED, X_RED, WAIT_Y_BLUE, Y_BLUE, WAIT_Y_YELLOW, Y_YELLOW, WAIT_Y_RED} state_process_signal_t;
+typedef enum{WAIT = 0, OPERATE} state_control_signal_t;
+typedef enum{START = 0, CHECK} state_request_t;
 struct AGVInfo {
   String status;
   String energy;
   String destination;
   String goods_list;
   String quantity;
+  uint8_t update[2];
 };
 uint8_t state = 0;
-
+state_control_signal_t state_control_signal;
+state_process_signal_t state_process_signal;
+state_request_t state_request_rs1 = START;
+state_request_t state_request_rs2 = START;
+state_request_t state_request_rs3 = START;
+state_request_t state_request_rs4 = START;
 AGVInfo agv[9];
 
 uint8_t check_p[3] = { 0, 0, 0 };
+uint8_t type_request[4];
 
 
 IPAddress ip;     //(192, 168, 61, 10);
@@ -24,6 +38,9 @@ IPAddress subnet(255, 255, 255, 0);
 
 WebSocketsServer webSocket = WebSocketsServer(81);
 ESP8266WebServer webServer(80);
+
+void  V_Control_Signal(void);
+void Timer_Call_Back(void);
 
 const char MainPage[] PROGMEM = R"=====(
 <!DOCTYPE html> 
@@ -399,13 +416,17 @@ void off_AGV1(void) {
   check_p[0] = 0;
 }
 void on_AGV2(void) {
-  if (check_p[1] == 0)
+  if (check_p[1] == 0){
     webSocket.broadcastTXT("2PON");
+    Serial.println("TX: 2PON");
+  }
   check_p[1] = 1;
 }
 void off_AGV2(void) {
-  if (check_p[1] == 1)
+  if (check_p[1] == 1){
     webSocket.broadcastTXT("2POFF");
+    Serial.println("TX: 2POFF");
+  }
   check_p[1] = 0;
 }
 
@@ -615,9 +636,198 @@ void webSocketEvent(uint8_t num, WStype_t type,
     } else if (AGV_in4 == 'Q') {
       agv[agvIndex].quantity = payloadString;
       Serial.println(agv[agvIndex].quantity);
+    } else if (AGV_in4 == 'U') {
+      if(payloadString == "0")
+        agv[agvIndex].update[0] = 1;
+      else if(payloadString == "1")
+        agv[agvIndex].update[1] = 1;
+      else if(payloadString == "2")
+        agv[agvIndex].update[0] = 0;
+      else if(payloadString == "3")
+        agv[agvIndex].update[1] = 0;
+    } else if (AGV_in4 == 'R') {
+      if(AGV_num == '6'){
+        if(payloadString == "0")
+          type_request[0] = 0;
+        else
+          type_request[0] = 1;
+      state_request_rs1 = CHECK;
+      }
+      else if(AGV_num == '7'){
+        if(payloadString == "0")
+          type_request[1] = 0;
+        else
+          type_request[1] = 1;
+      state_request_rs2 = CHECK;
+      }
+      else if(AGV_num == '8'){
+        if(payloadString == "0")
+          type_request[2] = 0;
+        else
+          type_request[2] = 1;
+      state_request_rs3 = CHECK;
+      }
+      else if(AGV_num == '9'){
+        if(payloadString == "0")
+          type_request[3] = 0;
+        else
+          type_request[3] = 1;
+      state_request_rs4 = CHECK;
+      }
     } 
   }
 }
+void  V_Control_Signal(void){
+  switch(state_control_signal){
+    case WAIT:
+     if((check_p[0] == 1) && (check_p[1] == 1))
+        state_control_signal = OPERATE;
+      break;
+    case OPERATE:
+      if((check_p[0] == 0) || (check_p[1] == 0))
+        state_control_signal = WAIT;
+      else{
+        switch(state_process_signal)
+        {
+          case Y_RED:
+            webSocket.broadcastTXT("YSRED");
+            Serial.println("YSRED");
+            state_process_signal = WAIT_X_BLUE;
+            break;
+          case WAIT_X_BLUE:
+            if(systick_count >= 4)
+              state_process_signal = X_BLUE;
+            break;
+          case X_BLUE:
+            webSocket.broadcastTXT("XSBLUE");
+            Serial.println("XSBLUE");
+            state_process_signal = WAIT_X_YELLOW;
+            break;
+          case WAIT_X_YELLOW:
+            if(systick_count >= 12)
+              state_process_signal = X_YELLOW;
+            break;
+          case X_YELLOW:
+            webSocket.broadcastTXT("XSYELLOW");
+            Serial.println("XSYELLOW");
+            state_process_signal = WAIT_X_RED;
+            break;
+          case WAIT_X_RED:
+            if(systick_count >= 20)
+              state_process_signal = X_RED;
+            break;
+          case X_RED:
+            webSocket.broadcastTXT("XSRED");
+            Serial.println("XSRED");
+            state_process_signal = WAIT_Y_BLUE;
+            break;
+          case WAIT_Y_BLUE:
+            if(systick_count >= 24)
+              state_process_signal = Y_BLUE;
+            break;
+          case Y_BLUE:
+            webSocket.broadcastTXT("YSBLUE");
+            Serial.println("YSBLUE");
+            state_process_signal = WAIT_Y_YELLOW;
+            break;
+          case WAIT_Y_YELLOW:
+            if(systick_count >= 32)
+              state_process_signal = Y_YELLOW;
+            break;
+          case Y_YELLOW:
+            webSocket.broadcastTXT("YSYELLOW");
+            Serial.println("YSYELLOW");
+            state_process_signal = WAIT_Y_RED;
+            break;
+          case WAIT_Y_RED:
+            if(systick_count >= 40){
+              state_process_signal = Y_RED;
+              systick_count = 0;
+            }
+            break;
+        }
+      }
+      break;
+  }
+}
+void V_PROCESS_REQUEST_SIGNAL(void){
+  switch(state_request_rs1){
+    case START:
+      break;
+    case CHECK:
+      if(type_request[0] == 0){
+        if((agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0) && (agv[9].update[1] == 0))  {
+          webSocket.broadcastTXT("6RBLUE");
+        }
+        state_request_rs1 = START;
+      }
+      else{
+        if((agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0)){
+          webSocket.broadcastTXT("6RYELLOW");
+        }
+        state_request_rs1 = START;
+      }
+      break;
+  }
+  switch(state_request_rs2){
+    case START:
+      break;
+    case CHECK:
+      if(type_request[1] == 0){
+        if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[8].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0))  {
+          webSocket.broadcastTXT("7RBLUE");
+        }
+        state_request_rs2 = START;
+      }
+      else{
+        if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0)){
+          webSocket.broadcastTXT("7RYELLOW");
+        }
+        state_request_rs2 = START;
+      }
+      break;
+  }
+  switch(state_request_rs3){
+    case START:
+      break;
+    case CHECK:
+      if(type_request[2] == 0){
+        if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[7].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0))  {
+          webSocket.broadcastTXT("8RBLUE");
+        }
+        state_request_rs3 = START;
+      }
+      else{
+        if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0)){
+          webSocket.broadcastTXT("8RYELLOW");
+        }
+        state_request_rs3 = START;
+      }
+      break;
+  }
+  switch(state_request_rs4){
+    case START:
+      break;
+    case CHECK:
+      if(type_request[3] == 0){
+        if((agv[6].update[1] == 0) && (agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0))  {
+          webSocket.broadcastTXT("9RBLUE");
+        }
+        state_request_rs4 = START;
+      }
+      else{
+        if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0)){
+          webSocket.broadcastTXT("9RYELLOW");
+        }
+        state_request_rs4 = START;
+      }
+      break;
+  }
+}
+/*void Timer_Call_Back(void)
+{
+  systick_count+=2;
+}*/
 void setup(void) {
   Serial.begin(115200);
   // Connect to Wi-Fi
@@ -641,9 +851,12 @@ void setup(void) {
   webSocket.begin();
   webSocket.onEvent(webSocketEvent);
   Serial.println("Done");
+//  systick_count = 0;
+ // systick.attach(2, Timer_Call_Back);
 }
 
 void loop(void) {
   webServer.handleClient();
   webSocket.loop();
+  V_Control_Signal();
 }

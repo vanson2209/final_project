@@ -1,7 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <WebSocketsClient.h> 
-//#include <SoftwareSerial.h>
 #include <Arduino.h>
 #include <stdlib.h>
 
@@ -14,7 +13,9 @@ const char* WIFI_PASS = "tamsotam";
 
 IPAddress ip_host;
 const uint16_t port = 81; 
+
 status_button button = CHECK_PRESS;
+
 String status;
 String agv_NUM;
 int pos = -1;
@@ -24,34 +25,29 @@ String Quantity_S;
 
 volatile uint8_t state = 0;
 
-uint8_t Check_P = 0;
 uint8_t goods_count = 0;
 
 String data;
-uint8_t state_re;
-
+char TRA_num;
+char TRA_in4;
 
 ESP8266WebServer server(80);
 
 void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
   String payloadString = (const char *)payload;
-  Serial.println(payloadString);
-  char TRA_num = payloadString[0];
-  char TRA_in4 = payloadString[1];
-  char data_re = payloadString[2];
+  TRA_num = payloadString[0];
+  TRA_in4 = payloadString[1];
   payloadString = payloadString.substring(2);
-  if ((TRA_num == '4') || (TRA_num == '5')){ 
+  if (TRA_num == '4'){ 
     if(TRA_in4 == 'D'){
       webSocket.sendTXT("4S9Operating");
       state = 1;
       agv_NUM = payloadString;
-      Serial.println("Destination");
     }
     else if(TRA_in4 == 'Q'){
       Quantity_S = payloadString;
       Quantity =strtol(Quantity_S.c_str(), NULL, 10);
       Data_to_Send = "4Q" + String(Quantity);
-      Serial.println(Data_to_Send);
       webSocket.sendTXT(Data_to_Send);
     }
   }
@@ -83,11 +79,11 @@ void V_Read_Button(void){
     switch(button){
       case CHECK_PRESS:
         if(V_Check_Button() == 1)
-          button =  CHECK_RELEASE;
+          button = CHECK_RELEASE;
         break;
       case CHECK_RELEASE:
         if(V_Check_Button() == 0)
-            button =  PREPARE_DATA;
+            button = PREPARE_DATA;
         break;
       case PREPARE_DATA:
         if(pos == 4)
@@ -113,34 +109,7 @@ void V_Data_Button(void){
   pos = -1;
   state = 3;
 }
-void  setup(){
-  pinMode(D0, INPUT);
-  pinMode(D5, INPUT);
-  pinMode(D6, INPUT);
-  pinMode(D7, INPUT);
-  pinMode(D8, INPUT);
-  Serial.begin(115200);
-  WiFi.disconnect();
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(WIFI_SSID, WIFI_PASS);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-  }
-    Serial.print("http://");
-   Serial.println(WiFi.localIP());
-  ip_host = WiFi.localIP();
-  ip_host[3] = 10;
-  Serial.println(ip_host);
-  server.begin();
-  webSocket.begin(ip_host, port);
-  webSocket.onEvent(webSocketEvent);
-  Serial.println("Done");
-}
-
-void loop()
-{
-  webSocket.loop();
-  server.handleClient();
+void V_Process_Data_Button(void){
   switch(state){
     case 0:
       break;
@@ -171,4 +140,34 @@ void loop()
       state = 0;
       break;
   }
+}
+void  setup(){
+  pinMode(D0, INPUT);
+  pinMode(D5, INPUT);
+  pinMode(D6, INPUT);
+  pinMode(D7, INPUT);
+  pinMode(D8, INPUT);
+  Serial.begin(115200);
+  WiFi.disconnect();
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+  }
+    Serial.print("http://");
+   Serial.println(WiFi.localIP());
+  ip_host = WiFi.localIP();
+  ip_host[3] = 10;
+  Serial.println(ip_host);
+  server.begin();
+  webSocket.begin(ip_host, port);
+  webSocket.onEvent(webSocketEvent);
+  Serial.println("Done");
+}
+
+void loop()
+{
+  webSocket.loop();
+  server.handleClient();
+  V_Process_Data_Button();
 }

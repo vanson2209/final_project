@@ -3,6 +3,9 @@
 #include <WebSocketsClient.h> 
 #include <SoftwareSerial.h>
 #include <Arduino.h>
+#include <Ticker.h>
+Ticker systick;
+volatile uint8_t systick_count, systick_count_pre;
 
 #define RX2 13
 #define TX2 15
@@ -13,21 +16,16 @@ WebSocketsClient webSocket;
 const char* WIFI_SSID = "abc";
 const char* WIFI_PASS = "tamsotam";
 
-IPAddress ip_host;
-//const char* ip_host;// = "192.168.61.10"; 
+IPAddress ip_host; 
 const uint16_t port = 81; 
 
 String energy = "N/A";
 String status = "Unknow";
 uint8_t Power;
-//String ipAddress;
-char receivedChar;
-uint8_t Check_P = 0;
-uint32_t t = 0x0FFFF0;
-uint16_t ADC;
 
-//const char* serverIP = "192.168.2.1";
-//const int serverPort = 80;
+char receivedChar;
+
+uint16_t ADC;
 
 ESP8266WebServer server(80);
 
@@ -41,17 +39,16 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
   if (AGV_num == '1'){
     if(AGV_in4 == 'P'){
       if (payloadString == "ON") {
-        if(Check_P == 0){
+        if((systick_count - systick_count_pre) > 2){
           mySerial.write('0');
         }
-        Check_P = 1;
       }
       else if (payloadString == "OFF"){
-        if(Check_P == 1){
+        if((systick_count - systick_count_pre) > 2){
           mySerial.write('1');
         }
-        Check_P = 0;
-      } 
+      }
+      systick_count_pre = systick_count; 
     }
     else if(AGV_in4 == 'D'){
       if(payloadString == "Done"){
@@ -108,7 +105,10 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
     }
   }
 } 
-
+void Timer_Call_Back(void)
+{
+  systick_count++;
+}
 void  setup(){
   mySerial.begin(115200);
   Serial.begin(115200);
@@ -119,7 +119,7 @@ void  setup(){
     delay(500);
   }
   //  Serial.print("http://");
-   Serial.println(WiFi.localIP());
+  // Serial.println(WiFi.localIP());
  // IPAddress localIP = WiFi.localIP(); 
  // ipAddress = String(localIP[0]) + "." + String(localIP[1]) + "." + String(localIP[2]) + "." + String(localIP[3]);
  
@@ -130,6 +130,8 @@ void  setup(){
   webSocket.begin(ip_host, port);
   webSocket.onEvent(webSocketEvent);
   //Serial.println("Done");
+  systick_count = 0;
+  systick.attach(1, Timer_Call_Back);
 }
 
 void loop()
@@ -177,14 +179,13 @@ void loop()
         break;
     }
   }
-  if(t == 0x0FFFF0){
+  if((systick_count - systick_count_pre) > 5){
     ADC = analogRead(A0);
     Power = map(ADC, 824, 994, 0, 100);
     if(Power < 20) mySerial.write('1');
       String data = "1E"+(String)Power+'%';
     //  Serial.println(data);
       webSocket.sendTXT(data);
-    t = 0;
+    systick_count_pre = systick_count;
   }
-  t = t + 1;
 }

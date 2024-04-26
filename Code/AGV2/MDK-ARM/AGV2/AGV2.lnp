@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"agv2\startup_stm32f103xb.o"
+"agv2\lcd.o"
+"agv2\main.o"
+"agv2\stm32f1xx_it.o"
+"agv2\stm32f1xx_hal_msp.o"
+"agv2\stm32f1xx_hal_gpio_ex.o"
+"agv2\stm32f1xx_hal_adc.o"
+"agv2\stm32f1xx_hal_adc_ex.o"
+"agv2\stm32f1xx_hal.o"
+"agv2\stm32f1xx_hal_rcc.o"
+"agv2\stm32f1xx_hal_rcc_ex.o"
+"agv2\stm32f1xx_hal_gpio.o"
+"agv2\stm32f1xx_hal_dma.o"
+"agv2\stm32f1xx_hal_cortex.o"
+"agv2\stm32f1xx_hal_pwr.o"
+"agv2\stm32f1xx_hal_flash.o"
+"agv2\stm32f1xx_hal_flash_ex.o"
+"agv2\stm32f1xx_hal_exti.o"
+"agv2\stm32f1xx_hal_i2c.o"
+"agv2\stm32f1xx_hal_tim.o"
+"agv2\stm32f1xx_hal_tim_ex.o"
+"agv2\stm32f1xx_hal_uart.o"
+"agv2\system_stm32f1xx.o"
+--strict --scatter "AGV2\AGV2.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "AGV2.map" -o AGV2\AGV2.axf
