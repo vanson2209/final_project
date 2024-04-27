@@ -68,7 +68,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
       }
       else if (payloadString == "RS4"){
         mySerial.write('8');
-          Serial.println("Destination is B2");
+         // Serial.println("Destination is B2");
       }
     }
     else if(AGV_in4 == 'A'){
@@ -125,7 +125,7 @@ void  setup(){
  
   ip_host = WiFi.localIP();
   ip_host[3] = 10;
-  Serial.println(ip_host);
+ // Serial.println(ip_host);
   server.begin();
   webSocket.begin(ip_host, port);
   webSocket.onEvent(webSocketEvent);
@@ -175,11 +175,11 @@ void loop()
         webSocket.sendTXT("1S9Coming Home");
         break;
       case 'D':
-        webSocket.sendTXT("1S9SHIPPING");
+        webSocket.sendTXT("1S9Shipping");
         break;
     }
   }
-  if((systick_count - systick_count_pre) > 5){
+  if((systick_count - systick_count_pre) > 10){
     ADC = analogRead(A0);
     Power = map(ADC, 824, 994, 0, 100);
     if(Power < 20) mySerial.write('1');

@@ -35,7 +35,7 @@ typedef enum {PROCESS_SHIP = 0, GO_SHIP, PUT_DOWN, WAIT_DONE_SHIP, DONE_SHIP} st
 typedef enum {PROCESS_GO = 0, WAIT_CROSS} state_go_t;
 typedef enum {PRE_DOWN = 0, WAIT_ROBOT, PROCESS_PUT_DOWN, DONE_PUT_DOWN} state_put_down_t;
 typedef enum {PRE_CB = 0, GO_CB} state_comeback_t;
-typedef enum {PRE_STOP = 0, WAIT_OUT} state_stop_t;
+typedef enum {PRE_STOP = 0, CHECK_OUT, WAIT_OUT} state_stop_t;
 
 typedef enum {CHECK_SIGN_LEFT, PASS_LEFT_1, TURN_LEFT, PASS_LEFT_2} state_turn_left_intersection_t;
 typedef enum {CHECK_SIGN_RIGHT, TURN_RIGHT} state_turn_right_intersection_t;
@@ -121,7 +121,7 @@ uint16_t sensor[5]; // gia tri doc mau tu
 uint8_t check[5];	// gia tri kiem tra mau tu
 uint16_t val1, val2; //gia tri bam xung pwm cho dng co
 
-//uint8_t direct;
+volatile uint32_t systick_count;
 
 uint8_t tmp;
 /* USER CODE END PV */
@@ -348,10 +348,26 @@ int main(void)
 					case PRE_STOP:
 						htim2.Instance -> CCR1 = 0;
 						htim2.Instance -> CCR2 = 0;
-						state_stop = WAIT_OUT;
+						systick_count = HAL_GetTick();
+						state_stop = CHECK_OUT;
 						break;
-					case WAIT_OUT:
+					case CHECK_OUT:
 						if((GPIOB -> IDR  & GPIO_PIN_2) == GPIO_PIN_RESET)
+						{
+							if((HAL_GetTick() - systick_count) < 500)
+							{
+								state_stop = PRE_STOP;
+								state = AUTO;
+							}
+							else
+							{
+								systick_count = HAL_GetTick();
+								state_stop = WAIT_OUT;
+							}
+						}
+						break;
+					case 	WAIT_OUT:
+						if((HAL_GetTick() - systick_count) < 1000)
 						{
 							state_stop = PRE_STOP;
 							state = AUTO;
@@ -810,12 +826,12 @@ void V_Turn_Left(void)
 {
 	htim2.Instance -> CCR1 = 9999;
 	htim2.Instance -> CCR2 = 9999;
-	HAL_Delay(650);
+	HAL_Delay(550);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_11);   //AIN1
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_12);	//AIN2
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB
-	HAL_Delay(400);
+	HAL_Delay(500);
 	systick_count = HAL_GetTick();
 	do
 	{
@@ -835,12 +851,12 @@ void V_Turn_Right(void)
 {
 	htim2.Instance -> CCR1 = 9999;
 	htim2.Instance -> CCR2 = 9999;
-	HAL_Delay(650);
+	HAL_Delay(550);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 	GPIO_RESET_PIN(GPIOB, GPIO_PIN_4);   //BIN2
 	GPIO_SET_PIN(GPIOB, GPIO_PIN_5);	//BIN1
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB`
-	HAL_Delay(400);
+	HAL_Delay(500);
 	systick_count = HAL_GetTick();
 	do
 	{
@@ -848,7 +864,7 @@ void V_Turn_Right(void)
 		HAL_Delay(1);
 		HAL_ADC_Stop_DMA(&hadc1);
 		tmp = V_Check_Sensor();
-		if((tmp > 0) && (tmp < 4))
+		if((tmp > 0) && (tmp < 5))
 				break;
 	} while((HAL_GetTick() - systick_count) < 800);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`

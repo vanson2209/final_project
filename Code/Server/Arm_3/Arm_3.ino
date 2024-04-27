@@ -6,10 +6,17 @@
 #include <stdlib.h>
 #include <Ticker.h>
 
+Ticker systick_re;
 Ticker systick;
+
+volatile uint8_t systick_re_count;
+volatile uint32_t systick_count;
+void Timer_re_Call_Back(void);
+
 
 typedef enum {CHECK_PRESS = 0, CHECK_RELEASE} status_button_t;
 typedef enum{RED = 0, WAIT_BLUE, BLUE, WAIT_YELLOW, YELLOW, WAIT_RED} state_signal_t;
+typedef enum{WAIT = 0, START_PRO, OPERATE, STOP} state_process_signal_t;
 typedef enum{START = 0, PROCESS_SIGNAL, PRE_SEND_STRAIGHT, PRE_SEND_TURN} update_data_t;
 typedef enum{START_RE = 0, BLUE_RE, YELLOW_RE, WAIT_DONE_BLUE, WAIT_DONE_YELLOW} state_process_request_t;
 
@@ -34,11 +41,12 @@ char TRA_num;
 char TRA_in4;
 
 status_button_t status_button = CHECK_PRESS;
-volatile state_signal_t  state_signal = RED;
+volatile state_signal_t  state_signal;
+volatile state_process_signal_t state_process_signal;
 volatile update_data_t update_data = START;
 volatile state_process_request_t state_process_request = START_RE;
 
-volatile uint8_t systick_count;
+
 
 ESP8266WebServer server(80);
 
@@ -46,7 +54,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
   String payloadString = (const char *)payload;
   Serial.println(payloadString);
   TRA_num = payloadString[0];
-  if ((TRA_num == '6') || (TRA_num == 'Y')){    
+  if ((TRA_num == '6') || (TRA_num == 'X')){    
     TRA_in4 = payloadString[1];
     payloadString = payloadString.substring(2);        //if (TRA_num == '6')
     if(TRA_in4 == 'D'){
@@ -63,12 +71,10 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
       webSocket.sendTXT(Data_To_Send);
     }
     else if(TRA_in4 == 'S'){
-      if(payloadString == "BLUE")
-        state_signal = BLUE;
-      else if(payloadString == "YELLOW")
-        state_signal = YELLOW;
-      else if(payloadString == "RED")
-        state_signal = RED;
+      if(payloadString == "START")
+        state_process_signal = START_PRO;
+      else if(payloadString == "STOP")
+        state_process_signal = STOP;
     }
     else if(TRA_in4 == 'R'){
       if(payloadString == "BLUE")
@@ -111,27 +117,59 @@ void V_Process_Data_Button(void){
   }
 }
 void V_Process_Signal(void){
-  switch(state_signal)
-  {
-    case RED:
-      digitalWrite(D3, LOW);
-      digitalWrite(D4, LOW);
+  switch(state_process_signal){
+    case WAIT:
       break;
-    case WAIT_BLUE:
+    case START_PRO:
+      systick_count = 0;
+      systick.attach_ms(1, Timer_Call_Back);
+      state_signal = RED;
+      state_process_signal = OPERATE;
       break;
-    case BLUE:
-      digitalWrite(D3, LOW);
-      digitalWrite(D4, HIGH);
+    case OPERATE:
+      switch(state_signal){
+        case RED:
+          digitalWrite(D3, LOW);
+          digitalWrite(D4, LOW);
+          state_signal = WAIT_BLUE;
+          break;
+        case WAIT_BLUE:
+          if(systick_count >= 24000)
+            state_signal = BLUE;
+          break;
+        case BLUE:
+          digitalWrite(D3, LOW);
+          digitalWrite(D4, HIGH);
+          state_signal = WAIT_YELLOW;
+          break;
+        case WAIT_YELLOW:
+          if(systick_count >= 32000)
+            state_signal = YELLOW;
+          break;
+        case YELLOW:
+          digitalWrite(D3, HIGH);
+          digitalWrite(D4, LOW);
+          state_signal = WAIT_RED;
+          break;
+        case WAIT_RED:
+          if(systick_count >= 40000){
+            systick_count = 0;
+            state_signal = RED;
+          }
+          break;
+      }
       break;
-    case WAIT_YELLOW:
-      break;
-    case YELLOW:
+    case STOP:
       digitalWrite(D3, HIGH);
-      digitalWrite(D4, LOW);
-      break;
-    case WAIT_RED:
+      digitalWrite(D4, HIGH);
+      systick.detach();
+      state_process_signal = WAIT;
       break;
   }
+}
+void Timer_Call_Back(void)
+{
+  systick_count ++;
 }
 void V_Update_Signal(void){
   switch(update_data){
@@ -211,7 +249,7 @@ ICACHE_RAM_ATTR void IST_TURN (void){
 ICACHE_RAM_ATTR void IST_STRAIGHT (void){
   update_data = PROCESS_SIGNAL;
 }
-void Timer_Call_Back (void){
+void Timer_re_Call_Back (void){
   systick_count ++;
 }
 void  setup(){
@@ -238,9 +276,9 @@ void  setup(){
   Serial.println("Done");
   attachInterrupt(D5, IST_TURN, RISING);
   attachInterrupt(D6, IST_STRAIGHT, RISING);
-  systick.attach(1, Timer_Call_Back);
-  digitalWrite(D3, LOW);
-  digitalWrite(D4, LOW);
+  systick_re.attach(1, Timer_re_Call_Back);
+  digitalWrite(D3, HIGH);
+  digitalWrite(D4, HIGH);
 }
 
 void loop()

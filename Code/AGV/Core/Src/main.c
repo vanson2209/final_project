@@ -35,7 +35,7 @@ typedef enum {PROCESS_SHIP = 0, GO_SHIP, PUT_DOWN, WAIT_DONE_SHIP, DONE_SHIP} st
 typedef enum {PROCESS_GO = 0, WAIT_CROSS} state_go_t;
 typedef enum {PRE_DOWN = 0, WAIT_ROBOT, PROCESS_PUT_DOWN, DONE_PUT_DOWN} state_put_down_t;
 typedef enum {PRE_CB = 0, GO_CB} state_comeback_t;
-typedef enum {PRE_STOP = 0, WAIT_OUT} state_stop_t;
+typedef enum {PRE_STOP = 0, CHECK_OUT, WAIT_OUT} state_stop_t;
 
 typedef enum {CHECK_SIGN_LEFT, PASS_LEFT_1, TURN_LEFT, PASS_LEFT_2} state_turn_left_intersection_t;
 typedef enum {CHECK_SIGN_RIGHT, TURN_RIGHT} state_turn_right_intersection_t;
@@ -340,10 +340,26 @@ int main(void)
 					case PRE_STOP:
 						htim2.Instance -> CCR1 = 0;
 						htim2.Instance -> CCR2 = 0;
-						state_stop = WAIT_OUT;
+						systick_count = HAL_GetTick();
+						state_stop = CHECK_OUT;
 						break;
-					case WAIT_OUT:
+					case CHECK_OUT:
 						if((GPIOB -> IDR  & GPIO_PIN_2) == GPIO_PIN_RESET)
+						{
+							if((HAL_GetTick() - systick_count) < 500)
+							{
+								state_stop = PRE_STOP;
+								state = AUTO;
+							}
+							else
+							{
+								systick_count = HAL_GetTick();
+								state_stop = WAIT_OUT;
+							}
+						}
+						break;
+					case 	WAIT_OUT:
+						if((HAL_GetTick() - systick_count) < 1000)
 						{
 							state_stop = PRE_STOP;
 							state = AUTO;

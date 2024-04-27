@@ -3,7 +3,7 @@
 <title>Static Call Graph - [AGV2\AGV2.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image AGV2\AGV2.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Apr 27 01:11:27 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Apr 27 14:54:00 2024
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -613,7 +613,10 @@ Global Symbols
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Start
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Sensor_Init
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Cross_the_Intersection
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Data
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Init
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Goto_XY
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Clear_Display
 </UL>
 
 <P><STRONG><a name="[67]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, main.o(i.HAL_GPIO_EXTI_Callback))
@@ -648,6 +651,7 @@ Global Symbols
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCCEx_PeriphCLKConfig
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Turn_Right
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Turn_Left
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Sensor_Init
@@ -945,19 +949,22 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[9f]"></a>Lcd_Clear_Display</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lcd.o(i.Lcd_Clear_Display))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = Lcd_Clear_Display &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
+<P><STRONG><a name="[9f]"></a>Lcd_Clear_Display</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, lcd.o(i.Lcd_Clear_Display))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Lcd_Clear_Display &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Cmd
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Put_Down
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Pick_Up
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_String_XY
 </UL>
 
-<P><STRONG><a name="[a1]"></a>Lcd_Goto_XY</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lcd.o(i.Lcd_Goto_XY))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = Lcd_Goto_XY &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
+<P><STRONG><a name="[a1]"></a>Lcd_Goto_XY</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, lcd.o(i.Lcd_Goto_XY))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = Lcd_Goto_XY &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Cmd
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Pick_Up
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_String_XY
@@ -977,16 +984,16 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Transmit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_String_XY
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Init
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Init
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Goto_XY
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Clear_Display
 </UL>
 
-<P><STRONG><a name="[a3]"></a>Lcd_Send_Data</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, lcd.o(i.Lcd_Send_Data))
+<P><STRONG><a name="[a3]"></a>Lcd_Send_Data</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, lcd.o(i.Lcd_Send_Data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = Lcd_Send_Data &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Master_Transmit
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_String_XY
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_String
@@ -1000,12 +1007,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Pick_Up
 </UL>
 
-<P><STRONG><a name="[a5]"></a>Lcd_Send_String_XY</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, lcd.o(i.Lcd_Send_String_XY))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = Lcd_Send_String_XY &rArr; Lcd_Send_Data &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
+<P><STRONG><a name="[a5]"></a>Lcd_Send_String_XY</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, lcd.o(i.Lcd_Send_String_XY))
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = Lcd_Send_String_XY &rArr; Lcd_Goto_XY &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Data
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Send_Cmd
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Goto_XY
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_Clear_Display
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Put_Down
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Pick_Up
@@ -1198,7 +1205,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[c2]"></a>V_Pick_Up</STRONG> (Thumb, 242 bytes, Stack size 24 bytes, main.o(i.V_Pick_Up))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = V_Pick_Up &rArr; Lcd_Send_String_XY &rArr; Lcd_Send_Data &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = V_Pick_Up &rArr; Lcd_Send_String_XY &rArr; Lcd_Goto_XY &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -1213,7 +1220,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[c5]"></a>V_Put_Down</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, main.o(i.V_Put_Down))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = V_Put_Down &rArr; Lcd_Send_String_XY &rArr; Lcd_Send_Data &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = V_Put_Down &rArr; Lcd_Send_String_XY &rArr; Lcd_Goto_XY &rArr; Lcd_Send_Cmd &rArr; HAL_I2C_Master_Transmit &rArr; I2C_MasterRequestWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -1366,7 +1373,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pow
 </UL>
 
-<P><STRONG><a name="[48]"></a>main</STRONG> (Thumb, 554 bytes, Stack size 8 bytes, main.o(i.main))
+<P><STRONG><a name="[48]"></a>main</STRONG> (Thumb, 618 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = main &rArr; V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
@@ -1377,6 +1384,7 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Stop_DMA
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Start

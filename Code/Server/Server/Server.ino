@@ -8,8 +8,8 @@ volatile uint8_t systick_count;
 const char* WIFI_SSID = "abc";
 const char* WIFI_PASS = "tamsotam";
 
-typedef enum{Y_RED = 0, WAIT_X_BLUE, X_BLUE, WAIT_X_YELLOW, X_YELLOW, WAIT_X_RED, X_RED, WAIT_Y_BLUE, Y_BLUE, WAIT_Y_YELLOW, Y_YELLOW, WAIT_Y_RED} state_process_signal_t;
-typedef enum{WAIT = 0, OPERATE} state_control_signal_t;
+
+typedef enum{START_C = 0, SEND_DATA} state_control_signal_t;
 typedef enum{START = 0, CHECK} state_request_t;
 struct AGVInfo {
   String status;
@@ -21,7 +21,7 @@ struct AGVInfo {
 };
 uint8_t state = 0;
 state_control_signal_t state_control_signal;
-state_process_signal_t state_process_signal;
+
 state_request_t state_request_rs1 = START;
 state_request_t state_request_rs2 = START;
 state_request_t state_request_rs3 = START;
@@ -679,73 +679,24 @@ void webSocketEvent(uint8_t num, WStype_t type,
 }
 void  V_Control_Signal(void){
   switch(state_control_signal){
-    case WAIT:
-     if((check_p[0] == 1) && (check_p[1] == 1))
-        state_control_signal = OPERATE;
+    case START_C:
+      if((check_p[0] == 1) && (check_p[1] == 1)){
+        systick_count = 1;
+        systick.attach(400, Timer_Call_Back);
+        state_control_signal = SEND_DATA;
+     }
       break;
-    case OPERATE:
-      if((check_p[0] == 0) || (check_p[1] == 0))
-        state_control_signal = WAIT;
-      else{
-        switch(state_process_signal)
-        {
-          case Y_RED:
-            webSocket.broadcastTXT("YSRED");
-            Serial.println("YSRED");
-            state_process_signal = WAIT_X_BLUE;
-            break;
-          case WAIT_X_BLUE:
-            if(systick_count >= 4)
-              state_process_signal = X_BLUE;
-            break;
-          case X_BLUE:
-            webSocket.broadcastTXT("XSBLUE");
-            Serial.println("XSBLUE");
-            state_process_signal = WAIT_X_YELLOW;
-            break;
-          case WAIT_X_YELLOW:
-            if(systick_count >= 12)
-              state_process_signal = X_YELLOW;
-            break;
-          case X_YELLOW:
-            webSocket.broadcastTXT("XSYELLOW");
-            Serial.println("XSYELLOW");
-            state_process_signal = WAIT_X_RED;
-            break;
-          case WAIT_X_RED:
-            if(systick_count >= 20)
-              state_process_signal = X_RED;
-            break;
-          case X_RED:
-            webSocket.broadcastTXT("XSRED");
-            Serial.println("XSRED");
-            state_process_signal = WAIT_Y_BLUE;
-            break;
-          case WAIT_Y_BLUE:
-            if(systick_count >= 24)
-              state_process_signal = Y_BLUE;
-            break;
-          case Y_BLUE:
-            webSocket.broadcastTXT("YSBLUE");
-            Serial.println("YSBLUE");
-            state_process_signal = WAIT_Y_YELLOW;
-            break;
-          case WAIT_Y_YELLOW:
-            if(systick_count >= 32)
-              state_process_signal = Y_YELLOW;
-            break;
-          case Y_YELLOW:
-            webSocket.broadcastTXT("YSYELLOW");
-            Serial.println("YSYELLOW");
-            state_process_signal = WAIT_Y_RED;
-            break;
-          case WAIT_Y_RED:
-            if(systick_count >= 40){
-              state_process_signal = Y_RED;
-              systick_count = 0;
-            }
-            break;
-        }
+    case SEND_DATA:
+      if((check_p[0] == 0) || (check_p[1] == 0)){
+        webSocket.broadcastTXT("XSSTOP");
+        Serial.println("XSSTOP");
+        systick.detach();
+        state_control_signal = START_C;
+      }
+      else if(systick_count == 1){
+        webSocket.broadcastTXT("XSSTART");
+        Serial.println("XSSTART");
+        systick_count = 0;
       }
       break;
   }
@@ -824,10 +775,10 @@ void V_PROCESS_REQUEST_SIGNAL(void){
       break;
   }
 }
-/*void Timer_Call_Back(void)
+void Timer_Call_Back(void)
 {
-  systick_count+=2;
-}*/
+  systick_count = 1;
+}
 void setup(void) {
   Serial.begin(115200);
   // Connect to Wi-Fi
@@ -851,8 +802,6 @@ void setup(void) {
   webSocket.begin();
   webSocket.onEvent(webSocketEvent);
   Serial.println("Done");
-//  systick_count = 0;
- // systick.attach(2, Timer_Call_Back);
 }
 
 void loop(void) {

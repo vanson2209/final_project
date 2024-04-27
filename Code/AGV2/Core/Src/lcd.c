@@ -27,6 +27,7 @@ void Lcd_Send_Data (char data)
 	data_t[2] = data_l|0x0D;  //en=1, rs=0
 	data_t[3] = data_l|0x09;  //en=0, rs=0
 	HAL_I2C_Master_Transmit (&hi2c2, SLAVE_ADDRESS_LCD,(uint8_t *) data_t, 4, 100);
+	HAL_Delay(10);
 }
 
 void Lcd_Init (void)
@@ -52,7 +53,7 @@ void Lcd_Send_String (char *str)
 void Lcd_Clear_Display (void)
 {
 	Lcd_Send_Cmd (0x01);
-//	HAL_Delay(10);
+	HAL_Delay(10);
 }
 
 void Lcd_Goto_XY (int row, int col)
@@ -67,7 +68,7 @@ void Lcd_Goto_XY (int row, int col)
 		pos_Addr = 0x80 | (0x40 + col);
 	}
 	Lcd_Send_Cmd(pos_Addr);
-//	HAL_Delay(10);
+	HAL_Delay(10);
 }
 void Lcd_Send_String_XY(int row, int col, char *str){
 	Lcd_Clear_Display();

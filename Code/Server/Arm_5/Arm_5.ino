@@ -4,9 +4,14 @@
 #include <SoftwareSerial.h>
 #include <Arduino.h>
 #include <stdlib.h>
+#include <Ticker.h>
+Ticker systick;
+volatile uint32_t systick_count;
+void Timer_Call_Back(void);
 
 typedef enum {CHECK_PRESS = 0, CHECK_RELEASE} status_button_t;
-typedef enum{RED = 0, WAIT_BLUE, BLUE, WAIT_YELLOW, YELLOW, WAIT_RED} state_signal_t;
+typedef enum{RED = 0, WAIT_BLUE, BLUE, WAIT_YELLOW, YELLOW, WAIT_RED_I, RED_I,WAIT_RED} state_signal_t;
+typedef enum{WAIT = 0, START, OPERATE, STOP} state_process_signal_t;
 
 WebSocketsClient webSocket;
 
@@ -29,6 +34,7 @@ char TRA_in4;
 
 status_button_t status_button;
 volatile state_signal_t  state_signal;
+volatile state_process_signal_t state_process_signal;
 
 ESP8266WebServer server(80);
 
@@ -54,12 +60,10 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
       webSocket.sendTXT(Data_To_Send);
     }
     else if(TRA_in4 == 'S'){
-      if(payloadString == "BLUE")
-        state_signal = BLUE;
-      else if(payloadString == "YELLOW")
-        state_signal = YELLOW;
-      else if(payloadString == "RED")
-        state_signal = RED;
+      if(payloadString == "START")
+        state_process_signal = START;
+      else if(payloadString == "STOP")
+        state_process_signal = STOP;
     }
   }
 } 
@@ -96,27 +100,68 @@ void V_Process_Data_Button(void){
   }
 }
 void V_Process_Signal(void){
-  switch(state_signal)
-  {
-    case RED:
-      digitalWrite(D3, LOW);
-      digitalWrite(D4, LOW);
+  switch(state_process_signal){
+    case WAIT:
       break;
-    case WAIT_BLUE:
+    case START:
+      systick_count = 0;
+      systick.attach_ms(1, Timer_Call_Back);
+      state_signal = RED;
+      state_process_signal = OPERATE;
       break;
-    case BLUE:
-      digitalWrite(D3, LOW);
-      digitalWrite(D4, HIGH);
+    case OPERATE:
+      switch(state_signal){
+        case RED:
+          digitalWrite(D3, LOW);
+          digitalWrite(D4, LOW);
+          state_signal = WAIT_BLUE;
+          break;
+        case WAIT_BLUE:
+          if(systick_count >= 4000)
+            state_signal = BLUE;
+          break;
+        case BLUE:
+          digitalWrite(D3, LOW);
+          digitalWrite(D4, HIGH);
+          state_signal = WAIT_YELLOW;
+          break;
+        case WAIT_YELLOW:
+          if(systick_count >= 12000)
+            state_signal = YELLOW;
+          break;
+        case YELLOW:
+          digitalWrite(D3, HIGH);
+          digitalWrite(D4, LOW);
+          state_signal = WAIT_RED_I;
+          break;
+        case WAIT_RED_I:
+          if(systick_count >= 20000)
+            state_signal = RED_I;
+          break;
+        case RED_I:
+          digitalWrite(D3, LOW);
+          digitalWrite(D4, LOW);
+          state_signal = WAIT_RED;
+          break;
+        case WAIT_RED:
+          if(systick_count >= 40000){
+            systick_count = 0;
+            state_signal = RED;
+          }
+        break;
+      }
       break;
-    case WAIT_YELLOW:
-      break;
-    case YELLOW:
+    case STOP:
       digitalWrite(D3, HIGH);
-      digitalWrite(D4, LOW);
-      break;
-    case WAIT_RED:
+      digitalWrite(D4, HIGH);
+      systick.detach();
+      state_process_signal = WAIT;
       break;
   }
+}
+void Timer_Call_Back(void)
+{
+  systick_count ++;
 }
 void  setup(){
   pinMode(D2, INPUT);
@@ -140,6 +185,8 @@ void  setup(){
   webSocket.begin(ip_host, port);
   webSocket.onEvent(webSocketEvent);
   Serial.println("Done");
+  digitalWrite(D3, HIGH);
+  digitalWrite(D4, HIGH);
 }
 
 void loop()

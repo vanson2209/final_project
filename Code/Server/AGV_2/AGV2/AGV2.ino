@@ -71,7 +71,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
       }
       else if (payloadString == "RS4"){
         mySerial.write('8');
-          Serial.println("Destination is B2");
+       //   Serial.println("Destination is B2");
       }
     }
     else if(AGV_in4 == 'A'){
@@ -178,11 +178,11 @@ void loop()
         webSocket.sendTXT("2S9Coming Home");
         break;
       case 'D':
-        webSocket.sendTXT("2S9SHIPPING");
+        webSocket.sendTXT("2S9Shipping");
         break;
     }
   }
-  if((systick_count - systick_count_pre) > 20){
+  if((systick_count - systick_count_pre) > 10){
     ADC = analogRead(A0);
     Power = map(ADC, 824, 971, 0, 100);
     if(Power < 20) mySerial.write('1');
