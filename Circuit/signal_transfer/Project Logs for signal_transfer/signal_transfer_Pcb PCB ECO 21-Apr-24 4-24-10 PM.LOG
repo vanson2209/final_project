@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=VCC Pin=C01-1
+Removed Pin From Net: NetName=GND Pin=C01-2
+Removed Pin From Net: NetName=VCC Pin=C02-1
+Removed Pin From Net: NetName=GND Pin=C02-2
+Removed Pin From Net: NetName=VCC Pin=C03-1
+Removed Pin From Net: NetName=GND Pin=C03-2
+Removed Member From Class: ClassName=signal_transfer_Sch Member=C02
+Removed Member From Class: ClassName=signal_transfer_Sch Member=C03
+Removed Member From Class: ClassName=signal_transfer_Sch Member=C04
+Change Component Designator: OldDesignator=C04 NewDesignator=C01
+Added Room: Name=signal_transfer_Sch

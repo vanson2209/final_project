@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=IR_S2 Pin=H0-7
+Removed Pin From Net: NetName=IR_S1 Pin=H0-8
+Added Pin To Net: NetName=IR_S1 Pin=H0-7
+Added Pin To Net: NetName=IR_S2 Pin=H0-8
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C10 Cap Non-Pol SMD
+Added Room: Name=signal_circuit_Sch

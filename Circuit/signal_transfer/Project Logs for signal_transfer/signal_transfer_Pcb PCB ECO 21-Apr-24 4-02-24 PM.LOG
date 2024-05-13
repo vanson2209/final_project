@@ -1,0 +1,12 @@
+Added Component: Designator=C081(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C111(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC08_1 Pin=C081-1
+Added Pin To Net: NetName=GND Pin=C081-2
+Added Pin To Net: NetName=NetC11_1 Pin=C111-1
+Added Pin To Net: NetName=GND Pin=C111-2
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C081 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C111 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component LP2 LED 5mm
+Added Room: Name=signal_transfer_Sch

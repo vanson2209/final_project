@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=5V Pin=IC2-1
+Removed Pin From Net: NetName=LP1 Pin=IC2-2
+Removed Pin From Net: NetName=5V Pin=IC2-14
+Added Pin To Net: NetName=LP1 Pin=IC2-1
+Added Pin To Net: NetName=5V Pin=IC2-2
+Added Pin To Net: NetName=VCC Pin=IC2-14
+Added Room: Name=signal_circuit_Sch

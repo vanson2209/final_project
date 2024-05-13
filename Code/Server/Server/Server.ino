@@ -2,30 +2,38 @@
 #include <ESP8266WebServer.h>
 #include <WebSocketsServer.h>
 #include <Ticker.h>
+
+//void V_Control_Signal(void);
+void V_Check_Power_AGV(void);
 Ticker systick;
-volatile uint8_t systick_count;
+volatile uint32_t systick_count, systick_count_agv1, systick_count_agv2;
 
 const char* WIFI_SSID = "abc";
 const char* WIFI_PASS = "tamsotam";
 
 
-typedef enum{START_C = 0, SEND_DATA} state_control_signal_t;
-typedef enum{START = 0, CHECK} state_request_t;
+//typedef enum{START_C = 0, SEND_DATA} state_control_signal_t;
+//typedef enum{START_R = 0, CHECK} state_request_t;
+typedef enum{START_P_AGV = 0, CHECK_AGV_ON, CHECK_AGV_OF} state_check_power_t;
+
 struct AGVInfo {
   String status;
   String energy;
   String destination;
   String goods_list;
   String quantity;
-  uint8_t update[2];
+//  uint8_t update[2];
+  uint8_t power;
 };
 uint8_t state = 0;
-state_control_signal_t state_control_signal;
+/*state_control_signal_t state_control_signal;
 
-state_request_t state_request_rs1 = START;
-state_request_t state_request_rs2 = START;
-state_request_t state_request_rs3 = START;
-state_request_t state_request_rs4 = START;
+state_request_t state_request_rs1 = START_R;
+state_request_t state_request_rs2 = START_R;
+state_request_t state_request_rs3 = START_R;
+state_request_t state_request_rs4 = START_R;*/
+state_check_power_t state_check_power_AGV1 = START_P_AGV;
+state_check_power_t state_check_power_AGV2 = START_P_AGV;
 AGVInfo agv[9];
 
 uint8_t check_p[3] = { 0, 0, 0 };
@@ -405,6 +413,8 @@ void on_AGV1(void) {
   if (check_p[0] == 0){
     webSocket.broadcastTXT("1PON");
     Serial.println("TX: 1PON");
+    systick_count_agv1 = 30;
+    state_check_power_AGV1 = CHECK_AGV_ON;
   }
   check_p[0] = 1;
 }
@@ -412,6 +422,8 @@ void off_AGV1(void) {
   if (check_p[0] == 1){
     webSocket.broadcastTXT("1POFF");
     Serial.println("TX: 1POFF");
+    systick_count_agv1 = 30;
+    state_check_power_AGV1 = CHECK_AGV_OF;
   }
   check_p[0] = 0;
 }
@@ -419,6 +431,8 @@ void on_AGV2(void) {
   if (check_p[1] == 0){
     webSocket.broadcastTXT("2PON");
     Serial.println("TX: 2PON");
+    systick_count_agv2 = 30;
+    state_check_power_AGV2 = CHECK_AGV_ON;
   }
   check_p[1] = 1;
 }
@@ -426,6 +440,8 @@ void off_AGV2(void) {
   if (check_p[1] == 1){
     webSocket.broadcastTXT("2POFF");
     Serial.println("TX: 2POFF");
+    systick_count_agv2 = 30;
+    state_check_power_AGV2 = CHECK_AGV_OF;
   }
   check_p[1] = 0;
 }
@@ -594,49 +610,56 @@ void webSocketEvent(uint8_t num, WStype_t type,
   Serial.println(payloadString);
   String broadcastPayload;
   payloadString = payloadString.substring(2);
-  if (AGV_num >= '1' && AGV_num <= '9') {
+  if ((AGV_num >= '1' && AGV_num <= '9') || (AGV_num == 'Y')) {
     int agvIndex = AGV_num - '1';
     if (AGV_in4 == 'S') {
       char side = payloadString[0];
 
       agv[agvIndex].status = payloadString.substring(1);
-      Serial.println(side);
-      //  Serial.println(agv[agvIndex].status);
+      if(agv[agvIndex].status == "Coming Back"){
+        agv[agvIndex].goods_list = "";
+        webSocket.broadcastTXT("ZU");
+      }
       if (side == '0') {
-        broadcastPayload = "4D" + String(AGV_num);
+        broadcastPayload = "4G" + String(AGV_num);
         webSocket.broadcastTXT(broadcastPayload);
       } else if (side == '1') {
         Serial.println("Side = 1");
-        broadcastPayload = "5D" + String(AGV_num);
+        broadcastPayload = "5G" + String(AGV_num);
         webSocket.broadcastTXT(broadcastPayload);
       } else if (side == '2') {
-        broadcastPayload = "6D" + String(AGV_num);
+        broadcastPayload = "6G" + String(AGV_num);
         webSocket.broadcastTXT(broadcastPayload);
       } else if (side == '3') {
-        broadcastPayload = "7D" + String(AGV_num);
+        broadcastPayload = "7G" + String(AGV_num);
         webSocket.broadcastTXT(broadcastPayload);
       } else if (side == '4') {
-        broadcastPayload = "8D" + String(AGV_num);
+        broadcastPayload = "8G" + String(AGV_num);
         webSocket.broadcastTXT(broadcastPayload);
       } else if (side == '5') {
-        broadcastPayload = "9D" + String(AGV_num);
+        broadcastPayload = "9G" + String(AGV_num);
         webSocket.broadcastTXT(broadcastPayload);
       }
       Serial.println("TX: " + broadcastPayload);
-    } else if (AGV_in4 == 'E') {
+    } 
+    else if (AGV_in4 == 'E') {
       agv[agvIndex].energy = payloadString;
-    } else if (AGV_in4 == 'D') {
-      if(payloadString != "Done")
-        agv[agvIndex].destination = payloadString;
-      broadcastPayload = String(AGV_num) + 'D' + payloadString;
+    } 
+    else if (AGV_in4 == 'D') {
+      agv[agvIndex].destination = payloadString;
+    } 
+    else if (AGV_in4 == 'G') {
+      if((payloadString != "Done") && (payloadString != "1OutOf") && (payloadString != "2OutOf") && (payloadString != "1FullOf") && (payloadString != "2FullOf"))
+        agv[agvIndex].goods_list +=payloadString;
+      broadcastPayload = String(AGV_num) + 'G' + payloadString;
       webSocket.broadcastTXT(broadcastPayload);
       Serial.println("TX: " + broadcastPayload);
-    } else if (AGV_in4 == 'G') {
-      agv[agvIndex].goods_list = payloadString;
-    } else if (AGV_in4 == 'Q') {
+    } 
+    else if (AGV_in4 == 'Q') {
       agv[agvIndex].quantity = payloadString;
       Serial.println(agv[agvIndex].quantity);
-    } else if (AGV_in4 == 'U') {
+    } 
+/*    else if (AGV_in4 == 'U') {
       if(payloadString == "0")
         agv[agvIndex].update[0] = 1;
       else if(payloadString == "1")
@@ -645,7 +668,8 @@ void webSocketEvent(uint8_t num, WStype_t type,
         agv[agvIndex].update[0] = 0;
       else if(payloadString == "3")
         agv[agvIndex].update[1] = 0;
-    } else if (AGV_in4 == 'R') {
+    } 
+    else if (AGV_in4 == 'R') {
       if(AGV_num == '6'){
         if(payloadString == "0")
           type_request[0] = 0;
@@ -674,15 +698,22 @@ void webSocketEvent(uint8_t num, WStype_t type,
           type_request[3] = 1;
       state_request_rs4 = CHECK;
       }
-    } 
+    } */
+    else if (AGV_in4 == 'P') {
+      if(payloadString == "ON"){
+        agv[agvIndex].power = 1;
+      }
+      else if(payloadString == "OFF"){
+        agv[agvIndex].power = 0;
+      }
+    }
   }
 }
-void  V_Control_Signal(void){
+/*void  V_Control_Signal(void){
   switch(state_control_signal){
     case START_C:
       if((check_p[0] == 1) && (check_p[1] == 1)){
-        systick_count = 1;
-        systick.attach(400, Timer_Call_Back);
+        systick_count = 0;
         state_control_signal = SEND_DATA;
      }
       break;
@@ -693,91 +724,159 @@ void  V_Control_Signal(void){
         systick.detach();
         state_control_signal = START_C;
       }
-      else if(systick_count == 1){
+      else if(systick_count == 0){
         webSocket.broadcastTXT("XSSTART");
         Serial.println("XSSTART");
-        systick_count = 0;
+        systick_count = 4000;
       }
       break;
   }
 }
 void V_PROCESS_REQUEST_SIGNAL(void){
   switch(state_request_rs1){
-    case START:
+    case START_R:
       break;
     case CHECK:
       if(type_request[0] == 0){
         if((agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0) && (agv[9].update[1] == 0))  {
           webSocket.broadcastTXT("6RBLUE");
         }
-        state_request_rs1 = START;
+        state_request_rs1 = START_R;
       }
       else{
         if((agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0)){
           webSocket.broadcastTXT("6RYELLOW");
         }
-        state_request_rs1 = START;
+        state_request_rs1 = START_R;
       }
       break;
   }
   switch(state_request_rs2){
-    case START:
+    case START_R:
       break;
     case CHECK:
       if(type_request[1] == 0){
         if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[8].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0))  {
           webSocket.broadcastTXT("7RBLUE");
         }
-        state_request_rs2 = START;
+        state_request_rs2 = START_R;
       }
       else{
         if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0)){
           webSocket.broadcastTXT("7RYELLOW");
         }
-        state_request_rs2 = START;
+        state_request_rs2 = START_R;
       }
       break;
   }
   switch(state_request_rs3){
-    case START:
+    case START_R:
       break;
     case CHECK:
       if(type_request[2] == 0){
         if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[7].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0))  {
           webSocket.broadcastTXT("8RBLUE");
         }
-        state_request_rs3 = START;
+        state_request_rs3 = START_R;
       }
       else{
         if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[9].update[0] == 0) && (agv[9].update[1] == 0)){
           webSocket.broadcastTXT("8RYELLOW");
         }
-        state_request_rs3 = START;
+        state_request_rs3 = START_R;
       }
       break;
   }
   switch(state_request_rs4){
-    case START:
+    case START_R:
       break;
     case CHECK:
       if(type_request[3] == 0){
         if((agv[6].update[1] == 0) && (agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0))  {
           webSocket.broadcastTXT("9RBLUE");
         }
-        state_request_rs4 = START;
+        state_request_rs4 = START_R;
       }
       else{
         if((agv[6].update[0] == 0) && (agv[6].update[1] == 0) && (agv[7].update[0] == 0) && (agv[7].update[1] == 0) && (agv[8].update[0] == 0) && (agv[8].update[1] == 0)){
           webSocket.broadcastTXT("9RYELLOW");
         }
-        state_request_rs4 = START;
+        state_request_rs4 = START_R;
+      }
+      break;
+  }
+}*/
+void V_Check_Power_AGV(void){
+  switch(state_check_power_AGV1)
+  {
+    case START_P_AGV:
+      break;
+    case CHECK_AGV_ON:
+      if(systick_count_agv1 == 0){
+        if(agv[0].power == 0){
+          systick_count_agv1 = 30;
+          webSocket.broadcastTXT("1PON");
+          Serial.println("TX: 1PON");
+        }
+        else{
+          state_check_power_AGV1 = START_P_AGV;
+        }
+      }
+      break;
+    case CHECK_AGV_OF:
+      if(systick_count_agv1 == 0){
+        if(agv[0].power == 1){
+          systick_count_agv1 = 30;
+          webSocket.broadcastTXT("1POFF");
+          Serial.println("TX: 1POFF");
+        }
+        else{
+          state_check_power_AGV1 = START_P_AGV;
+        }
+      }
+      break;
+  }
+   switch(state_check_power_AGV2)
+  {
+    case START_P_AGV:
+      break;
+    case CHECK_AGV_ON:
+      if(systick_count_agv2 == 0){
+        if(agv[1].power == 0){
+          systick_count_agv2 = 30;
+          webSocket.broadcastTXT("2PON");
+          Serial.println("TX: 2PON");
+        }
+        else{
+          state_check_power_AGV2 = START_P_AGV;
+        }
+      }
+      break;
+    case CHECK_AGV_OF:
+      if(systick_count_agv2 == 0){
+        if(agv[1].power == 1){
+          systick_count_agv2 = 30;
+          webSocket.broadcastTXT("2POFF");
+          Serial.println("TX: 2POFF");
+        }
+        else{
+          state_check_power_AGV2 = START_P_AGV;
+        }
       }
       break;
   }
 }
 void Timer_Call_Back(void)
 {
-  systick_count = 1;
+/*  if(systick_count != 0){
+    systick_count--;
+  }*/
+  if(systick_count_agv1 != 0){
+    systick_count_agv1--;
+  }
+  if(systick_count_agv2 != 0){
+    systick_count_agv2--;
+  }
 }
 void setup(void) {
   Serial.begin(115200);
@@ -802,10 +901,14 @@ void setup(void) {
   webSocket.begin();
   webSocket.onEvent(webSocketEvent);
   Serial.println("Done");
+  agv[0].power = 0;
+  agv[1].power = 0;
+  systick.attach_ms(100, Timer_Call_Back);
 }
 
 void loop(void) {
   webServer.handleClient();
   webSocket.loop();
-  V_Control_Signal();
+//  V_Control_Signal();
+  V_Check_Power_AGV();
 }

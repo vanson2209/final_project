@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=Sig_1 Pin=C13-1
+Removed Pin From Net: NetName=GND Pin=C13-2
+Removed Pin From Net: NetName=Sig_2 Pin=C14-1
+Removed Pin From Net: NetName=GND Pin=C14-2
+Removed Pin From Net: NetName=VCC Pin=IC1-1
+Removed Pin From Net: NetName=Sig_2 Pin=IC1-2
+Removed Pin From Net: NetName=NetC15_1 Pin=IC1-3
+Removed Pin From Net: NetName=VCC Pin=IC1-4
+Removed Pin From Net: NetName=Sig_1 Pin=IC1-5
+Removed Pin From Net: NetName=NetC6_1 Pin=IC1-6
+Removed Pin From Net: NetName=VCC Pin=L2-1
+Removed Pin From Net: NetName=GND Pin=L3-2
+Removed Pin From Net: NetName=NetC15_1 Pin=R2-1
+Removed Member From Class: ClassName=signal_transfer_Sch Member=C13
+Removed Member From Class: ClassName=signal_transfer_Sch Member=C14
+Change Component Footprint: Designator=IC1 Old Footprint=SO14 New Footprint=DIP14
+Change Component Comment : Designator=IC1 Old Comment=7408 New Comment=7432
+Change component parameters: Designator = "IC1" ("IC1"); Footprint = "SO14"; UniqueID = "\XUSFNZJQ" ("\XUSFNZJQ")
+Added Component: Designator=C?(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R6(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=Sig_1 Pin=IC1-1
+Added Pin To Net: NetName=GND Pin=IC1-2
+Added Pin To Net: NetName=NetC6_1 Pin=IC1-3
+Added Pin To Net: NetName=Sig_2 Pin=IC1-4
+Added Pin To Net: NetName=GND Pin=IC1-5
+Added Pin To Net: NetName=NetC15_1 Pin=IC1-6
+Added Pin To Net: NetName=GND Pin=IC1-10
+Added Pin To Net: NetName=GND Pin=L2-2
+Added Pin To Net: NetName=VCC Pin=L3-1
+Added Pin To Net: NetName=GND Pin=R5-2
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=IC1-8
+Added Pin To Net: NetName=NetC?_1 Pin=R2-1
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetIC1_9 Pin=IC1-9
+Added Pin To Net: NetName=NetIC1_9 Pin=R5-1
+Added Net: Name=NetIC1_9
+Added Pin To Net: NetName=NetL2_1 Pin=L2-1
+Added Pin To Net: NetName=NetL2_1 Pin=R3-2
+Added Net: Name=NetL2_1
+Added Pin To Net: NetName=NetL3_2 Pin=L3-2
+Added Pin To Net: NetName=NetL3_2 Pin=R2-2
+Added Net: Name=NetL3_2
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C? Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component L2 LED 5mm
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component R5 RESISTOR SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component R6 RESISTOR SMD
+Added Room: Name=signal_transfer_Sch

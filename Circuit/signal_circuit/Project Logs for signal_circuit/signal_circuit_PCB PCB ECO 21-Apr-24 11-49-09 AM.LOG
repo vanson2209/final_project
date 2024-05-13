@@ -1,0 +1,165 @@
+Removed Pin From Net: NetName=IR_S1 Pin=H0-4
+Removed Pin From Net: NetName=IR_S2 Pin=H0-5
+Added Component: Designator=C00(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C01(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C02(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C03(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C04(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C05(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C06(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C07(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C08(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C09(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C12(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C13(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=C14(CAP-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "0.1uF"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(SO8)
+Add component (AddParameter): Name = "Value"; Value = "LM358"; VariantName = "[No Variations]"
+Added Component: Designator=IC2(SO14)
+Add component (AddParameter): Name = "Value"; Value = "7408"; VariantName = "[No Variations]"
+Added Component: Designator=R00(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "27k"; VariantName = "[No Variations]"
+Added Component: Designator=R01(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "18k"; VariantName = "[No Variations]"
+Added Component: Designator=R03(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "18k"; VariantName = "[No Variations]"
+Added Component: Designator=R04(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "27k"; VariantName = "[No Variations]"
+Added Component: Designator=R05(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R06(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R07(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R08(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "220"; VariantName = "[No Variations]"
+Added Component: Designator=R09(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C00-1
+Added Pin To Net: NetName=5V Pin=C00-2
+Added Pin To Net: NetName=GND Pin=C01-1
+Added Pin To Net: NetName=5V Pin=C02-1
+Added Pin To Net: NetName=GND Pin=C02-2
+Added Pin To Net: NetName=5V Pin=C03-1
+Added Pin To Net: NetName=GND Pin=C03-2
+Added Pin To Net: NetName=GND Pin=C04-1
+Added Pin To Net: NetName=NetC04_2 Pin=C04-2
+Added Pin To Net: NetName=NetC05_1 Pin=C05-1
+Added Pin To Net: NetName=GND Pin=C05-2
+Added Pin To Net: NetName=NetC05_1 Pin=C06-1
+Added Pin To Net: NetName=GND Pin=C06-2
+Added Pin To Net: NetName=IR_S1 Pin=C07-1
+Added Pin To Net: NetName=GND Pin=C07-2
+Added Pin To Net: NetName=5V Pin=C08-1
+Added Pin To Net: NetName=GND Pin=C08-2
+Added Pin To Net: NetName=5V Pin=C09-1
+Added Pin To Net: NetName=GND Pin=C09-2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=NetC11_1 Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=IR_S2 Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=5V Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=IR_S2 Pin=H0-7
+Added Pin To Net: NetName=IR_S1 Pin=H0-10
+Added Pin To Net: NetName=IR_S1 Pin=IC1-1
+Added Pin To Net: NetName=NetC05_1 Pin=IC1-2
+Added Pin To Net: NetName=NetC04_2 Pin=IC1-3
+Added Pin To Net: NetName=GND Pin=IC1-4
+Added Pin To Net: NetName=NetC10_1 Pin=IC1-5
+Added Pin To Net: NetName=NetC11_1 Pin=IC1-6
+Added Pin To Net: NetName=IR_S2 Pin=IC1-7
+Added Pin To Net: NetName=5V Pin=IC1-8
+Added Pin To Net: NetName=GND Pin=IC2-7
+Added Pin To Net: NetName=GND Pin=R00-1
+Added Pin To Net: NetName=NetC04_2 Pin=R00-2
+Added Pin To Net: NetName=NetC04_2 Pin=R01-1
+Added Pin To Net: NetName=5V Pin=R01-2
+Added Pin To Net: NetName=NetC10_1 Pin=R03-1
+Added Pin To Net: NetName=5V Pin=R03-2
+Added Pin To Net: NetName=GND Pin=R04-1
+Added Pin To Net: NetName=NetC10_1 Pin=R04-2
+Added Pin To Net: NetName=NetLP1_1 Pin=R05-1
+Added Pin To Net: NetName=NetC05_1 Pin=R06-1
+Added Pin To Net: NetName=5V Pin=R06-2
+Added Pin To Net: NetName=GND Pin=R07-1
+Added Pin To Net: NetName=IR_S1 Pin=R07-2
+Added Pin To Net: NetName=NetLP2_1 Pin=R08-1
+Added Pin To Net: NetName=NetC11_1 Pin=R09-1
+Added Pin To Net: NetName=5V Pin=R09-2
+Added Pin To Net: NetName=GND Pin=R10-1
+Added Pin To Net: NetName=IR_S2 Pin=R10-2
+Added Pin To Net: NetName=+5 Pin=C01-2
+Added Pin To Net: NetName=+5 Pin=IC2-1
+Added Pin To Net: NetName=+5 Pin=IC2-4
+Added Net: Name=+5
+Added Pin To Net: NetName=LP1 Pin=H0-9
+Added Pin To Net: NetName=LP1 Pin=IC2-2
+Added Net: Name=LP1
+Added Pin To Net: NetName=LP2 Pin=H0-8
+Added Pin To Net: NetName=LP2 Pin=IC2-5
+Added Net: Name=LP2
+Added Pin To Net: NetName=NetIC2_3 Pin=IC2-3
+Added Pin To Net: NetName=NetIC2_3 Pin=R05-2
+Added Net: Name=NetIC2_3
+Added Pin To Net: NetName=NetIC2_6 Pin=IC2-6
+Added Pin To Net: NetName=NetIC2_6 Pin=R08-2
+Added Net: Name=NetIC2_6
+Added Pin To Net: NetName=VCC Pin=IC2-14
+Added Net: Name=VCC
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C00 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C01 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C02 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C03 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C04 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C05 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C06 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C07 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C08 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C11 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C12 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C13 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C14 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component H0 RIGHT
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component IC1 LM358
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component IC2 7408
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LP1 LED 5mm
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LP2 LED 5mm
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LT1 LED 5mm
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LT2 LED 5mm
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R00 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R01 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R03 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R04 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R05 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R06 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R07 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R08 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R09 RESISTOR SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component R10 RESISTOR SMD
+Added Room: Name=signal_circuit_Sch

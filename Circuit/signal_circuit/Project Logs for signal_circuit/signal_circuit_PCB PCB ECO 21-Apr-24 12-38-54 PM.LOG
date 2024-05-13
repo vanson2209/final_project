@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=NetC05_1 Pin=C06-1
+Removed Pin From Net: NetName=GND Pin=C06-2
+Change Net Name : Old Net Name=5V New Net Name=VCC
+Added Room: Name=signal_circuit_Sch

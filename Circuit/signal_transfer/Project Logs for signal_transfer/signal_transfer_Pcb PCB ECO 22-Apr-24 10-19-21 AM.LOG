@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetC17_1 Pin=IC1-11
+Removed Pin From Net: NetName=NetC16_1 Pin=IC1-12
+Removed Pin From Net: NetName=NetC15_1 Pin=IC1-13
+Added Pin To Net: NetName=NetC17_1 Pin=IC1-8
+Added Pin To Net: NetName=NetC15_1 Pin=IC1-9
+Added Pin To Net: NetName=NetC16_1 Pin=IC1-10
+Added Room: Name=signal_transfer_Sch

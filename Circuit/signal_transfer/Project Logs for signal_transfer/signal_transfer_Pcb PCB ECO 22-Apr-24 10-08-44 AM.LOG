@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=Sig_2 Pin=H00-3
+Removed Pin From Net: NetName=Sig_1 Pin=H00-4
+Added Pin To Net: NetName=Sig_1 Pin=H00-3
+Added Pin To Net: NetName=IR_S2 Pin=H00-4
+Added Room: Name=signal_transfer_Sch

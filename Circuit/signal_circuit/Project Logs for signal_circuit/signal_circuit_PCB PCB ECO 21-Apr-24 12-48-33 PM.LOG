@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=C00-1
+Removed Pin From Net: NetName=VCC Pin=C00-2
+Removed Pin From Net: NetName=GND Pin=C01-1
+Removed Pin From Net: NetName=VCC Pin=C01-2
+Removed Pin From Net: NetName=VCC Pin=C03-1
+Removed Pin From Net: NetName=GND Pin=C03-2
+Removed Pin From Net: NetName=VCC Pin=C09-1
+Removed Pin From Net: NetName=GND Pin=C09-2
+Removed Member From Class: ClassName=signal_circuit_Sch Member=C00
+Removed Member From Class: ClassName=signal_circuit_Sch Member=C01
+Removed Member From Class: ClassName=signal_circuit_Sch Member=C03
+Removed Member From Class: ClassName=signal_circuit_Sch Member=C09
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LT1 LED 5mm
+Added Room: Name=signal_circuit_Sch

@@ -7,9 +7,9 @@
 Ticker systick;
 volatile uint8_t systick_count, systick_count_pre;
 
-#define RX2 13
-#define TX2 15
-SoftwareSerial mySerial(RX2, TX2);
+//#define RX2 13
+//#define TX2 15
+//SoftwareSerial mySerial(RX2, TX2);
 
 WebSocketsClient webSocket;
 
@@ -24,8 +24,7 @@ String status = "Unknow";
 uint8_t Power;
 
 char receivedChar;
-//uint8_t Check_P = 0;
-uint32_t t = 0x0FFFF0, t_pre;
+
 uint16_t ADC;
 
 ESP8266WebServer server(80);
@@ -37,73 +36,73 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
   char AGV_num = payloadString[0];
   char AGV_in4 = payloadString[1];
   payloadString = payloadString.substring(2);
-  if (AGV_num == '2'){
+  if ((AGV_num == '2') || (AGV_num == 'Y')){
     if(AGV_in4 == 'P'){
       if (payloadString == "ON") {
         if((systick_count - systick_count_pre) > 2){
-          mySerial.write('0');
-        //  Serial.println("AGV1 ON");
+          Serial.write('0');
         }
       }
       else if (payloadString == "OFF"){
         if((systick_count - systick_count_pre) > 2){
-          mySerial.write('1');
-       //   Serial.println("AGV1 OFF");
+          Serial.write('1');
         }
-      } 
-      systick_count_pre = systick_count;
+      }
+      systick_count_pre = 0; 
+      systick_count = 0;
     }
-    else if(AGV_in4 == 'D'){
+    else if(AGV_in4 == 'G'){
       if(payloadString == "Done"){
-        mySerial.write('4');
+        Serial.write('4');
+      }
+      else if(payloadString == "1OutOf"){
+        Serial.write('E');
+      }
+      else if(payloadString == "2OutOf"){
+        Serial.write('F');
+      }
+      else if(payloadString == "1FullOf"){
+        Serial.write('G');
+      }
+      else if(payloadString == "2FullOf"){
+        Serial.write('H');
       }
       else if (payloadString == "RS1") {
-        mySerial.write('5');
- //         Serial.println("Destination is A1");
+        Serial.write('5');
       }
       else if (payloadString == "RS2"){
-        mySerial.write('6');
-          //Serial.println("Destination is A2");
+        Serial.write('6');
       }
       else if (payloadString == "RS3"){
-        mySerial.write('7');
-          //Serial.println("Destination is B1");
+        Serial.write('7');
       }
       else if (payloadString == "RS4"){
-        mySerial.write('8');
-       //   Serial.println("Destination is B2");
+        Serial.write('8');
       }
     }
     else if(AGV_in4 == 'A'){
       if (payloadString == "On") {
-          mySerial.write('3');
-      //    Serial.println("AGV1 ON");
+          Serial.write('3');
       }
       else if (payloadString == "Of"){
-          mySerial.write('2');
-      //    Serial.println("AGV1 OFF");
+          Serial.write('2');
       }
     }
     else if(AGV_in4 == 'C'){
       if (payloadString == "S") {
-          mySerial.write('D');
-          //Serial.println("AGV1 ON");
+          Serial.write('D');
       }
       else if (payloadString == "U"){
-          mySerial.write('9');
-          //Serial.println("AGV1 OFF");
+          Serial.write('9');
       }
       else if (payloadString == "D"){
-          mySerial.write('A');
-          //Serial.println("AGV1 OFF");
+          Serial.write('A');
       }
       else if (payloadString == "L"){
-          mySerial.write('B');
-          //Serial.println("AGV1 OFF");
+          Serial.write('B');;
       }
       else if (payloadString == "R"){
-          mySerial.write('C');
-          //Serial.println("AGV1 OFF");
+          Serial.write('C');
       }
     }
   }
@@ -113,7 +112,7 @@ void Timer_Call_Back(void)
   systick_count++;
 }
 void  setup(){
-  mySerial.begin(115200);
+  //mySerial.begin(115200);
   Serial.begin(115200);
   WiFi.disconnect();
   WiFi.mode(WIFI_STA);
@@ -121,19 +120,15 @@ void  setup(){
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
   }
-  //  Serial.print("http://");
- //  Serial.println(WiFi.localIP());
- // IPAddress localIP = WiFi.localIP(); 
-  //ipAddress = String(localIP[0]) + "." + String(localIP[1]) + "." + String(localIP[2]) + "." + String(localIP[3]);
- 
+
   ip_host = WiFi.localIP();
   ip_host[3] = 10;
-  Serial.println(ip_host);
   server.begin();
   webSocket.begin(ip_host, port);
   webSocket.onEvent(webSocketEvent);
-  Serial.println("Done");
+  //Serial.println("Done");
   systick_count = 0;
+  systick_count_pre = 0;
   systick.attach(1, Timer_Call_Back);
 }
 
@@ -141,8 +136,8 @@ void loop()
 {
   webSocket.loop();
   server.handleClient();
-  if (mySerial.available()){
-    receivedChar = mySerial.read();
+  if (Serial.available()){
+    receivedChar = Serial.read();
     switch (receivedChar) {
       case '0':
         webSocket.sendTXT("2S9Ready");
@@ -180,14 +175,40 @@ void loop()
       case 'D':
         webSocket.sendTXT("2S9Shipping");
         break;
+      case 'E':
+        webSocket.sendTXT("2PON");
+        break;
+      case 'F':
+        webSocket.sendTXT("2POFF");
+        break;
+      case 'G':
+        webSocket.sendTXT("1DPS2");
+        break;
+      case 'H':
+        webSocket.sendTXT("1DTS1");
+        break;
+      case 'I':
+        webSocket.sendTXT("2DTS2");
+        break;
+      case 'K':
+        webSocket.sendTXT("2DRS1");
+        break;
+      case 'L':
+        webSocket.sendTXT("2DRS2");
+        break;
+      case 'M':
+        webSocket.sendTXT("2DRS3");
+        break;
+      case 'N':
+        webSocket.sendTXT("2DRS4");
+        break;
     }
   }
-  if((systick_count - systick_count_pre) > 10){
+  if((systick_count - systick_count_pre) > 20){
     ADC = analogRead(A0);
     Power = map(ADC, 824, 971, 0, 100);
-    if(Power < 20) mySerial.write('1');
+    if(Power < 20) Serial.write('1');
       String data = "2E"+(String)Power+'%';
-    //  Serial.println(data);
       webSocket.sendTXT(data);
     systick_count_pre = systick_count;
   }

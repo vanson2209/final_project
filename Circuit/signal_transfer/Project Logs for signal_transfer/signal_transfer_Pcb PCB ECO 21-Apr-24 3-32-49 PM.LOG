@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=H0 NewDesignator=H00
+Change Component Designator: OldDesignator=H? NewDesignator=H01
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component C09 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component LT? LED 5mm
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component R09 RESISTOR SMD
+Added Room: Name=signal_transfer_Sch

@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=GND Pin=IC1-1
+Removed Pin From Net: NetName=GND Pin=IC1-5
+Added Component: Designator=R15(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R16(RES-SM-0603)
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R15-1
+Added Pin To Net: NetName=GND Pin=R16-2
+Added Pin To Net: NetName=NetIC1_1 Pin=IC1-1
+Added Pin To Net: NetName=NetIC1_1 Pin=R15-2
+Added Net: Name=NetIC1_1
+Added Pin To Net: NetName=NetIC1_5 Pin=IC1-5
+Added Pin To Net: NetName=NetIC1_5 Pin=R16-1
+Added Net: Name=NetIC1_5
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component R15 RESISTOR SMD
+Added Member To Class: ClassName=signal_transfer_Sch Member=Component R16 RESISTOR SMD
+Added Room: Name=signal_transfer_Sch

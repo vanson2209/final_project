@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=GND Pin=LP1-2
+Removed Pin From Net: NetName=GND Pin=LP2-2
+Removed Pin From Net: NetName=GND Pin=R6-1
+Removed Pin From Net: NetName=NetC15_1 Pin=R6-2
+Change component parameters: Designator = "R0" ("R0"); Footprint = "RES-SM-0603"; UniqueID = "\PQDCBNCQ" ("\PQDCBNCQ")
+Change component parameters (AddParameter): Name = "Value"; Value = "2.49K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R4" ("R4"); Footprint = "RES-SM-0603"; UniqueID = "\HYIULTQA" ("\HYIULTQA")
+Change component parameters (AddParameter): Name = "Value"; Value = "2.49K"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=LP1-1
+Added Pin To Net: NetName=VCC Pin=LP2-1
+Added Pin To Net: NetName=NetC15_1 Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=NetLP1_2 Pin=LP1-2
+Added Pin To Net: NetName=NetLP1_2 Pin=R0-2
+Added Net: Name=NetLP1_2
+Added Pin To Net: NetName=NetLP2_2 Pin=LP2-2
+Added Pin To Net: NetName=NetLP2_2 Pin=R4-2
+Added Net: Name=NetLP2_2
+Added Room: Name=signal_transfer_Sch

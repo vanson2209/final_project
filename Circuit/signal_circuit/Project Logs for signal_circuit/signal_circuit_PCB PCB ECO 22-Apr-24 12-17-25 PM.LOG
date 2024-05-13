@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetIC2_6 Pin=H0-2
+Removed Pin From Net: NetName=NetIC2_6 Pin=H0-6
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component C10 Cap Non-Pol SMD
+Added Member To Class: ClassName=signal_circuit_Sch Member=Component LT1 LED 5mm
+Added Room: Name=signal_circuit_Sch
