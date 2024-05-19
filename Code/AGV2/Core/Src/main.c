@@ -264,6 +264,8 @@ int main(void)
 	htim2.Instance -> CCR1 = 9999;
 	htim2.Instance -> CCR2 = 9999;
 	HAL_Delay(1000);
+
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -869,7 +871,7 @@ void V_Turn_Left(void)
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_11);   //AIN1
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_12);	//AIN2
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB
-	HAL_Delay(350);
+	HAL_Delay(500);
 	systick_count = HAL_GetTick();
 	do
 	{
@@ -878,7 +880,7 @@ void V_Turn_Left(void)
 		HAL_ADC_Stop_DMA(&hadc1);
 		tmp = V_Check_Sensor();
 		//if((tmp > 4) && (tmp < 7))
-		if((tmp == 1) || (tmp == 5))
+		if((tmp == 0) || (tmp == 1) || (tmp == 5))
 				break;
 	} while((HAL_GetTick() - systick_count) < 700);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
@@ -895,7 +897,7 @@ void V_Turn_Right(void)
 	GPIO_RESET_PIN(GPIOB, GPIO_PIN_4);   //BIN2
 	GPIO_SET_PIN(GPIOB, GPIO_PIN_5);	//BIN1
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB`
-	HAL_Delay(350);
+	HAL_Delay(500);
 	systick_count = HAL_GetTick();
 	do
 	{
@@ -904,7 +906,7 @@ void V_Turn_Right(void)
 		HAL_ADC_Stop_DMA(&hadc1);
 		tmp = V_Check_Sensor();
 		//if((tmp > 0) && (tmp < 3))
-		if((tmp == 1) || (tmp == 0))
+		if((tmp == 0) || (tmp == 1) || (tmp == 5))
 				break;
 	} while((HAL_GetTick() - systick_count) < 700);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`

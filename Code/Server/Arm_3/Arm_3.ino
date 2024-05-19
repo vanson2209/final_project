@@ -4,18 +4,18 @@
 #include <SoftwareSerial.h>
 #include <Arduino.h>
 #include <stdlib.h>
-/*#include <Ticker.h>
+#include <Ticker.h>
 
-Ticker systick_re;
+//Ticker systick_re;
 Ticker systick;
 
-volatile uint8_t systick_re_count;
+//volatile uint8_t systick_re_count;
 volatile uint32_t systick_count;
-void Timer_re_Call_Back(void);*/
+void Timer_Call_Back(void);
 
 
-typedef enum {CHECK_PRESS = 0, CHECK_RELEASE} status_button_t;
-typedef enum {WAIT_START = 0, READ_BUTTON, SEND_DONE, WAIT_DONE} state_feedback_data_t;
+typedef enum {Idle = 0, Wait_Expire} status_time_t;
+typedef enum {WAIT_START = 0, CHECK_TIME, SEND_DONE, WAIT_DONE} state_feedback_data_t;
 //typedef enum{RED = 0, WAIT_BLUE, BLUE, WAIT_YELLOW, YELLOW, WAIT_RED} state_signal_t;
 //typedef enum{WAIT = 0, START_PRO, OPERATE, STOP} state_process_signal_t;
 //typedef enum{START = 0, PROCESS_SIGNAL, PRE_SEND_STRAIGHT, PRE_SEND_TURN} update_data_t;
@@ -41,7 +41,7 @@ String Data_To_Send;
 char TRA_num;
 char TRA_in4;
 
-status_button_t status_button = CHECK_PRESS;
+status_time_t status_time = Idle;
 state_feedback_data_t state_feedback_data = WAIT_START;
 /*volatile state_signal_t  state_signal;
 volatile state_process_signal_t state_process_signal;
@@ -62,7 +62,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
     if(TRA_in4 == 'G'){
       agv_quantity++;
       webSocket.sendTXT("6S9Operating");
-      state_feedback_data = READ_BUTTON;
+      state_feedback_data = CHECK_TIME;
       if(agv_quantity > 1)
         agv_NUM_tmp = payloadString;
       else
@@ -90,16 +90,15 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
     }*/
   }
 } 
-void V_Read_Button(void){
-  switch(status_button){
-    case CHECK_PRESS:
-      if(digitalRead(D2) == LOW)
-        status_button = CHECK_RELEASE;
-      break;
-    case CHECK_RELEASE:
-      if(digitalRead(D2) == HIGH){
-        status_button = CHECK_PRESS;
+void V_Check_Time(void){
+  switch(status_time){
+    case Idle:
+      systick.attach_ms(100, Timer_Call_Back);
+      systick_count = 50;
+    case Wait_Expire:
+      if(systick_count == 0){
         state_feedback_data = SEND_DONE;
+        status_time = Idle;
       }
       break;
   }
@@ -108,8 +107,8 @@ void V_Process_Data_Button(void){
   switch(state_feedback_data){
     case WAIT_START:
       break;
-    case READ_BUTTON:
-      V_Read_Button();
+    case CHECK_TIME:
+      V_Check_Time();
       break;
     case SEND_DONE:
       Data_To_Send = agv_NUM + "GDone";
@@ -122,12 +121,13 @@ void V_Process_Data_Button(void){
       break;
     case  WAIT_DONE:
       if(agv_quantity == 0){
+        systick.detach();
         webSocket.sendTXT("6S9Resting");
         state_feedback_data = WAIT_START;
       }
       else {
         agv_NUM = agv_NUM_tmp;
-        state_feedback_data = READ_BUTTON;
+        state_feedback_data = CHECK_TIME;
       }
       break;
   }
@@ -183,10 +183,7 @@ void V_Process_Data_Button(void){
       break;
   }
 }
-void Timer_Call_Back(void)
-{
-  systick_count ++;
-}
+
 void V_Update_Signal(void){
   switch(update_data){
     case START:
@@ -268,6 +265,11 @@ ICACHE_RAM_ATTR void IST_STRAIGHT (void){
 void Timer_re_Call_Back (void){
   systick_count ++;
 }*/
+void Timer_Call_Back(void)
+{
+  if(systick_count != 0)
+    systick_count --;
+}
 void  setup(){
   pinMode(D2, INPUT);
 // pinMode(D3, OUTPUT);
