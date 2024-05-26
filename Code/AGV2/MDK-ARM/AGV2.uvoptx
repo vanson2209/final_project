@@ -152,9 +152,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>249</LineNumber>
+          <LineNumber>343</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134233716</Address>
+          <Address>134234406</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -163,7 +163,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AGV2\../Core/Src/main.c\249</Expression>
+          <Expression>\\AGV2\../Core/Src/main.c\343</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -201,6 +201,21 @@
           <count>6</count>
           <WinNumber>1</WinNumber>
           <ItemText>sensor,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>goods_infor</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>agv_infor</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>distance_tmp,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

@@ -417,6 +417,7 @@ void on_AGV1(void) {
     state_check_power_AGV1 = CHECK_AGV_ON;
   }
   check_p[0] = 1;
+  webServer.send(200, "text/plain", "None");
 }
 void off_AGV1(void) {
   if (check_p[0] == 1){
@@ -426,6 +427,7 @@ void off_AGV1(void) {
     state_check_power_AGV1 = CHECK_AGV_OF;
   }
   check_p[0] = 0;
+  webServer.send(200, "text/plain", "None");
 }
 void on_AGV2(void) {
   if (check_p[1] == 0){
@@ -435,6 +437,7 @@ void on_AGV2(void) {
     state_check_power_AGV2 = CHECK_AGV_ON;
   }
   check_p[1] = 1;
+  webServer.send(200, "text/plain", "None");
 }
 void off_AGV2(void) {
   if (check_p[1] == 1){
@@ -444,6 +447,7 @@ void off_AGV2(void) {
     state_check_power_AGV2 = CHECK_AGV_OF;
   }
   check_p[1] = 0;
+  webServer.send(200, "text/plain", "None");
 }
 
 //status
@@ -518,6 +522,7 @@ void Wr_TRA1(void) {
   Q_To_Send = "4Q" + agv[3].quantity;
   webSocket.broadcastTXT(Q_To_Send);
   Serial.println(Q_To_Send);
+  webServer.send(200, "text/plain", "None");
 }
 void Wr_TRA2(void) {
   agv[4].quantity = webServer.arg("DTRA2");
@@ -525,6 +530,7 @@ void Wr_TRA2(void) {
   Q_To_Send = "5Q" + agv[4].quantity;
   webSocket.broadcastTXT(Q_To_Send);
   Serial.println(Q_To_Send);
+  webServer.send(200, "text/plain", "None");
 }
 void Wr_RRA1(void) {
   agv[5].quantity = webServer.arg("DRRA1");
@@ -532,6 +538,7 @@ void Wr_RRA1(void) {
   Q_To_Send = "6Q" + agv[5].quantity;
   webSocket.broadcastTXT(Q_To_Send);
   Serial.println(Q_To_Send);
+  webServer.send(200, "text/plain", "None");
 }
 void Wr_RRA2(void) {
   agv[6].quantity = webServer.arg("DRRA2");
@@ -539,6 +546,7 @@ void Wr_RRA2(void) {
   Q_To_Send = "7Q" + agv[6].quantity;
   webSocket.broadcastTXT(Q_To_Send);
   Serial.println(Q_To_Send);
+  webServer.send(200, "text/plain", "None");
 }
 void Wr_RRA3(void) {
   agv[7].quantity = webServer.arg("DRRA3");
@@ -546,6 +554,7 @@ void Wr_RRA3(void) {
   Q_To_Send = "8Q" + agv[7].quantity;
   webSocket.broadcastTXT(Q_To_Send);
   Serial.println(Q_To_Send);
+  webServer.send(200, "text/plain", "None");
 }
 void Wr_RRA4(void) {
   agv[8].quantity = webServer.arg("DRRA4");
@@ -553,51 +562,66 @@ void Wr_RRA4(void) {
   Q_To_Send = "9Q" + agv[8].quantity;
   webSocket.broadcastTXT(Q_To_Send);
   Serial.println(Q_To_Send);
+  webServer.send(200, "text/plain", "None");
 }
 //Automation
 void ONA_AGV1(void) {
   webSocket.broadcastTXT("1AOn");
+  webServer.send(200, "text/plain", "None");
 }
 void OFFA_AGV1(void) {
   webSocket.broadcastTXT("1AOf");
+  webServer.send(200, "text/plain", "None");
 }
 void ONA_AGV2(void) {
   webSocket.broadcastTXT("2AOn");
+  webServer.send(200, "text/plain", "None");
 }
 void OFFA_AGV2(void) {
   webSocket.broadcastTXT("2AOf");
+  webServer.send(200, "text/plain", "None");
 }
 //control
 void stop_AGV1(void) {
   webSocket.broadcastTXT("1CS");
+  webServer.send(200, "text/plain", "None");
 }
 void up_AGV1(void) {
   webSocket.broadcastTXT("1CU");
+  webServer.send(200, "text/plain", "None");
 }
 void down_AGV1(void) {
   webSocket.broadcastTXT("1CD");
+  webServer.send(200, "text/plain", "None");
 }
 void left_AGV1(void) {
   webSocket.broadcastTXT("1CL");
+  webServer.send(200, "text/plain", "None");
 }
 void right_AGV1(void) {
   webSocket.broadcastTXT("1CR");
+  webServer.send(200, "text/plain", "None");
 }
 
 void stop_AGV2(void) {
   webSocket.broadcastTXT("2CS");
+  webServer.send(200, "text/plain", "None");
 }
 void up_AGV2(void) {
   webSocket.broadcastTXT("2CU");
+  webServer.send(200, "text/plain", "None");
 }
 void down_AGV2(void) {
   webSocket.broadcastTXT("2CD");
+  webServer.send(200, "text/plain", "None");
 }
 void left_AGV2(void) {
   webSocket.broadcastTXT("2CL");
+  webServer.send(200, "text/plain", "None");
 }
 void right_AGV2(void) {
   webSocket.broadcastTXT("2CR");
+  webServer.send(200, "text/plain", "None");
 }
 
 void webSocketEvent(uint8_t num, WStype_t type,

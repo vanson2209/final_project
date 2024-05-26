@@ -96,6 +96,7 @@ void V_Check_Time(void){
       systick.attach_ms(100, Timer_Call_Back);
       systick_count = 50;
       status_time = Wait_Expire;
+      break;
     case Wait_Expire:
       if(systick_count == 0){
         state_feedback_data = SEND_DONE;
@@ -124,9 +125,9 @@ void V_Process_Data_Button(void){
       if(agv_quantity == 0){
         webSocket.sendTXT("8S9Resting");
         state_feedback_data = WAIT_START;
+        systick.detach();
       }
       else {
-        systick.detach();
         agv_NUM = agv_NUM_tmp;
         state_feedback_data = CHECK_TIME;
       }

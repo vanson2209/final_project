@@ -71,9 +71,8 @@ typedef struct{
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define line_sensor 	30
-#define i_axis				6
-#define j_axis				3
-//#define GPIO_READ_PIN(GPIOx, GPIO_Pin_x) (GPIOx -> IDR & GPIO_Pin_x)
+#define i_axis				5
+#define j_axis				5
 #define GPIO_SET_PIN(GPIOx, GPIO_Pin_x) (GPIOx -> ODR |= GPIO_Pin_x)
 #define GPIO_RESET_PIN(GPIOx, GPIO_Pin_x) (GPIOx -> ODR &= ~GPIO_Pin_x)
 
@@ -95,7 +94,7 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-uint8_t distance_tmp;
+uint16_t distance_tmp;
 volatile uint32_t systick_count;
 volatile state_t state;
 state_moving_t state_moving;
@@ -121,16 +120,16 @@ AGV_infor_t	agv_infor;
 
 uint8_t Rx;
 uint8_t Tx;
-direct_t direct;
-
+direct_t direct = PAUSE;
+direct_t direct_tmp; 
 uint16_t data[5], data_max[5], data_min[5]; // gia tri mau tu
 uint16_t sensor[5]; // gia tri doc mau tu
 uint8_t check[5];	// gia tri kiem tra mau tu
 uint16_t val1, val2; //gia tri bam xung pwm cho dng co
 
-//uint8_t direct;
 
-uint8_t tmp;
+
+uint8_t tmp_check;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -175,7 +174,7 @@ bool_t V_Check_Turn_Left(void);
 bool_t V_Check_Go_Straight(void);
 
 void V_Determine_Next_Step(void);
-uint8_t V_Determine_Distance(uint8_t xo, uint8_t yo, uint8_t x1, uint8_t y1, direct_t v_direct);
+uint16_t V_Determine_Distance(uint8_t xo, uint8_t yo, uint8_t x1, uint8_t y1, direct_t v_direct);
 void V_Remove_Duplicate(list_station_t v_goods_list[4],  uint8_t* goods_quantity);
 void V_Remove_First_Goods(list_station_t v_goods_list[4],  uint8_t goods_quantity);
 void V_GO(void);
@@ -241,6 +240,7 @@ int main(void)
 	turn_left_interection_state = CHECK_SIGN_LEFT;
 	turn_right_interection_state = CHECK_SIGN_RIGHT;
 	V_Go_Straight();
+	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 	Lcd_Init();
@@ -258,11 +258,10 @@ int main(void)
 		V_Sensor_Init();
 	}
 	while(V_Check_Sensor_Init());
-	
-	Tx = '2';
-	HAL_UART_Transmit(&huart1, &Tx, 1, 100);
 	htim2.Instance -> CCR1 = 9999;
 	htim2.Instance -> CCR2 = 9999;
+	Tx = '2';
+	HAL_UART_Transmit(&huart1, &Tx, 1, 100);
 	HAL_Delay(1000);
 
 	
@@ -788,8 +787,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 			break;
 		case '2':		//off the automation
 			state = NONE_AUTO_WEB;
+			htim2.Instance -> CCR1 = 0;
+			htim2.Instance -> CCR2 = 0;
 			break;
 		case '3':			//on the automation
+			direct = PAUSE;
 			state = AUTO;
 			break;
 		case '4':
@@ -846,21 +848,17 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 }
 void V_Go_Straight(void)
 {
-	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_11);   //AIN1
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_12);	//AIN2
 	GPIO_SET_PIN(GPIOB, GPIO_PIN_4);   //BIN2
 	GPIO_RESET_PIN(GPIOB, GPIO_PIN_5);	//BIN1
-	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 }
 void V_Go_Back(void)
 {
-	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_11);   //AIN1
 	GPIO_SET_PIN(GPIOA, GPIO_PIN_12);	//AIN2
 	GPIO_RESET_PIN(GPIOB, GPIO_PIN_4);   //BIN2
 	GPIO_SET_PIN(GPIOB, GPIO_PIN_5);	//BIN1
-	GPIO_SET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 }
 void V_Turn_Left(void)
 {
@@ -878,9 +876,9 @@ void V_Turn_Left(void)
 		HAL_ADC_Start_DMA(&hadc1, (uint32_t *)data, 5);
 		HAL_Delay(1);
 		HAL_ADC_Stop_DMA(&hadc1);
-		tmp = V_Check_Sensor();
+		tmp_check = V_Check_Sensor();
 		//if((tmp > 4) && (tmp < 7))
-		if((tmp == 0) || (tmp == 1) || (tmp == 5))
+		if((tmp_check == 0) || (tmp_check == 1) || (tmp_check == 5))
 				break;
 	} while((HAL_GetTick() - systick_count) < 700);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
@@ -904,9 +902,9 @@ void V_Turn_Right(void)
 		HAL_ADC_Start_DMA(&hadc1, (uint32_t *)data, 5);
 		HAL_Delay(1);
 		HAL_ADC_Stop_DMA(&hadc1);
-		tmp = V_Check_Sensor();
+		tmp_check = V_Check_Sensor();
 		//if((tmp > 0) && (tmp < 3))
-		if((tmp == 0) || (tmp == 1) || (tmp == 5))
+		if((tmp_check == 0) || (tmp_check == 1) || (tmp_check == 5))
 				break;
 	} while((HAL_GetTick() - systick_count) < 700);
 	GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
@@ -950,27 +948,50 @@ void V_Control_Web(void)
 {
 	if(direct == UP)		//UP
 	{
-		htim2.Instance -> CCR1 = 7777;
-		htim2.Instance -> CCR2 = 7777;
+		if(direct_tmp != UP)
+		{
+			V_Go_Straight();
+			htim2.Instance -> CCR1 = 7777;
+			htim2.Instance -> CCR2 = 7777;
+			direct_tmp = UP;
+		}
 	}
 	else if(direct == DOWN)	//DOWN
 	{
-		V_Go_Back();
+		if(direct_tmp != DOWN)
+		{
+			V_Go_Back();
+			htim2.Instance -> CCR1 = 7777;
+			htim2.Instance -> CCR2 = 7777;
+			direct_tmp = DOWN;
+		}
 	}
 	else if(direct == LEFT)	//LEFT
 	{
-		htim2.Instance -> CCR1 = 2222;
-		htim2.Instance -> CCR2 = 7777;
+		if(direct_tmp != LEFT)
+		{
+			htim2.Instance -> CCR1 = 2222;
+			htim2.Instance -> CCR2 = 7777;
+			direct_tmp = LEFT;
+		}
 	}
 	else if(direct == RIGHT)		//RIGHT
 	{
-		htim2.Instance -> CCR1 = 7777;
-		htim2.Instance -> CCR2 = 2222;
+		if(direct_tmp != RIGHT)
+		{
+			htim2.Instance -> CCR1 = 7777;
+			htim2.Instance -> CCR2 = 2222;
+			direct_tmp = RIGHT;
+		}
 	}
 	else if(direct == PAUSE)		//RIGHT
 	{
-		htim2.Instance -> CCR1 = 0;
-		htim2.Instance -> CCR2 = 0;
+		if(direct_tmp != PAUSE)
+		{
+			htim2.Instance -> CCR1 = 0;
+			htim2.Instance -> CCR2 = 0;
+			direct_tmp = PAUSE;
+		}
 	}
 }
 uint8_t V_Check_Sensor_Init(void) 
@@ -1194,13 +1215,13 @@ void V_Pick_Up(void)
 			break;
 		}
 		case WAIT_DONE_PICK:	//finish receiving
-			Lcd_Send_String_XY(1, 0, "FINISH RECEIVING");
-			systick_count = HAL_GetTick();
+//			Lcd_Send_String_XY(1, 0, "FINISH RECEIVING");
+//			systick_count = HAL_GetTick();
 			pick_state = DONE_PICK;
 			robot = set;
 			break;
 		case DONE_PICK:
-			if((HAL_GetTick() - systick_count) > 1500)
+//			if((HAL_GetTick() - systick_count) > 1500)
 			{
 				Lcd_Clear_Display();
 				pick_state = PRE_UP;
@@ -1219,13 +1240,13 @@ void V_Analysis_Goods_List(bool_t v_goods_side[4], uint8_t v_goods_position[4], 
 	}
 }
 
-uint8_t V_Determine_Distance(uint8_t xo, uint8_t yo, uint8_t x1, uint8_t y1, direct_t v_direct)
+uint16_t V_Determine_Distance(uint8_t xo, uint8_t yo, uint8_t x1, uint8_t y1, direct_t v_direct)
 {
-	uint8_t result;
+	uint16_t result;
 	if(v_direct == LEFT)
-		result = pow((int8_t)((xo*i_axis + 4) - x1*i_axis), 2) + pow((int8_t)((yo*j_axis + 1) - y1*j_axis), 2);
+		result = pow((int16_t)((xo*i_axis + 9) - x1*i_axis), 2) + pow((int16_t)((yo*j_axis + 2) - y1*j_axis), 2);
 	else
-		result = pow((int8_t)(((xo - 1)*i_axis - 4) - x1*i_axis), 2) + pow((int8_t)((yo*j_axis - 1) - y1*j_axis), 2);
+		result = pow((int16_t)(((xo - 1)*i_axis - 1) - x1*i_axis), 2) + pow((int16_t)((yo*j_axis + 7) - y1*j_axis), 2);
 	return result;
 }
 void V_Remove_Duplicate(list_station_t v_goods_list[4],  uint8_t* goods_quantity)
@@ -1335,6 +1356,7 @@ void V_Back_the_Intersection(void)
 			htim2.Instance -> CCR2 = 9999;
 			HAL_Delay(300);
 			state_back_intersection = TURN_LEFT_1;
+			break;
 		case TURN_LEFT_1:
 			V_Turn_Left();
 			state_back_intersection = TURN_LEFT_2;
@@ -1513,7 +1535,7 @@ void V_Put_Down(void)
 			break;
 		case PROCESS_PUT_DOWN:
 			Lcd_Send_String_XY(1, 2, "DONE PUT DOWN");
-			systick_count = HAL_GetTick();
+//			systick_count = HAL_GetTick();
 			robot = set;
 			goods_infor.goods_quantity--;
 			V_Remove_First_Goods(goods_infor.goods_list, goods_infor.goods_quantity);
@@ -1521,7 +1543,7 @@ void V_Put_Down(void)
 			state_put_down = DONE_PUT_DOWN;
 			break;
 		case DONE_PUT_DOWN:
-			if((HAL_GetTick() -  systick_count) > 1500)
+//			if((HAL_GetTick() -  systick_count) > 1500)
 			{
 				Lcd_Clear_Display();
 				state_put_down = PRE_DOWN;
@@ -1611,17 +1633,21 @@ void V_Determine_Next_Step(void)
 			else
 			{
 				goods_infor.goods_tmp = 0;
+				tmp_check = 0;
 				for(uint8_t x = 1; x < goods_infor.goods_quantity; x++)
 				{
-					if(goods_infor.goods_position[0] == goods_infor.goods_position[x])
-					{
+					if(goods_infor.goods_side[0] != goods_infor.goods_side[x])
 						goods_infor.goods_tmp = 1;
-						break;
-					}
+					else
+						tmp_check = 1;
 				}
-				if((goods_infor.goods_tmp == 1) && (goods_infor.goods_side[0] > agv_infor.agv_side))
-				{	
-					agv_infor.agv_next_step_go = UP;
+				if(goods_infor.goods_side[0] > agv_infor.agv_side)
+				{
+					if(((goods_infor.goods_tmp == 1) && (tmp_check == 0)) || (goods_infor.goods_quantity == 1))
+					{	
+						agv_infor.agv_next_step_go = UP;
+						tmp_check = 10;
+					}
 				}
 				else
 				{
@@ -1658,17 +1684,26 @@ void V_Determine_Next_Step(void)
 			else
 			{
 				goods_infor.goods_tmp = 0;
+				tmp_check = 0;
+				bool_t tmp_check_x = reset;
 				for(uint8_t x = 1; x < goods_infor.goods_quantity; x++)
 				{
-					if(goods_infor.goods_position[0] == goods_infor.goods_position[x])
-					{
+					if(goods_infor.goods_side[0] > goods_infor.goods_side[x])
 						goods_infor.goods_tmp = 1;
-						break;
-					}
+					else if(goods_infor.goods_side[0] < goods_infor.goods_side[x])
+						tmp_check_x = set;
+					else
+						tmp_check = 1;
 				}
-				if((goods_infor.goods_tmp == 1) && ((goods_infor.goods_side[0] + 1) < agv_infor.agv_side))
+				if(((goods_infor.goods_side[0] + 1) < agv_infor.agv_side) || (tmp_check_x == set))
+				{
+					agv_infor.agv_next_step_go = LEFT;
+					agv_infor.agv_direct = UP;
+				}
+				else if(((goods_infor.goods_tmp == 1) && (tmp_check == 0)) || ((goods_infor.goods_quantity == 1) && ((agv_infor.agv_side == 2) || (agv_infor.agv_side == goods_infor.goods_side[0]))))
 				{	
-					agv_infor.agv_next_step_go = UP;
+					agv_infor.agv_next_step_go = DOWN;
+					agv_infor.agv_direct = LEFT;
 				}
 				else
 				{
@@ -1719,8 +1754,9 @@ void V_GO(void)
 void V_Ship(void)
 {
 	uint8_t distance_min;
-//	uint8_t distance_tmp;
 	list_station_t tmp;
+	uint8_t tmp_rs_2, tmp_rs_3, tmp_rs_4;
+	bool_t check_rs1 = reset, check_rs2 = reset, check_rs3 = reset, check_rs4 = reset;
 	switch (ship_state)
 	{
 		case PROCESS_SHIP:
@@ -1734,11 +1770,89 @@ void V_Ship(void)
 					distance_min = 255;
 					for(uint8_t x = 0; x < goods_infor.goods_quantity; x++)
 					{
+						if(agv_infor.agv_position == 1)
+						{
+							switch(goods_infor.goods_list[x])
+							{
+								case RS1:
+									check_rs1 = set;
+									break;
+								case RS2:
+									tmp_rs_2 = x;
+									check_rs2 = set;
+									break;
+								case RS3:
+									tmp_rs_3 = x;
+									check_rs3 = set;
+									break;
+								case RS4:
+									tmp_rs_4 = x;
+									check_rs4 = set;
+									break;
+								default:
+									break;
+							}
+						}
 						distance_tmp = V_Determine_Distance(agv_infor.agv_side, agv_infor.agv_position, goods_infor.goods_side[x], goods_infor.goods_position[x], agv_infor.agv_direct);
 						if(distance_tmp < distance_min)
 						{
 								goods_infor.goods_tmp = x;
 								distance_min = distance_tmp;
+						}
+					}
+					if(agv_infor.agv_position == 1)
+					{
+						if(agv_infor.agv_direct == LEFT)
+						{
+							if(agv_infor.agv_side == 0)
+							{
+								if(goods_infor.goods_quantity == 3)
+								{
+									if(check_rs4 == reset)
+										goods_infor.goods_tmp = tmp_rs_2;
+								}
+								else if(goods_infor.goods_quantity == 2)
+								{
+									if((check_rs1 == set) && (check_rs2 == set))
+										goods_infor.goods_tmp = tmp_rs_2;
+								}
+							}
+							else if(agv_infor.agv_side == 1)
+							{
+								if(goods_infor.goods_quantity == 4)
+									goods_infor.goods_tmp = tmp_rs_4;
+								else if(goods_infor.goods_quantity == 3)
+								{
+									if(check_rs4 == set)
+										goods_infor.goods_tmp = tmp_rs_4;
+								}
+								else if(goods_infor.goods_quantity == 2)
+								{
+									if((check_rs3 == set) && (check_rs4 == set))
+										goods_infor.goods_tmp = tmp_rs_4;
+									else if((check_rs1 == set) && (check_rs2 == set))
+										goods_infor.goods_tmp = tmp_rs_2;
+								}
+							}
+						}	
+						else if(agv_infor.agv_direct == RIGHT)
+						{
+							if(agv_infor.agv_side == 2)
+							{
+								if(goods_infor.goods_quantity == 2)
+								{
+									if((check_rs1 == set) && (check_rs2 == set))
+										goods_infor.goods_tmp = tmp_rs_2;
+								}
+							}
+							else if(agv_infor.agv_side == 1)
+							{
+								if(goods_infor.goods_quantity == 3)
+								{
+									if(check_rs1 == reset)
+										goods_infor.goods_tmp = tmp_rs_3;
+								}
+							}
 						}
 					}
 					tmp = goods_infor.goods_list[0];
@@ -1749,15 +1863,19 @@ void V_Ship(void)
 				switch(goods_infor.goods_list[0])
 				{
 					case RS1:
+						Lcd_Send_String_XY(1, 3, "GOING TO RS1");
 						Tx = 'K';
 						break;
 					case RS2:
+						Lcd_Send_String_XY(1, 3, "GOING TO RS2");
 						Tx = 'L';
 						break;
 					case RS3:
+						Lcd_Send_String_XY(1, 3, "GOING TO RS3");
 						Tx = 'M';
 						break;
 					case RS4:
+						Lcd_Send_String_XY(1, 3, "GOING TO RS4");
 						Tx = 'N';
 						break;
 					default:
@@ -1817,9 +1935,11 @@ void V_Come_Back(void)
 			switch(goods_infor.goods_list[0])
 			{
 				case TS1:
+					Lcd_Send_String_XY(1, 3, "GOING TO TS1");
 					Tx = 'H';
 					break;
 				case TS2:
+					Lcd_Send_String_XY(1, 3, "GOING TO TS2");
 					Tx = 'I';
 					break;
 				default:
@@ -1846,6 +1966,9 @@ void V_Come_Home(void)
 		case PRE_CH:
 			goods_infor.goods_position[0] = goods_infor.goods_list[0] & 3;
 			goods_infor.goods_side[0] = (bool_t)((goods_infor.goods_list[0] & 4) >> 2);
+			Lcd_Send_String_XY(1, 4, "GOING TO");
+			Lcd_Goto_XY(2, 2);
+			Lcd_Send_String("THE PARKING");
 			Tx = 'G';
 			HAL_UART_Transmit(&huart1, &Tx, 1, 100);
 			Tx = 'A';
@@ -1871,7 +1994,7 @@ void V_Come_Home(void)
 			
 			htim2.Instance -> CCR1 = 9999;
 			htim2.Instance -> CCR2 = 9999;
-			HAL_Delay(500);
+			HAL_Delay(1000);
 			GPIO_RESET_PIN(GPIOA, GPIO_PIN_10);	//STB`
 			HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
 			HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_2);

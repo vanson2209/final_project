@@ -56,7 +56,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
   String payloadString = (const char *)payload;
  // Serial.println(payloadString);
   TRA_num = payloadString[0];
-  if ((TRA_num == '7') || (TRA_num == '6')){// || (TRA_num == 'X')){    
+  if (TRA_num == '7'){// || (TRA_num == 'X')){    
     TRA_in4 = payloadString[1];
     payloadString = payloadString.substring(2);        //if (TRA_num == '7')
     if(TRA_in4 == 'G'){
@@ -96,6 +96,7 @@ void V_Check_Time(void){
       systick.attach_ms(100, Timer_Call_Back);
       systick_count = 50;
       status_time = Wait_Expire;
+      break;
     case Wait_Expire:
       if(systick_count == 0){
         state_feedback_data = SEND_DONE;

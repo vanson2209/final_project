@@ -95,6 +95,8 @@ void V_Check_Time(void){
     case Idle:
       systick.attach_ms(100, Timer_Call_Back);
       systick_count = 50;
+      status_time = Wait_Expire;
+      break;
     case Wait_Expire:
       if(systick_count == 0){
         state_feedback_data = SEND_DONE;

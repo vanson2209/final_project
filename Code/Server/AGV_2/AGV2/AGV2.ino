@@ -99,7 +99,7 @@ void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
           Serial.write('A');
       }
       else if (payloadString == "L"){
-          Serial.write('B');;
+          Serial.write('B');
       }
       else if (payloadString == "R"){
           Serial.write('C');

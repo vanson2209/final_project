@@ -3,9 +3,9 @@
 <title>Static Call Graph - [AGV\AGV.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image AGV\AGV.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 19 19:10:20 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat May 25 16:33:27 2024
 <BR><P>
-<H3>Maximum Stack Usage =        272 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        280 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 <P>
@@ -204,7 +204,7 @@ Global Symbols
 <P><STRONG><a name="[10e]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[47]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 272 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1213,7 +1213,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Ship
 </UL>
 
-<P><STRONG><a name="[c1]"></a>V_Determine_Next_Step</STRONG> (Thumb, 494 bytes, Stack size 36 bytes, main.o(i.V_Determine_Next_Step))
+<P><STRONG><a name="[c1]"></a>V_Determine_Next_Step</STRONG> (Thumb, 492 bytes, Stack size 36 bytes, main.o(i.V_Determine_Next_Step))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = V_Determine_Next_Step
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_GO
@@ -1290,8 +1290,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c9]"></a>V_Ship</STRONG> (Thumb, 484 bytes, Stack size 48 bytes, main.o(i.V_Ship))
-<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
+<P><STRONG><a name="[c9]"></a>V_Ship</STRONG> (Thumb, 570 bytes, Stack size 56 bytes, main.o(i.V_Ship))
+<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_Put_Down
@@ -1312,7 +1312,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b2]"></a>V_Turn_Left</STRONG> (Thumb, 168 bytes, Stack size 16 bytes, main.o(i.V_Turn_Left))
+<P><STRONG><a name="[b2]"></a>V_Turn_Left</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, main.o(i.V_Turn_Left))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = V_Turn_Left &rArr; HAL_ADC_Start_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -1336,7 +1336,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;V_GO
 </UL>
 
-<P><STRONG><a name="[cc]"></a>V_Turn_Right</STRONG> (Thumb, 174 bytes, Stack size 24 bytes, main.o(i.V_Turn_Right))
+<P><STRONG><a name="[cc]"></a>V_Turn_Right</STRONG> (Thumb, 176 bytes, Stack size 24 bytes, main.o(i.V_Turn_Right))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = V_Turn_Right &rArr; HAL_ADC_Start_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -1407,7 +1407,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[48]"></a>main</STRONG> (Thumb, 684 bytes, Stack size 8 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = main &rArr; V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
+<BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = main &rArr; V_Ship &rArr; V_Determine_Distance &rArr; pow &rArr; sqrt &rArr; _dsqrt &rArr; __fpl_dnaninf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
